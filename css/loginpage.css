@@ -1,17 +1,17 @@
-img{
-    vertical-align:middle;
+img {
+    vertical-align: middle;
 }
 
-input{
-    display:inline-block;
-    vertical-align:middle;
+input {
+    display: inline-block;
+    vertical-align: middle;
     font-size: 20px;
 }
 
-input_table{
+input_table {
     width: 440px;
 }
 
-body{
-    font:宋体;
+body {
+    font: 宋体;
 }
