@@ -1,78 +1,35 @@
 <?php
-require_once('include/db_info.inc.php');
-	/****************************************
-	*  验证码 v0.9
-	*  Powerd by awaysoft.com
-	*  本组件采用GPLv3发布
-	*  2011-07-15
-	****************************************/
-	/* $len 为随机字符串长度，$type为类型，a为字符数字，c为字符,n为数字， 已经去除可能误导的字符 */
-	function get_rand_string($len=4, $type="n"){
-		if ($len < 0) $len = 4;
-		if ($type == 'a') $chars = 'ABCDEFGHJKMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz023456789';
-		else if ($type == 'c') $chars = 'ABCDEFGHJKMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz';
-		else if ($type == 'n') $chars = '0123456789';
-		else $chars = '0123456789';
-		
-		$result = '';
-		for ($i = 0; $i < $len; $i ++){
-			$index = mt_rand(0, strlen($chars) - 1);
-			$result .= substr($chars, $index, 1);
-		}
-		return $result;
-	}
-	
-header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-header("Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT");
-header("Cache-Control: no-cache, must-revalidate");
-header("Pramga: no-cache");
-	
-	/* 输出图片类型，字符长度，类型 */
-	$imgtype = 'gif';
-	$len = 4;
-	$vcodetype = 'n';
-	
-	$width = 15 * $len;
-	$height = 24;
-	/* 生成随机字符串并写入SESSION */
-	$vcode = get_rand_string($len, $vcodetype);
-	$_SESSION[$OJ_NAME.'_'.'vcode'] = $vcode;
-	header("Content-type: image/".$imgtype);
-	
-	if($imgtype != 'gif' && function_exists('imagecreatetruecolor')){
-		$im = imagecreatetruecolor($width, $height);
-	}else{
-		$im = imagecreate($width, $height);
-	}
-	
-	$r = mt_rand(0, 255);
-	$g = mt_rand(0, 255);
-	$b = mt_rand(0, 255);
-	/* 生成背景颜色 */
-	$backColor = ImageColorAllocate($im, $r, $g, $b);
-	/* 生成边框颜色 */
-	$borderColor = ImageColorAllocate($im, 0, 0, 0);
-	/* 生成干扰点颜色 */
-	$pointColor = ImageColorAllocate($im, mt_rand(0, 255), mt_rand(0, 255), mt_rand(0, 255));
-	
-	/* 背景位置 */
-	imagefilledrectangle($im, 0, 0, $width - 1, $height - 1, $backColor);
-	/* 边框位置 */
-	imagerectangle($im, 0, 0, $width - 1, $height - 1, $borderColor);
-	
-	/* 字符串颜色(背景反色) */
-	$stringColor = ImageColorAllocate($im, 255 - $r, 255 - $g, 255 - $b);
-	
-	/* 产生干扰点 */
-	$pointNumber = mt_rand($len * 25, $len * 50);
-	for($i=0; $i<=$pointNumber; $i++){
-		$pointX = mt_rand(2,$width-2);
-		$pointY = mt_rand(2,$height-2);
-		imagesetpixel($im, $pointX, $pointY, $pointColor);
-	}
-	
-	imagettftext($im, 15, 0, 4, 20, $stringColor, "include/Vera.ttf", $vcode);
-	$image_out = 'Image' . $imgtype;
-	$image_out($im);
-	@ImageDestroy($im);
+   
+$w = 80; //设置图片宽和高
+$h = 26;
+$str = Array(); //用来存储随机码
+$string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";//随机挑选其中4个字符，也可以选择更多，注意循环的时候加上，宽度适当调整
+for($i = 0;$i < 4;$i++){
+   $str[$i] = $string[rand(0,35)];
+   $vcode .= $str[$i];
+}
+session_start(); //启用超全局变量session
+$_SESSION["vcode"] = $vcode;
+$im = imagecreatetruecolor($w,$h);
+$white = imagecolorallocate($im,255,255,255); //第一次调用设置背景色
+$black = imagecolorallocate($im,0,0,0); //边框颜色
+imagefilledrectangle($im,0,0,$w,$h,$white); //画一矩形填充
+imagerectangle($im,0,0,$w-1,$h-1,$black); //画一矩形框
+//生成雪花背景
+for($i = 1;$i < 200;$i++){ 
+   $x = mt_rand(1,$w-9);
+   $y = mt_rand(1,$h-9);
+   $color = imagecolorallocate($im,mt_rand(200,255),mt_rand(200,255),mt_rand(200,255));
+   imagechar($im,1,$x,$y,"*",$color);
+}
+//将验证码写入图案
+for($i = 0;$i < count($str);$i++){
+   $x = 13 + $i * ($w - 15)/4;
+   $y = mt_rand(3,$h / 3);
+   $color = imagecolorallocate($im,mt_rand(0,225),mt_rand(0,150),mt_rand(0,225));
+   imagechar($im,5,$x,$y,$str[$i],$color);
+}
+header("Content-type:image/jpeg"); //以jpeg格式输出，注意上面不能输出任何字符，否则出错
+imagejpeg($im);
+imagedestroy($im);
 ?>
