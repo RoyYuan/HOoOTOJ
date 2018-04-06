@@ -27,10 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($password)) {
         $password_error = "密码不能为空";
         $password2_error = "两次密码不一致";
+        $password=$password2="";
         $flag = 0;
     }
     if (strcmp($password, $password2)) {
         $password2_error = "两次密码不一致";
+        $password=$password2="";
         $flag = 0;
     }
     if (empty($answer)) {
@@ -67,14 +69,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <td></td>
                                 <td> 密码:</td>
                                 <td>
-                                    <input name="password" type="password" size=20></td>
+                                    <input name="password" type="password" size=20 value="<?php echo $password ?>"></td>
                                 <td><span class="error">* <?php echo $password_error; ?></span></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td> 确认密码:</td>
                                 <td>
-                                    <input name="password2" type="password" size=20></td>
+                                    <input name="password2" type="password" size=20 value="<?php echo $password2 ?>"></td>
                                 <td><span class="error">* <?php echo $password2_error; ?></span></td>
                             </tr>
                             <tr>
