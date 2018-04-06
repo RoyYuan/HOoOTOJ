@@ -16,21 +16,21 @@
                             <tr>
                                 <td width=220> 用户名: </td>
                                 <td width=220>
-                                    <input name="UserId" type="text" size=20> </td>
+                                    <input name="user_id" type="text" size=20> </td>
                             </tr>
                             <tr>
                                 <td> 密码: </td>
                                 <td>
-                                    <input name="Password" type="password" size=20> </td>
+                                    <input name="password" type="password" size=20> </td>
                             </tr>
                             <tr>
                                 <td> 验证码: </td>
                                 <td>
-                                    <input name="Vcode" size="5" type="text">&nbsp;<img alt="点击刷新" src="vcode.php" onclick="this.src='vcode.php?'+Math.random()"> </td>
+                                    <input name="vcode" size="5" type="text">&nbsp;<img alt="点击刷新" src="vcode.php" onclick="this.src='vcode.php?'+Math.random()"> </td>
                             </tr>
                             <tr>
                                 <td width=220>
-                                    <input name="Submit" class="S" type="submit" value="登陆"> </td>
+                                    <input name="submit" class="S" type="submit" value="登陆"> </td>
                                 <td> <a href="forgetpage.php">忘记密码</a> <a href="registerpage.php">注册新用户</a></td>
                             </tr>
                         </table>
