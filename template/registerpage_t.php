@@ -8,6 +8,7 @@
 
 <body>
     <?php
+    session_start();
 $user_id=$password=$password2=$question=$answer=$vcode="";
 $user_id_error=$password_error=$password2_error=$answer_error=$vcode_error="";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,26 +18,34 @@ $password2=trim($_POST['password2']);
 $question=trim($_POST['question']);
 $answer=trim($_POST['answer']);
 $vcode=trim($_POST['vcode']);
+$flag=1;
 if(empty($user_id))
 {
     $user_id_error="用户名不能为空";
+    $flag=0;
 }
 if(empty($password))
 {
     $password_error="密码不能为空";
+    $password2_error="两次密码不一致";
+    $flag=0;
 }
 if(strcmp($password,$password2))
 {
     $password2_error="两次密码不一致";
+    $flag=0;
 }
 if(empty($answer))
 {
     $answer_error="密保答案不能为空";
+    $flag=0;
 }
-if($vcode!=$_SESSION["vcode"] || $vcode=="" || $vcode==null)
+if(strcasecmp($_SESSION["vcode"],$vcode) || $vcode=="" || $vcode==null)
 {
+//    $vcode_error=$_SESSION["vcode"];
     $_SESSION["vcode"]=null;
     $vcode_error="验证码错误";
+    $flag=0;
 }
 }
 
