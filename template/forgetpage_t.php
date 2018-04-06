@@ -3,30 +3,20 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>注册</title>
-    <link rel="stylesheet" type="text/css" href="css/registerpage.css" /> </head>
+    <title>忘记密码</title>
+    <link rel="stylesheet" type="text/css" href="css/forgetpage.css" /> </head>
 
 <body>
     <div id="C1">
         <?php require_once("header.php"); ?>
             <div id="main">
-                <form action="register.php" method="post">
+                <form action="forget.php" method="post">
                     <center>
                         <table id="input_table">
                             <tr>
                                 <td width=220> 用户名: </td>
                                 <td width=220>
                                     <input name="UserId" type="text" size=20> </td>
-                            </tr>
-                            <tr>
-                                <td> 密码: </td>
-                                <td>
-                                    <input name="Password" type="password" size=20> </td>
-                            </tr>
-                            <tr>
-                                <td> 确认密码: </td>
-                                <td>
-                                    <input name="Password2" type="password" size=20> </td>
                             </tr>
                             <tr>
                                 <td> 密保问题: </td>
@@ -50,7 +40,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input id="submit" class="S" name="Submit" type="submit" value="注册"> </td>
+                                    <input id="submit" class="S" name="Submit" type="submit" value="确认"> </td>
                                 <td> <a href="loginpage.php">返回登录</a> </td>
                             </tr>
                         </table>

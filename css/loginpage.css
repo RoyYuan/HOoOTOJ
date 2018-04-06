@@ -1,17 +1,23 @@
+body{
+    text-align: center;
+    font-size: 20px;
+}
+
+#input_table{
+    width: 440px;
+}
+
 img {
     vertical-align: middle;
 }
 
-input {
+input{
     display: inline-block;
     vertical-align: middle;
     font-size: 20px;
 }
 
-input_table {
-    width: 440px;
-}
-
-body {
-    font: 宋体;
+.S{
+    font-size: 20px;
+    border-radius: 10px;
 }

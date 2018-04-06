@@ -1,7 +1,7 @@
 <?php
    
 $w = 80; //设置图片宽和高
-$h = 26;
+$h = 30;
 $str = Array(); //用来存储随机码
 $string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";//随机挑选其中4个字符，也可以选择更多，注意循环的时候加上，宽度适当调整
 for($i = 0;$i < 4;$i++){
