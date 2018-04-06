@@ -1,3 +1,3 @@
 <?php
-    require("template/header_t.php");
+require("template/header_t.php");
 ?>

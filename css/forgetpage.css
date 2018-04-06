@@ -1,10 +1,10 @@
-body{
+body {
     text-align: center;
     font: 宋体;
     font-size: 20px;
 }
 
-#input_table{
+#input_table {
     width: 440px;
 }
 
@@ -12,17 +12,17 @@ img {
     vertical-align: middle;
 }
 
-input{
+input {
     display: inline-block;
     vertical-align: middle;
     font-size: 20px;
 }
 
-select{
+select {
     font-size: 20px;
 }
 
-.S{
+.S {
     font-size: 20px;
     border-radius: 10px;
 }

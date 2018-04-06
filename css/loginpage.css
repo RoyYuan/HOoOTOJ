@@ -1,9 +1,9 @@
-body{
+body {
     text-align: center;
     font-size: 20px;
 }
 
-#input_table{
+#input_table {
     width: 880px;
 }
 
@@ -11,13 +11,13 @@ img {
     vertical-align: middle;
 }
 
-input{
+input {
     display: inline-block;
     vertical-align: middle;
     font-size: 20px;
 }
 
-.S{
+.S {
     font-size: 20px;
     border-radius: 10px;
 }
