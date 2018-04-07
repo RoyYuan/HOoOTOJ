@@ -29,6 +29,7 @@ for ($i = 0; $i < count($str); $i++) {
     $color = imagecolorallocate($im, mt_rand(0, 225), mt_rand(0, 150), mt_rand(0, 225));
     imagechar($im, 5, $x, $y, $str[$i], $color);
 }
+ob_clean();  //关键代码，防止出现'图像因其本身有错无法显示'的问题。
 header("Content-type:image/jpeg"); //以jpeg格式输出，注意上面不能输出任何字符，否则出错
 imagejpeg($im);
 imagedestroy($im);
