@@ -8,20 +8,26 @@
 </head>
 
 <body>
-    <?php
+<?php
 session_start();
-$user_id = $password = $password2 = $question = $answer = $vcode = "";
-$user_id_error = $password_error = $password2_error = $answer_error = $vcode_error = "";
+$username = $password = $password2 = $question = $answer = $vcode = "";
+$username_error = $password_error = $password2_error = $answer_error = $vcode_error = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user_id = trim($_POST['user_id']);
+    $username = trim($_POST['username']);
     $password = trim($_POST['password']);
     $password2 = trim($_POST['password2']);
     $question = trim($_POST['question']);
+    switch($question){
+        case "Mother":$question=1; break;
+        case "Father":$question=2; break;
+        case "Game":$question=3; break;
+        default:;
+    }
     $answer = trim($_POST['answer']);
     $vcode = trim($_POST['vcode']);
     $flag = 1;
-    if (empty($user_id)) {
-        $user_id_error = "用户名不能为空";
+    if (empty($username)) {
+        $username_error = "用户名不能为空";
         $flag = 0;
     }
     if (empty($password)) {
@@ -45,6 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $vcode_error = "验证码错误";
         $flag = 0;
     }
+    if($flag==1)
+    {
+        require_once("register.php");
+        register($username,$password,$question,$answer);
+    }
 }
 
 
@@ -54,16 +65,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="C1">
             <?php require_once("header.php"); ?>
             <div id="main">
-                <form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF "]); ?>" method="post">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <center>
                         <table id="input_table">
                             <tr>
                                 <td width=220></td>
                                 <td width=220> 用户名:</td>
                                 <td width=220>
-                                    <input name="user_id" type="text" size=20 value="<?php echo $user_id ?>"></td>
+                                    <input name="username" type="text" size=20 value="<?php echo $username ?>"></td>
                                 <td width=220> <span class="error">
-                                        * <?php echo $user_id_error; ?></span></td>
+                                        * <?php echo $username_error; ?></span></td>
                             </tr>
                             <tr>
                                 <td></td>
