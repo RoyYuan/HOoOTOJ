@@ -27,12 +27,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = $password2 = "";
         $flag = 0;
     }
+    if($flag==1){
+        require_once ("forget.php");
+        forget2($password);
+    }
 }
 ?>
 <div id="C1">
     <?php require_once("header.php"); ?>
     <div id="main">
-        <form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF "]); ?>" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <center>
                 <table id="input_table">
                     <tr>

@@ -17,6 +17,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 {
     $user_id = trim($_POST['user_id']);
     $question = trim($_POST['question']);
+    switch($question){
+        case "Mother":$question=1; break;
+        case "Father":$question=2; break;
+        case "Game":$question=3; break;
+        default:;
+    }
     $answer = trim($_POST['answer']);
     $vcode = trim($_POST['vcode']);
     $flag = 1;
@@ -34,12 +40,17 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         $vcode_error = "验证码错误";
         $flag = 0;
     }
+    if($flag==1)
+    {
+        require_once ("forget.php");
+        forget($user_id,$question,$answer);
+    }
 }
     ?>
         <div id="C1">
             <?php require_once("header.php"); ?>
             <div id="main">
-                <form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF "]); ?>" method="post">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <center>
                         <table id="input_table">
                             <tr>

@@ -46,6 +46,7 @@ function register($username, $password, $question, $answer){
     
     //将当前用户加入groups表，默认权限组为0
     $sql="INSERT INTO `groups`("."`user_id`,`groups`)"."VALUES('".$user_id."',0)";
+    $result=mysqli_query($mysqli,$sql);
     $_SESSION['0']=true;
     $_SESSION['ac']=Array();
     $_SESSION['sub']=Array();
