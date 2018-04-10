@@ -53,6 +53,12 @@ function forget2($password){
         .mysqli_real_escape_string($mysqli,$_SESSION['forget_username'])
         ."'";
     $result=mysqli_query($mysqli,$sql);
+    if(mysqli_affected_rows($mysqli)==0){
+        echo "<script>\n";
+        echo "alert('设置密码失败\\n');\n";
+        echo "window.location.href='loginpage.php';\n</script>";
+        exit(0);
+    }
     echo "<script>\n";
     echo "alert('设置密码成功\\n');\n";
     echo "window.location.href='loginpage.php';\n";

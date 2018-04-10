@@ -1,0 +1,49 @@
+h3{
+    text-align: center;
+}
+
+.red{
+    color: red;
+}
+
+.oddrow {
+    background-color: #E5ECF9;
+    white-space: nowrap;
+}
+
+.evenrow {
+    background-color: #FFFFFF;
+    white-space: nowrap;
+}
+
+input{
+    height: 24px;
+}
+
+.toprow {
+    background-color: #1A5CC8;
+    color: #FFFFFF;
+    font-weight: bold;
+    white-space: nowrap;
+    /*background: url("image/menu_bg.png");*/
+}
+
+.toprow a {
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.toprow a:hover {
+    color: orange;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.pointer{
+    cursor:pointer
+}
