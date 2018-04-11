@@ -33,14 +33,14 @@
                 <table>
                     <tr align="center" class="evenrow">
                         <td width="5"></td>
-                        <td width="50%" colspan="1">
+                        <td width="50%">
                             <form action="problem.php">
                                 Problem ID：
                                 <input type="text" name="id" size="5">
                                 <button type="submit">搜索</button>
                             </form>
                         </td>
-                        <td width="50%" colspan="1">
+                        <td width="50%">
                             <form>
                                 Problem Title:
                                 <input type="text" name="search">

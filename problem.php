@@ -52,7 +52,7 @@ elseif (isset($_GET['cid']) && isset($_GET['pid'])){
     mysqli_free_result($result);
     if($ok_cnt!=1){
         $view_errors="没有该竞赛！";
-        require("template/showerror_t.php");
+        require("template/show_error_t.php");
         exit(0);
     }
     else{
@@ -65,14 +65,14 @@ elseif (isset($_GET['cid']) && isset($_GET['pid'])){
 
     if (!$contest_ok){
         $view_errors="不是参赛成员！";
-        require ("template/showerror_t.php");
+        require ("template/show_error_t.php");
         exit(0);
     }
     $co_flag=true;
 }
 else{
     $view_errors="没有该题目";
-    require ("template/showerror_t.php");
+    require ("template/show_error_t.php");
     exit(0);
 }
 $result=mysqli_query($mysqli,$sql) or die(mysqli_error());
@@ -82,23 +82,22 @@ if(mysqli_num_rows($result)!=1){
     if (isset($_GET['id'])){
         $id=intval($_GET['id']);
         mysqli_free_result($result);
-        $sql="SELECT contest.`contest_id`, contest.`title`, contest_problem.`num` FROM `contest_problem`,`contest`"
-            ."WHERE contest.contest_id=contest_problem.contest_id AND `problem_id`=$id AND `hide`=0 ORDER BY `num`";
+        $sql="SELECT contest.`contest_id` FROM `contest_problem`,`contest` WHERE contest.contest_id = contest_problem.contest_id AND `problem_id`=$id AND contest.`hide`=0 ORDER BY `num`";
         $result=mysqli_query($mysqli,$sql);
-        if($i=mysqli_num_rows($mysqli,$sql)){
+        if($i=mysqli_num_rows($result)){
             $view_errors.="该题目正用于竞赛";
-            require ("template/showerror_t.php");
+            require ("template/show_error_t.php");
             exit(0);
         }
         else{
             $view_errors="没有该题目";
-            require ("template/showerror_t.php");
+            require ("template/show_error_t.php");
             exit(0);
         }
     }
     else{
         $view_errors="没有该题目";
-        require ("template/showerror_t.php");
+        require ("template/show_error_t.php");
         exit(0);
     }
 }

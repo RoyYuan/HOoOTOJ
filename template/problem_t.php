@@ -37,8 +37,10 @@
 
         echo "<span class='green'>TimeLimit:</span>$row->time_limit s&nbsp;&nbsp;";
         echo "<span class='green'>MemoryLimit:</span>$row->memory_limit MB";
+        echo "<br/>";
         echo "<span class='green'>提交:</span>$row->submit &nbsp;&nbsp;";
         echo "<span class='green'>通过:</span>$row->accept";
+        echo "<br/>";
 
         if($pr_flag){
             echo "[<a href='submitpage.php?id=$id'>Submit</a>]";
@@ -47,7 +49,7 @@
             echo "[<a href='submitpage.php?cid=$cid&$pid=$pid'>Submit</a>]";
         }
 
-        echo "</center>";
+        echo "</center><div style='width:80%;margin-right: auto; margin-left: auto; '>";
 
         echo "<h2>Description</h2><div class='content'>".$row->description."</div>";
         echo "<h2>Input</h2><div class='content'>".$row->input."</div>";
@@ -67,7 +69,7 @@
 
         echo "<h2>Hint</h2>";
         echo "<div class=content><p>".nl2br($row->hint)."</p></div>";//nl2br() 函数在字符串中的每个新行（\n）之前插入 HTML 换行符
-
+        echo "</div>";
         echo "<center>";
         if ($pr_flag){
             echo "[<a href='submitpage.php?id=$id'>Submit</a>]";
