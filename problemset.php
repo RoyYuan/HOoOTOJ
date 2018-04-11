@@ -18,20 +18,22 @@ $cnt/=$page_cnt;//得到页数
 
 //得到当前页的题目id范围
 $page='1';
-$page_start=($page_cnt-1)*intval($page);
+$page_start=($page_cnt)*(intval($page)-1);
 $page_end=$page_start+$page_cnt;
 $sub_arr=Array();
 
-//按照id范围搜索
+//按照提供的title或是id范围搜索
 if(isset($_GET['search']) && trim($_GET['search'])!=""){
     $search=mysqli_real_escape_string($mysqli,$_GET['search']);
-    $filter_sql=" ( title like '%$search%' or source like '%$search%')";
+    $filter_sql=" ( title like '%$search%')";
 }
 else{
     $filter_sql="  `problem_id`>='".strval($page_start)."' AND `problem_id`<'".strval($page_end)."' ";
 }
+
 //按照权限显示题目，有的在contest里，有的是hide=1
 if(isset($_SESSION['administrator'])){
+    //若是管理员，不用在意是否hide或是在contest中
     $sql="SELECT `problem_id`,`title`,`submit`,`accept` FROM `problems` WHERE $filter_sql";
 }
 else{
@@ -43,8 +45,8 @@ else{
         (`end_time`>'$now' or `contest`.`hide`=1) AND `problems`.`hide`=0)
         )";
 }
-$sql=" ORDER BY `problem_id`";//按照题目id排序
-$result=mysqli_query($mysqli,$sql); //or die(mysqli_error());
+$sql.=" ORDER BY `problem_id`";//按照题目id排序
+$result=mysqli_query($mysqli,$sql) or die(mysqli_error());
 
 //从$result中获取当前页面能显示的题目信息放进$view_problemset中
 $view_total_page=$cnt+1;
@@ -54,7 +56,7 @@ $i=0;
 while($row=mysqli_fetch_object($result)){
     $view_problemset[$i]=Array();
     $view_problemset[$i][1]="<div class='center'>".$row->problem_id."</div>";;
-    $view_problemset[$i][2]="<div class='left'><a href='problem.php?id=".$row->problem.id."'>".$row->title."</a></div>";;
+    $view_problemset[$i][2]="<div class='left'>&nbsp;<a href='problem.php?id=".$row->problem_id."'>".$row->title."</a></div>";;
     $view_problemset[$i][3]="<div class='center'>".$row->submit."</div>";;
     $view_problemset[$i][4]="<div class='center'>".$row->accept."</div>";;
     $i++;

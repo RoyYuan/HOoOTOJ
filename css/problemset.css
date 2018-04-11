@@ -47,3 +47,11 @@ input{
 .pointer{
     cursor:pointer
 }
+
+.center{
+    text-align: center;
+}
+
+.left{
+    text-align: left;
+}

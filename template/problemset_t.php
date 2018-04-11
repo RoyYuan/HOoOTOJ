@@ -42,6 +42,7 @@
                         </td>
                         <td width="50%" colspan="1">
                             <form>
+                                Problem Title:
                                 <input type="text" name="search">
                                 <button type="submit">搜索相关</button>
                             </form>

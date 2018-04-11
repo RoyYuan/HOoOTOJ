@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd263d64-8bb3-4946-a4aa-223c963e86ec" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/problem.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/problemset.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/problemset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forget.php" beforeDir="false" afterPath="$PROJECT_DIR$/forget.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/problemset.php" beforeDir="false" afterPath="$PROJECT_DIR$/problemset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/problem_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/problem_t.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/problemset_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/problemset_t.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,56 +23,35 @@
     <splitter split-orientation="horizontal" split-proportion="0.44820064">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="problemset_t.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="problemset_t.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/template/problemset_t.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+                <state relative-caret-position="1558">
+                  <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="registerpage_t.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/template/registerpage_t.php">
+          <file leaf-file-name="problem.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/problem.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="19">
-                  <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
+                <state relative-caret-position="799">
+                  <caret line="109" column="35" lean-forward="true" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="forgetpage2.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/forgetpage2.php">
+          <file leaf-file-name="problem_t.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/template/problem_t.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="114">
-                  <caret line="6" selection-start-line="6" selection-end-line="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="registerpage.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/registerpage.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="114">
-                  <caret line="6" selection-start-line="6" selection-end-line="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="forget.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/forget.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="320">
-                  <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="problemset.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/problemset.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="779">
-                  <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+                <state relative-caret-position="285">
+                  <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+                  <folding>
+                    <element signature="e#56#62#0" expanded="true" />
+                    <element signature="e#62#68#0" expanded="true" />
+                    <element signature="e#48#54#0" expanded="true" />
+                    <element signature="e#54#60#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -80,83 +60,49 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="problemset.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/problemset.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="304">
-                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-                  <folding>
-                    <element signature="n#style#0;n#input#0;n#form#0;n#td#1;n#tr#0;n#table#0;n#center#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#form#0;n#td#2;n#tr#0;n#table#0;n#center#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="problemset.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/problemset.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="114">
-                  <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="hoj.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/hoj.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="311">
+                <state relative-caret-position="399">
                   <caret line="21" selection-start-line="21" selection-end-line="41" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/login.php">
+          <file leaf-file-name="problemset.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/problemset.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="475">
-                  <caret line="25" column="50" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="50" />
+                <state relative-caret-position="760">
+                  <caret line="58" column="93" selection-start-line="58" selection-start-column="93" selection-end-line="58" selection-end-column="93" />
+                  <folding>
+                    <element signature="e#18#24#1" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="loginpage_t.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/template/loginpage_t.php">
+          <file leaf-file-name="problem.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/problem.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+                <state relative-caret-position="248">
+                  <caret line="61" column="27" lean-forward="true" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="forgetpage_t.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/template/forgetpage_t.php">
+          <file leaf-file-name="problem.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/problem.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="798">
-                  <caret line="42" column="16" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/register.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="798">
-                  <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="problem.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/css/problem.css">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file leaf-file-name="problemset.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/css/problemset.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="703">
-                  <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+                <state relative-caret-position="1293">
+                  <caret line="92" column="18" lean-forward="true" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+                  <folding>
+                    <element signature="e#65#71#0" expanded="true" />
+                    <element signature="e#71#77#0" expanded="true" />
+                    <element signature="e#0#6#0" expanded="true" />
+                    <element signature="e#6#12#0" expanded="true" />
+                    <element signature="e#65#71#0" expanded="true" />
+                    <element signature="e#71#77#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -206,10 +152,13 @@
         <option value="$PROJECT_DIR$/forget.php" />
         <option value="$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/problemset.php" />
         <option value="$PROJECT_DIR$/css/problem.css" />
-        <option value="$PROJECT_DIR$/css/problemset.css" />
         <option value="$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/problemset.php" />
-        <option value="$PROJECT_DIR$/problemset.php" />
+        <option value="$PROJECT_DIR$/css/problemset.css" />
         <option value="$PROJECT_DIR$/template/problemset_t.php" />
+        <option value="$PROJECT_DIR$/problem.php" />
+        <option value="$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/problem.php" />
+        <option value="$PROJECT_DIR$/template/problem_t.php" />
+        <option value="$PROJECT_DIR$/problemset.php" />
       </list>
     </option>
   </component>
@@ -231,6 +180,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,10 +212,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/RoyYuan/Documents/HOoOTOJ/problemset.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -319,6 +269,7 @@
       <workItem from="1523258664423" duration="916000" />
       <workItem from="1523330625870" duration="4377000" />
       <workItem from="1523366897800" duration="4720000" />
+      <workItem from="1523419671475" duration="5147000" />
     </task>
     <servers />
   </component>
@@ -331,7 +282,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16821000" />
+    <option name="totallyTimeSpent" value="21968000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
@@ -368,27 +319,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vcode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/registerpage_t.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -642,26 +572,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
+        <state relative-caret-position="608">
           <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/include/jquery-latest.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/hoj.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="399">
+          <caret line="21" selection-start-line="21" selection-end-line="41" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/problemset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -672,52 +603,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/problem.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/hoj.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="21" selection-start-line="21" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/problemset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/problemset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/problemset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/problemset.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#form#0;n#td#1;n#tr#0;n#table#0;n#center#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#td#2;n#tr#0;n#table#0;n#center#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="19">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/problemset_t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+        <state relative-caret-position="1558">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/problemset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="50" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/problem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="61" column="27" lean-forward="true" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="109" column="35" lean-forward="true" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/problem_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding>
+            <element signature="e#56#62#0" expanded="true" />
+            <element signature="e#62#68#0" expanded="true" />
+            <element signature="e#48#54#0" expanded="true" />
+            <element signature="e#54#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/problem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1293">
+          <caret line="92" column="18" lean-forward="true" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+          <folding>
+            <element signature="e#65#71#0" expanded="true" />
+            <element signature="e#71#77#0" expanded="true" />
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="e#6#12#0" expanded="true" />
+            <element signature="e#65#71#0" expanded="true" />
+            <element signature="e#71#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problemset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="58" column="93" selection-start-line="58" selection-start-column="93" selection-end-line="58" selection-end-column="93" />
+          <folding>
+            <element signature="e#18#24#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
