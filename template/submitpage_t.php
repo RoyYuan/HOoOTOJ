@@ -21,7 +21,7 @@
                     Problem <span class="blue"><b><?php echo $id ?></b></span>
                     <input id="problem_id" type="hidden" value="<?php echo $id?>" name="id"><br>
                 <?php }else {?>
-                    Problem <span class="blue"><b><?php echo chr($pid+ord('A'))?></b></span> of Contest <span class="blue"><b><?php echo $cid?></b></span><br>
+                    Problem <span class="blue"><b><?php echo chr($pid+ord('A')-1)?></b></span> of Contest <span class="blue"><b><?php echo $cid?></b></span><br>
                     <input id="cid" type="hidden" value="<?php echo $cid?>" name="cid">
                     <input id="pid" type="hidden" value="<?php echo $pid?>" name="pid">
                 <?php }?>
@@ -29,18 +29,13 @@
 
                 <textarea style="width: 80%;" cols="180" rows="20" id="source_code" name="source_code"></textarea><br>
 
-                <input id="submit" type="button" value="提交" onclick="do_submit()">
+                <input id="go_submit" type="button" value="提交" onclick=do_submit()>
                 <input type="reset" value="重置">
             </form>
         </center>
-
-        <script>
+        <script language="Javascript" type="text/javascript">
             function do_submit() {
-                if (typeof(eAL) != "undefined") {
-                    eAL.toggle("source_code");
-                    eAL.toggle("source_code");
-                }
-                var mark = "<?php echo isset($id) ? 'problem_id' : 'cid';?>";
+                var mark = "<?php echo isset($id)? 'problem_id':'cid';?>";
                 var problem_id = document.getElementById(mark);
                 if (mark = 'problem_id')
                     problem_id.value = "<?php if (isset($id)) echo $id?>";
