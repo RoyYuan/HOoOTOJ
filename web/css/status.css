@@ -1,0 +1,54 @@
+#center {
+    text-align: center;
+}
+
+input{
+    height:24px;
+}
+
+span.yes {
+    color: green;
+    font-weight: bolder;
+}
+
+span.no {
+    color: red;
+    font-weight: bolder;
+}
+
+.toprow {
+    background-color: #1A5CC8;
+    color: #FFFFFF;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.toprow a {
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.toprow a:hover {
+    color: orange;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.oddrow {
+    background-color: #E5ECF9;
+    white-space: nowrap;
+}
+
+.evenrow {
+    background-color: #FFFFFF;
+    white-space: nowrap;
+}
+
+#result_table{
+    text-align: center;
+}

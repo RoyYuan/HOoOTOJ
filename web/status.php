@@ -5,12 +5,28 @@
  * Date: 2018/4/14
  * Time: 15:34
  */
+function is_running($cid){
+    $mysqli=$GLOBALS['mysqli'];
+    $now=strftime("%Y-%m-%d %H:%M",time());
+    $sql="SELECT count(*) FROM `contest` WHERE `contest_id`='$cid' AND `end_time`>'$now'";
+    $result=mysqli_query($mysqli,$sql);
+    $row=mysqli_fetch_array($result);
+    $cnt=intval($row[0]);
+    mysqli_free_result($result);
+    return $cnt>0;
+}
+
+$judge_color=Array("btn gray","btn btn-info","btn btn-warning","btn btn-warning","btn btn-success","btn btn-danger","btn btn-danger","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-info");
+
+
 $cache_time=2;
 $OJ_CACHE_SHARE=false;
 require_once ("include/db_info.php");
 require_once ("include/do_cache.php");
+require_once ("include/const.php");
 $view_title="STATUS";
 
+$str="";
 $lock=false;
 $lock_time=date("Y-m-d H:i:s",time());
 $sql="SELECT * FROM `submissions` WHERE problem_id>0 ";
@@ -164,7 +180,65 @@ for ($i=0;$i<$rows_cnt;$i++){
         $view_status[$i][3].= "<a href='reinfo.php?sid=".$row['solution_id']."' class='".$judge_color[$row['result']]."' title='点击查看详情'>".$judge_result[$row['result']]."</a>";
     }
     else{
-
+        if (!$lock || $lock_time>$row['submit_time'] || $row['user_id']==$_SESSION['user_id']) {
+            $view_status[$i][3].= "<span class='";
+            $view_status[$i][3].=$judge_color[$row['result']];
+            $view_status[$i][3].="'>";
+            $view_status[$i][3].=$judge_result[$row['result']];
+            $view_status[$i][3].="</span>";
+        }
+        else{
+            echo "<td>----";
+        }
     }
+    if (isset($_SESSION['http_judge'])){
+        $view_status[$i][3].="<form class='http_judge_form form-inline'><input type='hidden' name='sid' value='".$row['submit_id']."'>";
+        $view_status[$i][3].="</form>";
+    }
+
+    //4-7
+    if ($flag){
+        //4&5
+        if ($row['result']>=4){
+            $view_status[$i][4]="<div id='center' class='red'>".$row['memory']."</div>";
+            $view_status[$i][5]="<div id='center' class='red'>".$row['time']."</div>";
+        }
+        else{
+            $view_status[$i][4]="---";
+            $view_status[$i][5]="---";
+        }
+        //6
+        if ( !(isset($_SESSION['user_id']) && strtolower($row['user_id'])==strtolower($_SESSION['user_id']) || isset($_SESSION['source_brower']))){
+            $view_status[$i][6]=$language_name[$row['language']];
+        }
+        else{
+            $view_status[$i][6]="<a target=_blank href=showsource.php?id=".$row['submit_id'].">".$language_name[$row['language']]."</a>";
+            if ($row['problem_id']>0){
+                if (isset($cid)){
+                    $view_status[$i][6].="/<a target=_self href=\"submitpage.php?cid=".$cid."&pid=".$row['num']."&sid=".$row['submit_id']."\">Edit</a>";
+                }
+                else{
+                    $view_status[$i][6].="/<a target=_self href=\"submitpage.php?id=".$row['problem_id']."&sid=".$row['submit_id']."\">Edit</a>";
+                }
+            }
+        }
+        //7
+        $view_status[$i][7]=$row['code_length']." B";
+    }
+    else{
+        for($j=4;$j<8;$j++)
+            $view_status[$i][$j]="----";
+    }
+
+    //8
+    $view_status[$i][8]=$row['submit_time'];
 }
+
+if ($result)
+    mysqli_free_result($result);
+
+if (isset($_GET['cid']))
+    require ("template/contest_status_t.php");
+else
+    require ("template/status_t.php");
 ?>
