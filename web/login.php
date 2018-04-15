@@ -2,7 +2,7 @@
 function check_login($username, $password)
 {
     require_once("include/db_info.php");
-    //$mysqli=$GLOBALS['mysqli'];
+    $mysqli=$GLOBALS['mysqli'];
 
     //去除斜杠
     if (get_magic_quotes_gpc()) {

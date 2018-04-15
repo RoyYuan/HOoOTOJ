@@ -1,4 +1,38 @@
 #logo {
+    position: static;
     border-radius: 50px;
     vertical-align: middle;
+}
+
+#head {
+    height: 53px;
+    position: static;
+    text-align: center;
+    visibility: visible;
+    width: 100%;
+    z-index: 1;
+}
+
+#menu {
+    //background: url("../image/menu_bg.png") repeat scroll 0 0 transparent;
+    font-weight: bold;
+    height: 35px;
+    position: static;
+    text-align: center;
+    visibility: visible;
+    width: 100%;
+    z-index: 2;
+}
+
+
+#profile {
+    font-weight: bold;
+    height: 32px;
+    left: 0;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    visibility: visible;
+    width: 100%;
+    z-index: 3;
 }

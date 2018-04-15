@@ -9,7 +9,9 @@
 
 <body>
 <?php
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
 $username = $password = $vcode = "";
 $username_error = $password_error = $vcode_error = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
