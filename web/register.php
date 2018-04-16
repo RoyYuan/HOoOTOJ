@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * @param $username
  * @param $password
@@ -7,7 +7,6 @@
  */
 function register($username, $password, $question, $answer){
     require_once("include/db_info.php");
-    require_once("include/functions.php");
     //$mysqli=$GLOBALS['mysqli'];
     
     //验证用户名是否被使用过

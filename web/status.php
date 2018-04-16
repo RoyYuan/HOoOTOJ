@@ -216,7 +216,7 @@ for ($i=0;$i<$rows_cnt;$i++){
             $view_status[$i][6]=$language_name[$row['language']];
         }
         else{
-            $view_status[$i][6]="<a target=_blank href=showsource.php?id=".$row['submit_id'].">".$language_name[$row['language']]."</a>";
+            $view_status[$i][6]="<a target=_blank href=show_sourcecode.php?id=".$row['submit_id'].">".$language_name[$row['language']]."</a>";
         }
         //7
         $view_status[$i][7]=$row['code_length']." B";

@@ -8,7 +8,7 @@ static $DB_PASSWORD="";
 
 //OJ设置
 static $OJ_DATA="/home/judge/data";
-static $OJ_NAME="HOoOTOJ";
+static $OJ_NAME="hoootoj";
 
 //初始化db设置
 global $mysqli;
