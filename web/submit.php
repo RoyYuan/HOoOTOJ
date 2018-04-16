@@ -92,12 +92,12 @@ $store_id=0;
 if (isset($_SESSION['store_id']))
     $store_id=$_SESSION['store_id'];
 if (!isset($pid)){
-    $sql="INSERT INTO submissions(problem_id,user_id,language,code_length)
-    VALUES ('$id','$user_id',0,'$len')";
+    $sql="INSERT INTO submissions(problem_id,user_id,language,code_length,submit_time)
+    VALUES ('$id','$user_id',0,'$len','$now')";
 }
 else{
-    $sql="INSERT INTO submissions(problem_id,user_id,language,code_length,contest_id,contest_num)
-    VALUES ('$id','$user_id',0,'$len','$cid','$pid')";
+    $sql="INSERT INTO submissions(problem_id,user_id,language,code_length,contest_id,contest_num,submit_time)
+    VALUES ('$id','$user_id',0,'$len','$cid','$pid','$now')";
 }
 mysqli_query($mysqli,$sql);
 $flag=mysqli_affected_rows($mysqli);

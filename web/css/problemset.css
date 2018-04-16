@@ -9,15 +9,18 @@ h3{
 .oddrow {
     background-color: #E5ECF9;
     white-space: nowrap;
+    font-family: 宋体;
 }
 
 .evenrow {
     background-color: #FFFFFF;
     white-space: nowrap;
+    font-family: 宋体;
 }
 
 input{
-    height: 24px;
+    height: 20px;
+    font-family: 宋体;
 }
 
 .toprow {
@@ -25,21 +28,22 @@ input{
     color: #FFFFFF;
     font-weight: bold;
     white-space: nowrap;
+    font-family: 宋体;
     /*background: url("image/menu_bg.png");*/
 }
 
 .toprow a {
     color: #FFFFFF;
-    font-family: Arial;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     margin: 15px;
+    font-family: 宋体;
 }
 
 .toprow a:hover {
     color: orange;
-    font-family: Arial;
-    font-size: 18px;
+    font-family: 宋体;
+    font-size: 20px;
     font-weight: bold;
     margin: 15px;
 }

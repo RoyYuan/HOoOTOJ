@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Problemset</title>
-    <link rel=stylesheet href="css/problemset.css" type='text/css'>
+    <link rel="stylesheet" href="css/problemset.css" type='text/css'>
 </head>
 <body>
     <div id="C1">
@@ -32,15 +32,14 @@
             <center>
                 <table>
                     <tr align="center" class="evenrow">
-                        <td width="5"></td>
-                        <td width="50%">
+                        <td width="40%">
                             <form action="problem.php">
                                 Problem ID：
                                 <input type="text" name="id" size="5">
                                 <button type="submit">搜索</button>
                             </form>
                         </td>
-                        <td width="50%">
+                        <td width="40%">
                             <form>
                                 Problem Title:
                                 <input type="text" name="search">

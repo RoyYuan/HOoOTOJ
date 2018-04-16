@@ -55,6 +55,7 @@ if (isset($_GET['cid'])){
         $lock=false;
 }
 else{
+    //获取非竞赛的status
     if (isset($_SESSION['administrator']) || (isset($_SESSION['user_id']) && isset($_GET['user_id']) && $_GET['user_id'] && $_GET['user_id']==$_SESSION['user_id'])){
         $sql="SELECT * FROM `submissions` WHERE contest_id is null";
     }
@@ -66,11 +67,13 @@ $start_first=true;
 $order_str=" ORDER BY `submit_id` DESC";
 
 if (isset($_GET['top'])){
+    //按页获取
     $top=strval(intval($_GET['top']));
     if ($top!=-1)
         $sql=$sql."AND `submit_id`<='".$top."' ";
 }
 
+//按problem_id搜索
 $problem_id="";
 if (isset($_GET['problem_id']) && $_GET['problem_id']!=""){
     if (isset($_GET['cid'])){
@@ -82,7 +85,7 @@ if (isset($_GET['problem_id']) && $_GET['problem_id']!=""){
     else{
         $problem_id=strval(intval($_GET['problem_id']));
         if ($problem_id!='0'){
-            $sql.="AND `problem_id`='".$problem_id."' ";
+            $sql.=" AND `problem_id`='".$problem_id."' ";
             $str.="&problem_id=".$problem_id;
         }
         else
@@ -90,16 +93,17 @@ if (isset($_GET['problem_id']) && $_GET['problem_id']!=""){
     }
 }
 
-
+//按用户id搜索
 $user_id="";
 if (isset($_GET['user_id']) && $_GET['user_id']!=""){
     $user_id=trim($_GET['user_id']);
-    $sql=$sql."AND `user_id`='".$user_id."' ";
+    $sql=$sql." AND `user_id`='".$user_id."' ";
     if ($str!="")
         $str.="&";
     $str.="user_id=".$user_id;
 }
 
+//按result搜索
 if (isset($_GET['judge_result']))
     $result=intval($_GET['judge_result']);
 else
@@ -108,8 +112,8 @@ else
 if ($result>12 || $result<0)
     $result=-1;
 if ($result!=-1 && !$lock){
-    $sql.="AND `result`='".strval($result)."' ";
-    $str=$str."&judge_result=".$result;
+    $sql.=" AND `result`='".strval($result)."' ";
+    $str.="&judge_result=".$result;
 }
 
 
@@ -213,14 +217,6 @@ for ($i=0;$i<$rows_cnt;$i++){
         }
         else{
             $view_status[$i][6]="<a target=_blank href=showsource.php?id=".$row['submit_id'].">".$language_name[$row['language']]."</a>";
-            if ($row['problem_id']>0){
-                if (isset($cid)){
-                    $view_status[$i][6].="/<a target=_self href=\"submitpage.php?cid=".$cid."&pid=".$row['num']."&sid=".$row['submit_id']."\">Edit</a>";
-                }
-                else{
-                    $view_status[$i][6].="/<a target=_self href=\"submitpage.php?id=".$row['problem_id']."&sid=".$row['submit_id']."\">Edit</a>";
-                }
-            }
         }
         //7
         $view_status[$i][7]=$row['code_length']." B";

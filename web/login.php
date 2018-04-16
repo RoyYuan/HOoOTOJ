@@ -31,13 +31,15 @@ function check_login($username, $password)
         //从数据库获取用户权限
         $sql = "SELECT `groups` FROM `groups` WHERE `user_id`='" . mysqli_real_escape_string($mysqli, $user_id) . "'";
         $result = mysqli_query($mysqli, $sql);
-        $_SESSION[$row['groups']] = true;
+        $row=mysqli_fetch_array($result);
+        if (mysqli_num_rows($result))
+            $_SESSION['groups'.$row['groups']] = true;
 
         //将已经登陆的用户写入session
         $_SESSION['user_id'] = $user_id;
 
         //进入主页面
-        echo "<script language='javascript'>\n";
+        echo "<script language='javascript'>alert('登陆成功!\\n');";
         echo "window.location.href='index.php';\n";
         echo "</script>";
     } else {

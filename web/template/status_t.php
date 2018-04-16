@@ -9,6 +9,7 @@
 <div id="C1">
     <?php require_once ("header.php"); ?>
     <div id="main">
+        <br/>
         <div id="center" class="input-append">
             <form id="simform" action="status.php" method="get">
                 Problem ID:<input class="input-mini" style="height: 24px;" type="text" size="4" name="problem_id" value="<?php echo htmlentities($problem_id,ENT_QUOTES,'UTF-8')?>">
@@ -63,7 +64,7 @@
                 <input type="submit" class="input" value="搜索">
             </form>
 
-            <table id="result_table" class="table table-striped content-box-header" align="center" width="80%">
+            <table id="result_table" class="table table-striped content-box-header" align="center" width="90%">
                 <thead>
                 <tr class="success toprow">
                     <th>Run ID
@@ -98,12 +99,12 @@
             </table>
 
             <?php
-            echo "[<a href='status.php?".$str."'>Top</a>]&nbsp;&nbsp;";
+            echo "[<a href='status.php?".$str."'>最前页</a>]&nbsp;&nbsp;";
             if (isset($_GET['prevtop']))
-                echo "[<a href='status.php?".$str."&top=".intval($_GET['pretop'])."'>Previous Page</a>]&nbsp;&nbsp;";
+                echo "[<a href='status.php?".$str."&top=".intval($_GET['prevtop'])."'>上一页</a>]&nbsp;&nbsp;";
             else
-                echo "[<a href='status.php?".$str."&top=".($top+20)."'>Previous Page</a>]&nbsp;&nbsp;";
-            echo "[<a href='status.php?".$str."&top=".$bottom."&prevtop=".$top."'>Next Page</a>]";
+                echo "[<a href='status.php?".$str."&top=".($top+20)."'>上一页</a>]&nbsp;&nbsp;";
+            echo "[<a href='status.php?".$str."&top=".$bottom."&prevtop=".$top."'>下一页</a>]";
             ?>
         </div>
 

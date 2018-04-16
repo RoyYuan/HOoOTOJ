@@ -1,9 +1,9 @@
-#center {
-    text-align: center;
+body{
+    font-size: 20px;
 }
 
 input{
-    height:24px;
+    height:20px;
 }
 
 span.yes {
@@ -26,7 +26,7 @@ span.no {
 .toprow a {
     color: #FFFFFF;
     font-family: Arial;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     margin: 15px;
 }
@@ -34,7 +34,7 @@ span.no {
 .toprow a:hover {
     color: orange;
     font-family: Arial;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     margin: 15px;
 }
@@ -51,4 +51,9 @@ span.no {
 
 #result_table{
     text-align: center;
+}
+
+#center{
+    text-align: center;
+    font-family: 宋体;
 }
