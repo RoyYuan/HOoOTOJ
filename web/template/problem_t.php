@@ -46,7 +46,7 @@
             echo "[<a href='submitpage.php?id=$id'>Submit</a>]";
         }
         else{
-            echo "[<a href='submitpage.php?cid=$cid&$pid=$pid'>Submit</a>]";
+            echo "[<a href='submitpage.php?cid=$cid&pid=$pid'>Submit</a>]";
         }
 
         echo "</center><div style='width:80%;margin-right: auto; margin-left: auto; '>";

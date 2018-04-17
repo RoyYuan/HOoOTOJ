@@ -6,9 +6,11 @@
  * Time: 12:21
  */
 require_once ('include/db_info.php');
+require_once ('include/const.php');
+require_once ('include/do_cache.php');
 $now=strftime("%Y-%m-%d %H:%M",time());
 if (isset($_GET['cid']))
-    $ucid="$cid=".intval($_GET['cid']);
+    $ucid="&cid=".intval($_GET['cid']);
 else
     $ucid="";
 $pr_flag=false;
@@ -57,7 +59,7 @@ elseif (isset($_GET['cid']) && isset($_GET['pid'])){
     }
     else{
         //从题库中找到该cid与对应pid的题
-        $sql="SELECT * FROM `problem`"
+        $sql="SELECT * FROM `problems`"
             ."WHERE `hide`=0 AND `problem_id`=(
             SELECT `problem_id` FROM `contest_problem` WHERE `contest_id`=$cid AND `num`=$pid
             )";

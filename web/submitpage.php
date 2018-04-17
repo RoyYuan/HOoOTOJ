@@ -16,5 +16,9 @@ if (!isset($_GET['id']) && (!isset($_GET['cid']) || !isset($_GET['pid']))){
     require ("template/show_error_t.php");
     exit(0);
 }
+if (isset($_GET['cid']))
+    $cid=intval($_GET['cid']);
+if (isset($_GET['pid']))
+    $pid=intval($_GET['pid']);
 require_once ("template/submitpage_t.php");
 ?>

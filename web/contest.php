@@ -5,6 +5,26 @@
  * Date: 2018/4/17
  * Time: 13:20
  */
+function check_ac($cid,$pid){
+    require_once ("include/db_info.php");
+    $mysqli=$GLOBALS['mysqli'];
+    $sql="SELECT COUNT(*) FROM `submissions` WHERE `contest_id`='$cid' AND `contest_num`='$pid' AND `result`='4' AND `user_id`='".$_SESSION['user_id']."'";
+    $result=mysqli_query($mysqli,$sql);
+    $row=mysqli_fetch_array($result);
+    $ac=intval($row[0]);
+    mysqli_free_result($result);
+    if ($ac>0)
+        return "<font color=green>Y</font>";
+    $sql="SELECT count(*) FROM `submissions` WHERE `contest_id`='$cid' AND `contest_num`='$pid' AND `user_id`='".$_SESSION['user_id']."'";
+    $result=mysqli_query($mysqli,$sql);
+    $row=mysqli_fetch_array($result);
+    $sub=intval($row[0]);
+    mysqli_free_result($result);
+    if ($sub>0)
+        return "<font color=red>N</font>";
+    else
+        return "";
+}
 
 $OJ_CACHE_SHARE=!isset($_GET['cid']);
 require_once ("include/db_info.php");
@@ -29,7 +49,7 @@ function formatTimeLength($length){
 
 if (isset($_GET['cid'])){
     $cid=intval($_GET['cid']);
-    $view_cid=$cid;
+    $contest_cid=$cid;
 
     $sql="SELECT * FROM `contest` WHERE `contest_id`='$cid' ";
     $result=mysqli_query($mysqli,$sql);
@@ -72,8 +92,8 @@ if (isset($_GET['cid'])){
         require ("template/show_error_t.php");
         exit(0);
     }
-    $sql="SELECT * FROM (SELECT `problems`.`title` AS `title`,`problems`.`problem_id` AS `pid`,contest_problem.num AS pnum FROM `contest_problem`,`problem` WHERE `contest_problem`.`problem_id`=`problem`.`problem_id` AND `contest_problem`.`contest_id`=$cid ORDER BY `contest_problem`.`num`)
-problem LEFT JOIN (SELECT problem_id pid1,COUNT(1) accepted FROM submissions WHERE result=4 AND contest_id=$cid GROUP BY pid1)p1 ON problems.pid=p1.pid1
+    $sql="SELECT * FROM (SELECT problems.title AS title,problems.problem_id AS pid,contest_problem.num AS pnum FROM contest_problem,problems WHERE contest_problem.problem_id=problems.problem_id AND contest_problem.contest_id=$cid ORDER BY contest_problem.num)
+problems LEFT JOIN (SELECT problem_id pid1,COUNT(1) accepted FROM submissions WHERE result=4 AND contest_id=$cid GROUP BY pid1)p1 ON problems.pid=p1.pid1
 LEFT JOIN (SELECT problem_id pid2,COUNT(1) submit FROM submissions WHERE contest_id=$cid GROUP BY pid2)p2 ON problems.pid=p2.pid2
 ORDER BY pnum";
 
@@ -84,7 +104,7 @@ ORDER BY pnum";
         $contest_problemset[$cnt][0]="";
         if (isset($_SESSION['user_id']))
             $contest_problemset[$cnt][0]=check_ac($cid,$cnt);
-        $contest_problemset[$cnt][1]="$row->pid Problem $nbsp;".$PID[$cnt];
+        $contest_problemset[$cnt][1]="$row->pid Problem &nbsp;".$PID[$cnt];
         $contest_problemset[$cnt][2]="<a href='problem.php?cid=$cid&pid=".($cnt+1)."'>$row->title</a>";
         $contest_problemset[$cnt][3]=$row->accepted;
         $contest_problemset[$cnt][4]=$row->submit;

@@ -33,7 +33,7 @@ function check_login($username, $password)
         $result = mysqli_query($mysqli, $sql);
         $row=mysqli_fetch_array($result);
         if (mysqli_num_rows($result))
-            $_SESSION['groups'.$row['groups']] = true;
+            $_SESSION[$row['groups']] = true;
 
         //将已经登陆的用户写入session
         $_SESSION['user_id'] = $user_id;

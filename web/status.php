@@ -35,7 +35,7 @@ if (isset($_GET['cid'])){
     $cid=intval($_GET['cid']);
     $sql=$sql." AND `contest_id`='$cid' AND num>0";
     $str="&cid=$cid";
-    $sql_lock="SELECT `start_time`,`title`,`end_time` FROM `contest` WHERE `contest_id`='$cid'";
+    $sql_lock="SELECT `start_time`,`contest_title`,`end_time` FROM `contest` WHERE `contest_id`='$cid'";
     $result=mysqli_query($mysqli,$sql_lock) or die(mysqli_error($mysqli));
     $rows_cnt=mysqli_num_rows($result);
     $start_time=0;
