@@ -69,5 +69,8 @@
         </center>
     </div>
 </div>
+<div class="center">
+    <?php require_once ("footer.php"); ?>
+</div>
 </body>
 </html>

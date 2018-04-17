@@ -21,3 +21,8 @@ input {
     font-size: 20px;
     border-radius: 10px;
 }
+
+.center{
+    text-align: center;
+    font-family: 宋体;
+}

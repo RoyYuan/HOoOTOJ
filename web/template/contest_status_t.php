@@ -108,6 +108,9 @@
         </div>
     </div>
 </div>
+<div class="center">
+    <?php require_once ("footer.php"); ?>
+</div>
 
 <script>
     var i=0;

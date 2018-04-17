@@ -11,5 +11,8 @@
         <?php echo $view_errors?>
     </div>
 </div>
+<div class="center">
+    <?php require_once ("footer.php"); ?>
+</div>
 </body>
 </html>

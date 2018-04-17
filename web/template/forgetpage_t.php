@@ -106,5 +106,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
             </div>
         </div>
 </body>
-
+<div class="center">
+    <?php require_once ("footer.php"); ?>
+</div>
 </html>
