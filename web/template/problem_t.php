@@ -29,7 +29,7 @@
             echo "<center><h2>$id: $row->title</h2>";
         }
         else{
-            $PID="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            $PID="0ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             echo "<title>题目 $PID[$pid]: $row->title </title>";
             echo "<center><h2>题目 $PID[$pid]: $row->title</h2>";
             $id=$row->problem_id;

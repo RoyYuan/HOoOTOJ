@@ -103,7 +103,7 @@ ORDER BY pnum";
     while($row=mysqli_fetch_object($result)){
         $contest_problemset[$cnt][0]="";
         if (isset($_SESSION['user_id']))
-            $contest_problemset[$cnt][0]=check_ac($cid,$cnt);
+            $contest_problemset[$cnt][0]=check_ac($cid,$cnt+1);
         $contest_problemset[$cnt][1]="$row->pid Problem &nbsp;".$PID[$cnt];
         $contest_problemset[$cnt][2]="<a href='problem.php?cid=$cid&pid=".($cnt+1)."'>$row->title</a>";
         $contest_problemset[$cnt][3]=$row->accepted;
@@ -129,7 +129,7 @@ else{
     $wheremy="";
     if (isset($_GET['my']))
         $wheremy=" AND contest_id in ($mycontests)";
-    $sql="SELECT * FROM contest WHERE hide=0 $wheremy ORDER BY contest_id DESC limit 1";
+    $sql="SELECT * FROM contest WHERE hide=0 $wheremy ORDER BY contest_id DESC";
     //$sql="SELECT * FROM contest LEFT JOIN(SELECT * FROM groups WHERE groups.groups like 'm%')p ON concat('m',contest_id)=groups WHERE contest.hide=0 AND contest.title like '%keyword%' $wheremy ORDER BY contest_id DESC limit 1;";
 
     $result=mysqli_query($mysqli,$sql);

@@ -68,6 +68,9 @@ elseif (isset($_POST['pid']) && isset($_POST['cid']) && $_POST['cid']!=0){
         mysqli_free_result($result);
     }
 }
+else{
+    $id=0;
+}
 
 $source_code=$_POST['source_code'];
 if (get_magic_quotes_gpc()){

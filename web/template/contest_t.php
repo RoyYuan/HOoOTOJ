@@ -18,6 +18,7 @@
                 End Time:<font color="#993399"><?php echo $contest_end_time ?></font>
                 Current Time:<font color="#993399"><span id="nowdate"><?php echo date("Y-m-d H:i:s")?></span></font>
                 Status:<?php
+                $now=time();
                 if ($now>$end_time)
                     echo "<span class='red'>Ended</span>";
                 elseif ($now<$start_time)
@@ -27,7 +28,7 @@
                 ?>
                 <br/>
                 [<a href="status.php?cid=<?php echo $contest_cid?>">Status</a>]
-                [<a href="contestrank.php?cid=<?php echo $contest_cid?>">Standing</a>]
+                [<a href="contest_rank.php?cid=<?php echo $contest_cid?>">Standing</a>]
             </div>
             <table id="problemset" width="90%">
                 <thead>

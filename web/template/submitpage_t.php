@@ -30,7 +30,7 @@
 
                 <textarea style="width: 80%;" cols="180" rows="20" id="source_code" name="source_code"></textarea><br>
 
-                <input id="go_submit" type="button" value="提交" onclick=do_submit()>
+                <input id="go_submit" type="button" value="提交" onclick=do_submit();>
                 <input type="reset" value="重置">
             </form>
         </center>
@@ -38,7 +38,7 @@
             function do_submit() {
                 var mark = "<?php echo isset($id)? 'problem_id':'cid';?>";
                 var problem_id = document.getElementById(mark);
-                if (mark = 'problem_id')
+                if (mark=='problem_id')
                     problem_id.value = "<?php if (isset($id)) echo $id?>";
                 else
                     problem_id.value = "<?php if (isset($cid)) echo $cid?>";
