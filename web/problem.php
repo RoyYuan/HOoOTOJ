@@ -20,36 +20,70 @@ $co_flag=false;
 if (isset($_GET['id']))
 {
     $id=intval($_GET['id']);
-    if (!isset($_SESSION['administrator']) && $id!=1000 && !isset($_SESSION['contest_creator']))
-    {
-        $sql="SELECT * FROM `problems`".
-            " WHERE `problem_id`=$id AND `problems`.`hide`=0 AND `problem_id` NOT IN (
-            SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN(
-            SELECT `contest_id` FROM `contest` WHERE `end_time`>'$now' or `contest`.`hide`=1
-            )
-            )";
+    if (isset($_SESSION['groups']) && $_SESSION['groups']<=-4){
+        $sql="SELECT * FROM `problems` WHERE `problem_id`=$id AND `deleted`=0";
     }
-    else
-        $sql="SELECT * FROM `problems` WHERE `problem_id`=$id";
+    elseif (isset($_SESSION['groups']) && $_SESSION['groups']<=-1){
+        $sql="SELECT * FROM `problems` ".
+            "WHERE `problem_id`=$id AND `deleted`=0 AND `problem_id` NOT IN(
+            SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN (
+            SELECT `contest_id` FROM `contest` WHERE `end_time`>'$now' OR `contest`.`hide`=1 OR `contest`.`private`=1 ))";
+    }
+    else{
+        $sql="SELECT * FROM `problems` ".
+            "WHERE `problem_id`=$id AND `deleted`=0 AND `hide`=0 AND `problem_id` NOT IN(
+            SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN (
+            SELECT `contest_id` FROM `contest` WHERE `end_time`>'$now' OR `contest`.`hide`=1 OR `contest`.`private`=1 ))";
+    }
+
+
+//    if (!(isset($_SESSION['groups']) && $_SESSION['groups']<=-2) && $id!=0)
+//    {
+//        if(isset($_SESSION['groups']) && $_SESSION['groups']==-1){
+//            $sql="SELECT * FROM `problems`".
+//                " WHERE `problem_id`=$id AND `deleted`=0 AND `problem_id` NOT IN (
+//            SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN(
+//            SELECT `contest_id` FROM `contest` WHERE `end_time`>'$now' or `contest`.`hide`=1
+//            )
+//            )";
+//        }
+//        else{
+//            $sql="SELECT * FROM `problems`".
+//                " WHERE `problem_id`=$id AND `problems`.`hide`=0 AND `deleted`=0 AND `problem_id` NOT IN (
+//            SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN(
+//            SELECT `contest_id` FROM `contest` WHERE `end_time`>'$now' or `contest`.`hide`=1
+//            )
+//            )";
+//        }
+//    }
+//    else
+//        $sql="SELECT * FROM `problems` WHERE `problem_id`=$id AND `deleted`=0";
     $pr_flag=true;
 }
 //contest_id & problem_id
 elseif (isset($_GET['cid']) && isset($_GET['pid'])){
     $cid=intval($_GET['cid']);
     $pid=intval($_GET['pid']);
-    //根据权限决定sql
-    if(!isset($_SESSION['administrator']))
-        $sql="SELECT `hide` FROM `contest` WHERE `hide`=0 AND `contest_id`=$cid AND `start_time`<='$now'";
+    //根据权限决定sql G4-5可以看到hide的contest
+    if (isset($_SESSION['groups']) && $_SESSION['groups']<=-4)
+        $sql="SELECT `private` FROM `contest` WHERE `contest_id`=$cid";
     else
-        $sql="SELECT `hide` FROM `contest` WHERE `contest_id`=$cid";
+        $sql="SELECT `private` FROM `contest` WHERE `hide`=0 AND `contest_id`=$cid AND `start_time`<=$now";
+//    if(!(isset($_SESSION['groups']) && $_SESSION['groups']<=-4))
+//        $sql="SELECT `hide` FROM `contest` WHERE `hide`=0 AND `contest_id`=$cid AND `start_time`<='$now'";
+//    else
+//        $sql="SELECT `hide` FROM `contest` WHERE `contest_id`=$cid";
     $result=mysqli_query($mysqli,$sql);
     $rows_cnt=mysqli_num_rows($result);
     $row=mysqli_fetch_row($result);
     $contest_ok=true;
+
+    //private
     if ($row[0] && !isset($_SESSION['c'.$cid]))
         $contest_ok=false;
-    if (isset($_SESSION['administrator']))
+    if (isset($_SESSION['groups']) && $_SESSION['groups']<=-4)
         $contest_ok=true;
+
     $ok_cnt=$rows_cnt=1;
     mysqli_free_result($result);
     if($ok_cnt!=1){
@@ -60,11 +94,11 @@ elseif (isset($_GET['cid']) && isset($_GET['pid'])){
     else{
         //从题库中找到该cid与对应pid的题
         $sql="SELECT * FROM `problems`"
-            ."WHERE `hide`=0 AND `problem_id`=(
+            ."WHERE `deleted`=0 AND `problem_id`=(
             SELECT `problem_id` FROM `contest_problem` WHERE `contest_id`=$cid AND `num`=$pid
             )";
     }
-
+    //private
     if (!$contest_ok){
         $view_errors="不是参赛成员！";
         require ("template/show_error_t.php");
@@ -109,5 +143,4 @@ else{
 }
 mysqli_free_result($result);
 require ("template/problem_t.php");
-
 ?>

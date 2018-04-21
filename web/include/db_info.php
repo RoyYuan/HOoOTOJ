@@ -2,7 +2,7 @@
 
 //连接数据库
 static $DB_HOST="localhost";
-static $DB_NAME="HOoOTOJ";
+static $DB_NAME="HOoOTOJ1";
 static $DB_USER="root";
 static $DB_PASSWORD="";
 

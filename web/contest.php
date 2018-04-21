@@ -26,12 +26,6 @@ function check_ac($cid,$pid){
         return "";
 }
 
-$OJ_CACHE_SHARE=!isset($_GET['cid']);
-require_once ("include/db_info.php");
-require_once ("include/do_cache.php");
-require_once ("include/const.php");
-
-$view_title="竞赛";
 function formatTimeLength($length){
     $hour=0;
     $minute=0;
@@ -46,8 +40,15 @@ function formatTimeLength($length){
     return $result;
 }
 
+$OJ_CACHE_SHARE=!isset($_GET['cid']);
+require_once ("include/db_info.php");
+require_once ("include/do_cache.php");
+require_once ("include/const.php");
+
+$view_title="竞赛";
 
 if (isset($_GET['cid'])){
+    //进入cid的竞赛页面
     $cid=intval($_GET['cid']);
     $contest_cid=$cid;
 
@@ -63,13 +64,22 @@ if (isset($_GET['cid'])){
 
     if ($rows_cnt==0){
         mysqli_free_result($result);
-        $view_title="比赛已经关闭！";
+        $view_errors="<h2>不存在该竞赛！</h2>";
+        require ("template/show_error_t.php");
+        exit(0);
     }
     else{
         $row=mysqli_fetch_object($result);
-        if ($row->hide=='1')
+
+        //private contest
+        if ($row->private=='1' && !isset($_SESSION['c'.$cid]))
             $contest_ok=false;
-        if (isset($_SESSION['administrator']))
+        if ($password!="" && $password==$row->contest_key)//验证private邀请密码
+            $_SESSION['c'.$cid]=true;
+        if ($row->hide==1)
+            $contest_ok=false;
+        //G4-5可以直接浏览private contest
+        if (isset($_SESSION['groups']) && $_SESSION['groups']<=-4)
             $contest_ok=true;
 
         $now=time();
@@ -80,15 +90,15 @@ if (isset($_GET['cid'])){
         $contest_start_time=$row->start_time;
         $contest_end_time=$row->end_time;
 
-        if (!isset($_SESSION['administrator']) && $now<$start_time){
-            $view_errors="<h2>暂时不可浏览具体信息！</h2>";
+        if ((!isset($_SESSION['groups']) || (isset($_SESSION['groups']) && $_SESSION['groups']>-2)) && $now<$start_time){
+            $view_errors="<h2>比赛尚未开始，还不能浏览详细信息！</h2>";
             require ("template/show_error_t.php");
             exit(0);
         }
     }
     if (!$contest_ok){
-        $view_errors="<h2>暂时不可浏览具体信息！<br/><a href='contestrank.php?cid=$cid'>排名</a></h2>";
-        $view_errors.="<form method=post action='contest.php?cid=$cid'>竞赛密码：<input class='input-mini' type='password'><input class='btn' type='submit'></form>";
+        $view_errors="<h2>比赛需要验证后进行！<br/><a href='contest_rank.php?cid=$cid'>排名</a></h2>";
+        $view_errors.="<form method=post action='contest.php?cid=$cid'>竞赛密码：<input class='input-mini' type='password' name='password'><input class='btn' type='submit'></form>";
         require ("template/show_error_t.php");
         exit(0);
     }
@@ -114,10 +124,15 @@ ORDER BY pnum";
     mysqli_free_result($result);
 }
 else{
+    //显示contestset
+
+
     $keyword="";
     if (isset($_POST['keyword'])){
         $keyword=mysqli_real_escape_string($mysqli,$_POST['keyword']);
     }
+
+    //此帐号有权限的contests
     $mycontests="";
     foreach ($_SESSION as $key=>$value){
         if ($key[0]=='c' && intval(substr($key,1))>0){
@@ -126,12 +141,13 @@ else{
     }
     if (strlen($mycontests)>0)
         $mycontests=substr($mycontests,1);
+
+    //
     $wheremy="";
     if (isset($_GET['my']))
         $wheremy=" AND contest_id in ($mycontests)";
-    $sql="SELECT * FROM contest WHERE hide=0 $wheremy ORDER BY contest_id DESC";
-    //$sql="SELECT * FROM contest LEFT JOIN(SELECT * FROM groups WHERE groups.groups like 'm%')p ON concat('m',contest_id)=groups WHERE contest.hide=0 AND contest.title like '%keyword%' $wheremy ORDER BY contest_id DESC limit 1;";
-
+//    $sql="SELECT * FROM contest WHERE hide=0 $wheremy ORDER BY contest_id DESC";
+    $sql="select *  from contest left join (select * from groups where groups>0) p on contest_id=groups where hide=0 and contest_title like '%$keyword%' $wheremy  order by contest_id desc;";
     $result=mysqli_query($mysqli,$sql);
     $contest_list=Array();
     $i=0;

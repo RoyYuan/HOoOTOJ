@@ -1,5 +1,11 @@
 @import url(../bootstrap/css/bootstrap.css);
+#center{
+    text-align: center;
+    font-family: 宋体;
+}
+
 .center{
     text-align: center;
     font-family: 宋体;
 }
+

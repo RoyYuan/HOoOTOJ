@@ -7,7 +7,7 @@
  */
 require_once ('include/db_info.php');
 //problem_id别名upid
-$sql="SELECT max(`problem_id`) as upid FROM `problems`";
+$sql="SELECT MAX(`problem_id`) AS upid FROM `problems`";
 $page_cnt=100;
 $result=mysqli_query($mysqli,$sql);
 echo mysqli_error($mysqli);
@@ -22,6 +22,26 @@ $page_start=($page_cnt)*(intval($page)-1);
 $page_end=$page_start+$page_cnt;
 $sub_arr=Array();
 
+//submit
+if (isset($_SESSION['user_id'])){
+    $sql="SELECT `problem_id` FROM `submissions` WHERE `user_id`='".$_SESSION['user_id']."'".
+        "group by `problem_id`";
+    $result=@mysqli_query($mysqli,$sql) or die(mysqli_error($mysqli));
+    while ($row=mysqli_fetch_array($result))
+        $sub_arr[$row[0]]=true;
+}
+//AC
+$acc_arr=Array();
+if (isset($_SESSION['user_id'])){
+    $sql="SELECT `problem_id` FROM `submissions` WHERE `user_id`='".$_SESSION['user_id']."'".
+        "AND `result`=4".
+        " group by `problem_id`";
+    $result=@mysqli_query($mysqli,$sql) or die(mysqli_error());
+    while($row=mysqli_fetch_array($result))
+        $acc_arr[$row[0]]=true;
+}
+
+
 //按照提供的title或是id范围搜索
 if(isset($_GET['search']) && trim($_GET['search'])!=""){
     $search=mysqli_real_escape_string($mysqli,$_GET['search']);
@@ -32,17 +52,26 @@ else{
 }
 
 //按照权限显示题目，有的在contest里，有的是hide=1
-if(isset($_SESSION['administrator'])){
+if(isset($_SESSION['groups']) && $_SESSION['groups']<=-4){
     //若是管理员，不用在意是否hide或是在contest中
-    $sql="SELECT `problem_id`,`title`,`submit`,`accept` FROM `problems` WHERE $filter_sql";
+    $sql="SELECT `problem_id`,`title`,`submit`,`accept` FROM `problems` WHERE $filter_sql AND `deleted`=0";
+}
+else if(isset($_SESSION['groups']) && $_SESSION['groups']<0){
+    $now=strftime("%Y-%m-%d %H:%M",time());
+    $sql="SELECT `problem_id`,`title`,`submit`,`accept` FROM `problems`".
+        "WHERE $filter_sql AND `deleted`=0 AND `problem_id` NOT IN(
+        SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN(
+        SELECT `contest_id` FROM `contest` WHERE
+        (`end_time`>'$now' or `contest`.`private`=1) AND `hide`=0)
+        )";
 }
 else{
     $now=strftime("%Y-%m-%d %H:%M",time());
     $sql="SELECT `problem_id`,`title`,`submit`,`accept` FROM `problems`".
-        "WHERE `problems`.`hide`=0 AND $filter_sql AND `problem_id` NOT IN(
+        "WHERE `problems`.`hide`=0 AND $filter_sql AND `deleted`=0 AND `problem_id` NOT IN(
         SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN(
         SELECT `contest_id` FROM `contest` WHERE
-        (`end_time`>'$now' or `contest`.`hide`=1) AND `problems`.`hide`=0)
+        (`end_time`>'$now' or `contest`.`private`=1) AND `hide`=0)
         )";
 }
 $sql.=" ORDER BY `problem_id`";//按照题目id排序
@@ -55,6 +84,15 @@ $view_problemset=Array();
 $i=0;
 while($row=mysqli_fetch_object($result)){
     $view_problemset[$i]=Array();
+    //给AC的打Y，提交而未过的打N
+    if (isset($sub_arr[$row->problem_id])){
+        if (isset($acc_arr[$row->problem_id]))
+            $view_problemset[$i][0]="<div class='btn btn-success'>Y</div>";
+        else
+            $view_problemset[$i][0]="<div class='btn btn-danger'>N</div>";
+    }
+    else
+        $view_problemset[$i][0]="<div class=none></div>";
     $view_problemset[$i][1]="<div class='center'>".$row->problem_id."</div>";;
     $view_problemset[$i][2]="<div class='left'>&nbsp;<a href='problem.php?id=".$row->problem_id."'>".$row->title."</a></div>";;
     $view_problemset[$i][3]="<div class='center'>".$row->submit."</div>";;

@@ -56,7 +56,7 @@ if (isset($_GET['cid'])){
 }
 else{
     //获取非竞赛的status
-    if (isset($_SESSION['administrator']) || (isset($_SESSION['user_id']) && isset($_GET['user_id']) && $_GET['user_id'] && $_GET['user_id']==$_SESSION['user_id'])){
+    if ((isset($_SESSION['groups']) && $_SESSION['groups']<=-2) || (isset($_SESSION['user_id']) && isset($_GET['user_id']) && $_GET['user_id']==$_SESSION['user_id'])){
         $sql="SELECT * FROM `submissions` WHERE contest_id is null";
     }
     else{
@@ -93,14 +93,14 @@ if (isset($_GET['problem_id']) && $_GET['problem_id']!=""){
     }
 }
 
-//按用户id搜索
-$user_id="";
-if (isset($_GET['user_id']) && $_GET['user_id']!=""){
-    $user_id=trim($_GET['user_id']);
-    $sql=$sql." AND `user_id`='".$user_id."' ";
+//按用户名搜索
+$username="";
+if (isset($_GET['username']) && $_GET['username']!=""){
+    $username=trim($_GET['username']);
+    $sql=$sql." AND `username`='".$username."' ";
     if ($str!="")
         $str.="&";
-    $str.="user_id=".$user_id;
+    $str.="username=".$username;
 }
 
 //按result搜索
@@ -144,7 +144,7 @@ for ($i=0;$i<$rows_cnt;$i++){
     if ($top==-1)
         $top=$row['submit_id'];
     $bottom=$row['submit_id'];
-    $flag=(!is_running(intval($row['contest_id']))) || isset($_SESSION['administrator']) ||
+    $flag=(!is_running(intval($row['contest_id']))) || (isset($_SESSION['groups']) && $_SESSION['groups']<=-2) ||
         (isset($_SESSION['user_id']) && !strcmp($_row['user_id'],$_SESSION['user_id']));
 
     $cnt=1-$cnt;
@@ -157,7 +157,7 @@ for ($i=0;$i<$rows_cnt;$i++){
         $view_status[$i][1]="<a href='contest_rank.php?cid=".$row['contest_id']."&user_id=".$row['user_id']."#".$row['user_id']."'>".$row['user_id']."</a>";
     }
     else{
-        $view_status[$i][1]="<a href='userinfo.php?user=".$row['user_id']."'>".$row['user_id']."</a>";
+        $view_status[$i][1]="<a href='userinfo.php?user=".$row['user_id']."'>".$row['username']."</a>";
     }
 
     //2
@@ -177,10 +177,10 @@ for ($i=0;$i<$rows_cnt;$i++){
 
     //3
     $view_status[$i][3]="";
-    if (intval($row['result'])==11 && ((isset($_SESSION['user_id']) && $row['user_id']==$_SESSION['user_id']) || isset($_SESSION['source_brower']) ) ){
+    if (intval($row['result'])==11 && ((isset($_SESSION['user_id']) && $row['user_id']==$_SESSION['user_id']) || (isset($_SESSION['groups']) && $_SESSION['groups']<=-2) ) ){
         $view_status[$i][3].="<a href='ceinfo.php?sid=".$row['submit_id']."' class='".$judge_color[$row['result']]."' title='点击查看详情'>CE</a>";
     }
-    elseif ( (((intval($row['result'])==5 || intval($row['result'])==6) && $OJ_SHOW_DIFF) || $row['result']==10 || $row['result']==13) && ((isset($_SESSION['user_id']) && $row['user_id']==$_SESSION['user_id']) || isset($_SESSION['source_brower']))){
+    elseif ( (((intval($row['result'])==5 || intval($row['result'])==6) && $OJ_SHOW_DIFF) || $row['result']==10 || $row['result']==13) && ((isset($_SESSION['user_id']) && $row['user_id']==$_SESSION['user_id']) || (isset($_SESSION['groups']) && $_SESSION['groups']<=-2))){
         $view_status[$i][3].= "<a href='reinfo.php?sid=".$row['solution_id']."' class='".$judge_color[$row['result']]."' title='点击查看详情'>".$judge_result[$row['result']]."</a>";
     }
     else{
@@ -195,10 +195,10 @@ for ($i=0;$i<$rows_cnt;$i++){
             echo "<td>----";
         }
     }
-    if (isset($_SESSION['http_judge'])){
-        $view_status[$i][3].="<form class='http_judge_form form-inline'><input type='hidden' name='sid' value='".$row['submit_id']."'>";
-        $view_status[$i][3].="</form>";
-    }
+//    if (isset($_SESSION['http_judge'])){
+//        $view_status[$i][3].="<form class='http_judge_form form-inline'><input type='hidden' name='sid' value='".$row['submit_id']."'>";
+//        $view_status[$i][3].="</form>";
+//    }
 
     //4-7
     if ($flag){
@@ -212,7 +212,7 @@ for ($i=0;$i<$rows_cnt;$i++){
             $view_status[$i][5]="---";
         }
         //6
-        if ( !(isset($_SESSION['user_id']) && strtolower($row['user_id'])==strtolower($_SESSION['user_id']) || isset($_SESSION['source_brower']))){
+        if ( !(isset($_SESSION['user_id']) && strtolower($row['user_id'])==strtolower($_SESSION['user_id']) || (isset($_SESSION['groups']) && $_SESSION['groups']<=-2))){
             $view_status[$i][6]=$language_name[$row['language']];
         }
         else{

@@ -29,14 +29,17 @@ function check_login($username, $password)
         mysqli_free_result($result);
 
         //从数据库获取用户权限
-        $sql = "SELECT `groups` FROM `groups` WHERE `user_id`='" . mysqli_real_escape_string($mysqli, $user_id) . "'";
+        $sql = "SELECT `groups` FROM `groups` WHERE (`user_id`='" . mysqli_real_escape_string($mysqli, $user_id) . "' AND `groups`<=0)";
         $result = mysqli_query($mysqli, $sql);
         $row=mysqli_fetch_array($result);
         if (mysqli_num_rows($result))
-            $_SESSION[$row['groups']] = true;
+            $_SESSION['groups'] = $row['groups'];
+        else
+            $_SESSION['groups'] = 0;
 
         //将已经登陆的用户写入session
         $_SESSION['user_id'] = $user_id;
+        $_SESSION['username']=$username;
 
         //进入主页面
         echo "<script language='javascript'>alert('登陆成功!\\n');";

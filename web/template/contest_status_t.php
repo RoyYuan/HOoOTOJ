@@ -13,7 +13,7 @@
         <div id="center">
             <form id="simform" action="status.php" method="get">
                 Problem ID:<input class="input-mini" style="height: 24px;" type="text" size="4" name="problem_id" value="<?php echo htmlentities($problem_id,ENT_QUOTES,'UTF-8')?>">
-                用户:<input class="input-mini" style="height: 24px;" type="text" size="4" name="user_id" value="<?php echo htmlentities($user_id,ENT_QUOTES,'UTF-8')?>">
+                用户:<input class="input-mini" style="height: 24px;" type="text" size="4" name="user_id" value="<?php echo htmlentities($username,ENT_QUOTES,'UTF-8')?>">
                 <?php
                 if (isset($cid))
                     echo "<input type='hidden' name='cid' value='$cid'>";
@@ -64,18 +64,18 @@
 
                 <input type="submit" class="input" value="搜索">
             </form>
-            <table id="result_table" class="table table-striped content-box-header" align="center" width="80%">
+            <table id="result_table" align="center" width="90%">
                 <thead>
-                <tr class="success toprow">
-                    <th>Run ID
-                    <th>用户
-                    <th>Problem
-                    <th>结果
-                    <th>空间
-                    <th>时间
-                    <th>语言
-                    <th>代码长度
-                    <th>提交时间
+                <tr class="toprow">
+                    <th width="10%" style="text-align:center;">Run ID</th>
+                    <th  width="10%" style="text-align:center;">用户</th>
+                    <th width="10%" style="text-align:center;">Problem</th>
+                    <th width="10%" style="text-align:center;">结果</th>
+                    <th width="7.5%" style="text-align:center;">空间</th>
+                    <th width="7.5%" style="text-align:center;">时间</th>
+                    <th width="5%" style="text-align:center;">语言</th>
+                    <th width="5%" style="text-align:center;">代码长度</th>
+                    <th width="15%" style="text-align:center;">提交时间</th>
                 </tr>
                 </thead>
 

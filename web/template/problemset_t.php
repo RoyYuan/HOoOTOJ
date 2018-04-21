@@ -53,6 +53,7 @@
 
                     <thead>
                         <tr class="toprow">
+                            <th width="10"></th>
                             <th width="120"><A>题目id</A></th>
                             <th>Title</th>
                             <th class="pointer" width=60 >提交</th>

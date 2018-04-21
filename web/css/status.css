@@ -1,3 +1,4 @@
+@import url(../bootstrap/css/bootstrap.css);
 body{
     font-size: 20px;
 }
@@ -17,6 +18,7 @@ span.no {
 }
 
 .toprow {
+    width: 80%;
     background-color: #1A5CC8;
     color: #FFFFFF;
     font-weight: bold;
