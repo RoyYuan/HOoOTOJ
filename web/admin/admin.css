@@ -1,2 +1,63 @@
 @import url(../bootstrap/css/bootstrap.css);
+h3{
+    text-align: center;
+}
 
+.red{
+    color: red;
+}
+
+.oddrow {
+    background-color: #E5ECF9;
+    white-space: nowrap;
+    font-family: 宋体;
+}
+
+.evenrow {
+    background-color: #FFFFFF;
+    white-space: nowrap;
+    font-family: 宋体;
+}
+
+input{
+    height: 20px;
+    font-family: 宋体;
+}
+
+.toprow {
+    background-color: #1A5CC8;
+    color: #FFFFFF;
+    font-weight: bold;
+    white-space: nowrap;
+    font-family: 宋体;
+    /*background: url("image/menu_bg.png");*/
+}
+
+.toprow a {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+    font-family: 宋体;
+}
+
+.toprow a:hover {
+    color: orange;
+    font-family: 宋体;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.pointer{
+    cursor:pointer
+}
+
+.center{
+    text-align: center;
+    font-family: 宋体;
+}
+
+.left{
+    text-align: left;
+}

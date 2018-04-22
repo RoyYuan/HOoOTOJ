@@ -40,12 +40,14 @@ function register($username, $password, $question, $answer){
     $result=mysqli_query($mysqli,$sql);
     $row=mysqli_fetch_array($result);
     $user_id=$row['user_id'];
+    $_SESSION['username']=$username;
     $_SESSION['user_id']=$user_id;
     mysqli_free_result($result);
     
     //将当前用户加入groups表，默认权限组为0
     $sql="INSERT INTO `groups`("."`user_id`,`groups`)"."VALUES('".$user_id."',0)";
     $result=mysqli_query($mysqli,$sql);
+    $_SESSION['groups']=0;
     $_SESSION['0']=true;
     $_SESSION['ac']=Array();
     $_SESSION['sub']=Array();

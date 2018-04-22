@@ -7,7 +7,7 @@ static $DB_USER="root";
 static $DB_PASSWORD="";
 
 //OJ设置
-static $OJ_DATA="/home/judge/data";
+static $OJ_DATA="C:/Users/RoyYuan/Documents/HOoOTOJ/data";
 static $OJ_NAME="hoootoj";
 static $OJ_RANK_LOCK_PERCENT=0;
 
