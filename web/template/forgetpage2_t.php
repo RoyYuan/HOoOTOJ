@@ -9,7 +9,9 @@
 
 <body>
 <?php
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
 $password = $password2 = "";
 $password_error = $password2_error = "";
 //$vcode_error=$_SESSION["vcode"];

@@ -10,7 +10,9 @@
 
 <body>
 <?php
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
 $vcode = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $vcode = trim($_POST['vcode']);

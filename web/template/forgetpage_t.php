@@ -9,7 +9,9 @@
 
 <body>
     <?php
-    session_start();
+    if(!isset($_SESSION)){
+        session_start();
+    }
     $user_id=$question=$answer=$vcode="";
     $user_id_error=$answer_error=$vcode_error="";
     //$vcode_error=$_SESSION["vcode"];
