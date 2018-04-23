@@ -16,6 +16,7 @@ require_once ("include/db_info.php");
 
 $now=strftime("%Y-%m-%d %H:%M",time());
 $user_id=$_SESSION['user_id'];
+$username=$_SESSION['username'];
 if (isset($_POST['cid'])){
     $pid=intval($_POST['pid']);
     $cid=intval($_POST['cid']);
@@ -25,12 +26,13 @@ else{
     $id=intval($_POST['id']);
     $sql="SELECT `problem_id` FROM `problems` WHERE `problem_id`=$id AND `problem_id` NOT IN (SELECT DISTINCT problem_id FROM `contest_problem` WHERE `contest_id` IN (
 SELECT `contest_id` FROM `contest` WHERE (`end_time`>'$now' or `contest`.hide=1)))";
+    if (!isset($_SESSION['groups']) || (isset($_SESSION['groups']) && $_SESSION['groups']>=0))
     if (!isset($_SESSION['administrator']))
         $sql.="AND `problems`.`hide`=0";
 }
 
 $result=mysqli_query($mysqli,$sql);
-if ($result && mysqli_num_rows($result) <1 && !isset($_SESSION['administrator']) && !((isset($cid) && $cid<=0) || (isset($id)&&$id<=0))){
+if ($result && mysqli_num_rows($result) <1 && !isset($_SESSION['groups']) || (isset($_SESSION['groups']) && $_SESSION['groups']>=0) && !((isset($cid) && $cid<=0) || (isset($id)&&$id<=0))){
     mysqli_free_result($result);
     $view_errors="没有该题目<br>";
     require ("template/show_error_t.php");
@@ -95,13 +97,14 @@ $store_id=0;
 if (isset($_SESSION['store_id']))
     $store_id=$_SESSION['store_id'];
 if (!isset($pid)){
-    $sql="INSERT INTO submissions(problem_id,user_id,language,code_length,submit_time)
-    VALUES ('$id','$user_id',0,'$len','$now')";
+    $sql="INSERT INTO submissions(problem_id,user_id,username,language,code_length,submit_time)
+    VALUES ('$id','$user_id','$username',0,'$len','$now')";
 }
 else{
-    $sql="INSERT INTO submissions(problem_id,user_id,language,code_length,contest_id,contest_num,submit_time)
-    VALUES ('$id','$user_id',0,'$len','$cid','$pid','$now')";
+    $sql="INSERT INTO submissions(problem_id,user_id,username,language,code_length,contest_id,contest_num,submit_time)
+    VALUES ('$id','$user_id','$username',0,'$len','$cid','$pid','$now')";
 }
+echo $sql;
 mysqli_query($mysqli,$sql);
 $flag=mysqli_affected_rows($mysqli);
 if ($flag<1)
