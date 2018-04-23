@@ -24,7 +24,7 @@ function add_problem($title,$time_limit,$memory_limit,$description,$input,$outpu
 VALUES('$title','$description','$input','$output','$sample_input','$sample_output','$hint','$time_limit','$memory_limit','$owner',1,0,0,0)";
     @mysqli_query($mysqli,$sql) or die(mysqli_error($mysqli));
     $pid=mysqli_insert_id($mysqli);
-    echo "<br> Added $pid ";
+    echo "<br> Added Problem $pid ";
     return $pid;
 }
 function mk_data($pid,$filename,$input,$OJ_DATA){

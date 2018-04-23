@@ -65,14 +65,14 @@ elseif (isset($_GET['cid']) && isset($_GET['pid'])){
     $cid=intval($_GET['cid']);
     $pid=intval($_GET['pid']);
     //根据权限决定sql G4-5可以看到hide的contest
-    if (isset($_SESSION['groups']) && $_SESSION['groups']<=-4)
-        $sql="SELECT `private` FROM `contest` WHERE `contest_id`=$cid";
-    else
-        $sql="SELECT `private` FROM `contest` WHERE `hide`=0 AND `contest_id`=$cid AND `start_time`<=$now";
-//    if(!(isset($_SESSION['groups']) && $_SESSION['groups']<=-4))
-//        $sql="SELECT `hide` FROM `contest` WHERE `hide`=0 AND `contest_id`=$cid AND `start_time`<='$now'";
+//    if (isset($_SESSION['groups']) && $_SESSION['groups']<=-4)
+//        $sql="SELECT `private` FROM `contest` WHERE `contest_id`=$cid";
 //    else
-//        $sql="SELECT `hide` FROM `contest` WHERE `contest_id`=$cid";
+//        $sql="SELECT `private` FROM `contest` WHERE `hide`=0 AND `contest_id`=$cid AND `start_time`<=$now";
+    if(!(isset($_SESSION['groups']) && $_SESSION['groups']<=-4))
+        $sql="SELECT `hide` FROM `contest` WHERE `hide`=0 AND `contest_id`=$cid AND `start_time`<='$now'";
+    else
+        $sql="SELECT `hide` FROM `contest` WHERE `contest_id`=$cid";
     $result=mysqli_query($mysqli,$sql);
     $rows_cnt=mysqli_num_rows($result);
     $row=mysqli_fetch_row($result);
