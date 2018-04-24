@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd1b51fa-809b-4776-9fd7-2fef53deecc3" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/web/admin/problem_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/problem_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/header_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/header_t.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/header_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/header_t.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +26,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="problem_list.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="problem_list.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/admin/problem_list.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="590">
-                  <caret line="94" column="22" lean-forward="true" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
+                <state relative-caret-position="591">
+                  <caret line="94" column="22" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -72,17 +74,25 @@
           <file leaf-file-name="header_t.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/admin/header_t.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="627">
-                  <caret line="33" column="100" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="100" />
+                <state relative-caret-position="343">
+                  <caret line="35" column="240" selection-start-line="35" selection-start-column="240" selection-end-line="35" selection-end-column="240" />
+                  <folding>
+                    <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="header_t.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="header_t.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web/template/header_t.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="211">
-                  <caret line="28" column="83" selection-start-line="28" selection-start-column="83" selection-end-line="28" selection-end-column="83" />
+                <state relative-caret-position="665">
+                  <caret line="35" column="240" selection-start-line="35" selection-start-column="240" selection-end-line="35" selection-end-column="240" />
                   <folding>
                     <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
@@ -300,9 +310,9 @@
         <option value="$PROJECT_DIR$/web/admin/problem_status_change.php" />
         <option value="$PROJECT_DIR$/web/admin/contest_private_change.php" />
         <option value="$PROJECT_DIR$/web/admin/contest_status_change.php" />
+        <option value="$PROJECT_DIR$/web/admin/problem_list.php" />
         <option value="$PROJECT_DIR$/web/admin/header_t.php" />
         <option value="$PROJECT_DIR$/web/template/header_t.php" />
-        <option value="$PROJECT_DIR$/web/admin/problem_list.php" />
       </list>
     </option>
   </component>
@@ -312,7 +322,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="5" />
     <option name="y" value="30" />
     <option name="width" value="1080" />
@@ -323,7 +333,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -370,6 +379,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,16 +429,16 @@
       <workItem from="1524469130853" duration="3910000" />
       <workItem from="1524473223437" duration="1276000" />
       <workItem from="1524541260345" duration="16682000" />
-      <workItem from="1524563127547" duration="56000" />
+      <workItem from="1524563127547" duration="656000" />
+      <workItem from="1524573292875" duration="165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87676000" />
+    <option name="totallyTimeSpent" value="88441000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11230469" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -461,6 +471,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/admin/contest_pr_change.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/admin/contest_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1083">
@@ -657,9 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/footer_t.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/template/forgetpage2_t.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -793,17 +807,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/header_t.php">
+    <entry file="file://$PROJECT_DIR$/web/admin/problem_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="100" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="100" />
+        <state relative-caret-position="591">
+          <caret line="94" column="22" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/header_t.php">
+    <entry file="file://$PROJECT_DIR$/web/admin/header_t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="28" column="83" selection-start-line="28" selection-start-column="83" selection-end-line="28" selection-end-column="83" />
+        <state relative-caret-position="343">
+          <caret line="35" column="240" selection-start-line="35" selection-start-column="240" selection-end-line="35" selection-end-column="240" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
@@ -815,10 +829,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/problem_list.php">
+    <entry file="file://$PROJECT_DIR$/web/template/header_t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="94" column="22" lean-forward="true" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
+        <state relative-caret-position="665">
+          <caret line="35" column="240" selection-start-line="35" selection-start-column="240" selection-end-line="35" selection-end-column="240" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
