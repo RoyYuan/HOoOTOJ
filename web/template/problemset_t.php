@@ -4,6 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Problemset</title>
     <link rel="stylesheet" href="css/problemset.css" type='text/css'>
+    <style>
+
+        ::-webkit-scrollbar {display:none}
+
+    </style>
 </head>
 <body>
     <div id="C1">

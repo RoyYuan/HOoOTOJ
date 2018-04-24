@@ -4,6 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Source Code</title>
     <link rel=stylesheet href='css/show_sourcecode.css' type="text/css">
+    <style>
+
+        ::-webkit-scrollbar {display:none}
+
+    </style>
 </head>
 <body>
 <div id="C1">

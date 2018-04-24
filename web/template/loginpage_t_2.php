@@ -6,6 +6,11 @@
     <title>登陆</title>
     <link rel="stylesheet" type="text/css" href="css/loginpage.css" />
     <script src="js/jquery.js"></script>
+    <style>
+
+        ::-webkit-scrollbar {display:none}
+
+    </style>
 </head>
 
 <body>

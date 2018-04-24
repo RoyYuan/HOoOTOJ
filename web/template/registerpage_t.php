@@ -5,6 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>注册</title>
     <link rel="stylesheet" type="text/css" href="css/registerpage.css" />
+    <style>
+
+        ::-webkit-scrollbar {display:none}
+
+    </style>
 </head>
 
 <body>

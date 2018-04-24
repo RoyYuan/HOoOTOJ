@@ -8,14 +8,21 @@
     <title>添加题目</title>
     <link rel=stylesheet href='admin.css' type='text/css'>
     <script src="../js/jquery.js"></script>
+    <style>
+
+        ::-webkit-scrollbar {display:none}
+
+    </style>
 </head>
 
-<body style="margin-left:2cm;">
+<body>
 <?php require_once ("../include/db_info.php");?>
-<?php require_once ("admin_header.php");?>
+<?php require_once ("admin_header.php");
+require_once ("header.php");?>
+
 <h1 class="center">添加题目</h1>
 
-<form method="post" action="problem_add.php">
+<form style="margin-left:2cm;" method="post" action="problem_add.php">
     <input type=hidden name=problem_id value="New Problem">
     <p align="left">题目标题:&nbsp;<input class="input input-xxlarge" type="text" name="title" size="60"></p>
     <p align="left">时间限制:&nbsp;<input type="text" name="time_limit" size="20" value="1">S</p>

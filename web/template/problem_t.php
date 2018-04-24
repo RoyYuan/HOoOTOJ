@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title><?php echo $view_title ?></title>
+    <style>
+
+        ::-webkit-scrollbar {display:none}
+
+    </style>
     <link rel=stylesheet href='css/problem.css' type='text/css'>
     <link rel="next" href="submitpage.php?
     <?php

@@ -4,6 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Error</title>
     <link rel="stylesheet" href="css/show_error.css">
+    <style>
+
+        ::-webkit-scrollbar {display:none}
+
+    </style>
 </head>
 <body>
 <div id="C1">

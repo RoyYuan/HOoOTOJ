@@ -7,6 +7,11 @@
     <link rel=stylesheet href='css/contest_rank.css' type='text/css'>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+    <style>
+
+        ::-webkit-scrollbar {display:none}
+
+    </style>
     <script>
         $(document).ready(function(){
             $.tablesorter.addParser({

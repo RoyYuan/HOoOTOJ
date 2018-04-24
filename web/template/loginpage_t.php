@@ -5,6 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>登陆</title>
     <link rel="stylesheet" type="text/css" href="css/loginpage.css" />
+    <style>
+
+        ::-webkit-scrollbar {display:none}
+
+    </style>
 </head>
 
 <body>

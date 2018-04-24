@@ -8,17 +8,23 @@
     <title>添加竞赛</title>
     <link rel=stylesheet href='admin.css' type='text/css'>
     <script src="../js/jquery.js"></script>
+    <style>
+
+        ::-webkit-scrollbar {display:none}
+
+    </style>
 </head>
 
-<body style="margin-left:2cm;">
+<body style="">
 <?php require_once ("../include/db_info.php");?>
 <?php
 require_once ("admin_header.php");
+require_once ("header.php");
 $now=strftime("%Y-%m-%dT%H:%M",time());
 ?>
 <h1 class="center">添加竞赛</h1>
 
-<form method="post" action="contest_add.php">
+<form style="margin-left:2cm;" method="post" action="contest_add.php">
     <p align="left">竞赛标题:&nbsp;<input name="title" class="input input-xxlarge" type="text" name="title" size="60"></p>
     <p align="left">开始时间:&nbsp;<input name="start_time" type="datetime-local" min='<?php echo $now;?>' ></p>
     <p align="left">结束时间:&nbsp;<input name="end_time" type="datetime-local" min='<?php echo $now;?>' ></p>

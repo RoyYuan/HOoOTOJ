@@ -5,6 +5,11 @@
     <meta http-equiv='refresh' content='60'>
     <title><?php echo $view_title?></title>
     <link rel=stylesheet href='css/contest_status.css' type='text/css'>
+    <style>
+
+        ::-webkit-scrollbar {display:none}
+
+    </style>
 </head>
 <body>
 <div id="C1">
@@ -13,7 +18,7 @@
         <div id="center">
             <form id="simform" action="status.php" method="get">
                 Problem ID:<input class="input-mini" style="height: 24px;" type="text" size="4" name="problem_id" value="<?php echo htmlentities($problem_id,ENT_QUOTES,'UTF-8')?>">
-                用户:<input class="input-mini" style="height: 24px;" type="text" size="4" name="user_id" value="<?php echo htmlentities($username,ENT_QUOTES,'UTF-8')?>">
+                用户:<input class="input-mini" style="height: 24px;" type="text" size="10" name="username" value="<?php echo htmlentities($username,ENT_QUOTES,'UTF-8')?>">
                 <?php
                 if (isset($cid))
                     echo "<input type='hidden' name='cid' value='$cid'>";
@@ -62,8 +67,9 @@
                     ?>
                 </select>
 
-                <input type="submit" class="input" value="搜索">
+                <input type="submit" class="input" value="搜索" style="height: 25px;">
             </form>
+            <br/>
             <table id="result_table" align="center" width="90%">
                 <thead>
                 <tr class="toprow">

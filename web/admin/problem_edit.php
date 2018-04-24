@@ -8,6 +8,11 @@
     <title>编辑题目</title>
     <link rel=stylesheet href='admin.css' type='text/css'>
     <script src="../js/jquery.js"></script>
+    <style>
+
+        ::-webkit-scrollbar {display:none}
+
+    </style>
 </head>
 <body>
 <center>
@@ -15,18 +20,25 @@
     require_once ("../include/const.php");?>
     <?php
     require_once ("admin_header.php");
-    $owner_id=$_GET['owner'];
+    require_once ("header.php");
+    ?>
+</center>
+<?php
+if (isset($_GET['id'])) {
+    $id=$_GET['id'];
+    $sql="SELECT `owner_id` FROM `problems` WHERE `problem_id`=$id";
+    $result=mysqli_query($mysqli,$sql);
+    $row=mysqli_fetch_row($result);
+    $owner_id=$row->owner_id;
     if ($_SESSION['groups']>-3 && $_SESSION['user_id']!=$owner_id){
+        mysqli_free_result($result);
         echo "<script>\n";
         echo "alert('您的帐号不能对此题目进行编辑！\\n');\n";
         echo "history.go(-1);\n";
         echo "</script>";
         exit(1);
     }
-    ?>
-</center>
-<?php
-if (isset($_GET['id'])) {
+    mysqli_free_result($result);
     ?>
     <h1 class="center">编辑题目</h1>
     <form method="post" action="problem_edit.php?owner=$owner_id.">
