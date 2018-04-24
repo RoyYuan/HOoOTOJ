@@ -13,33 +13,35 @@
 <body style="margin-left:2cm;">
 <?php require_once ("../include/db_info.php");?>
 <?php require_once ("admin_header.php");?>
-<h1>添加题目</h1>
+<h1 class="center">添加题目</h1>
 
 <form method="post" action="problem_add.php">
-    <input type="hidden" name="problem_id" value="新题目">
-    <p align="left">题目标题:<input class="input input-xxlarge" type="text" name="title" size="60"></p>
-    <p align="left">时间限制:<input type="text" name="time_limit" size="20" value="1">S</p>
-    <p align="left">空间限制:<input type="text" name="memory_limit" size="20" value="32">MByte</p>
+    <input type=hidden name=problem_id value="New Problem">
+    <p align="left">题目标题:&nbsp;<input class="input input-xxlarge" type="text" name="title" size="60"></p>
+    <p align="left">时间限制:&nbsp;<input type="text" name="time_limit" size="20" value="1">S</p>
+    <p align="left">空间限制:&nbsp;<input type="text" name="memory_limit" size="20" value="32">MByte</p>
     <p align="left">Description:<br/>
-    <textarea rows="13" name="description" cols="180"></textarea></p>
+    <textarea style="width: 90%" rows="13" name="description"></textarea></p>
     <p align="left">Input:<br/>
-    <textarea rows="13" name="input" cols="180"></textarea></p>
+    <textarea style="width: 90%" rows="13" name="input"></textarea></p>
     <p align="left">Output:<br/>
-    <textarea rows="13" name="output" cols="180"></textarea></p>
+    <textarea style="width: 90%" rows="13" name="output"></textarea></p>
     <p align="left">Sample Input:<br/>
-    <textarea class="input input-xxlarge" rows="13" name="sample_input" cols="180"></textarea></p>
+    <textarea class="input input-xxlarge" style="width: 90%" rows="13" name="sample_input"></textarea></p>
     <p align="left">Sample Output:<br/>
-    <textarea class="input input-xxlarge" rows="13" name="sample_output" cols="180"></textarea></p>
+    <textarea class="input input-xxlarge" style="width: 90%" rows="13" name="sample_output"></textarea></p>
     <p align="left">Test Input:<br/>
-    <textarea class="input input-xxlarge" rows="13" name="test_input" cols="180"></textarea></p>
+    <textarea class="input input-xxlarge" style="width: 90%" rows="13" name="test_input"></textarea></p>
     <p align="left">Test Output:<br/>
-    <textarea class="input input-xxlarge" rows="13" name="test_output" cols="180"></textarea> </p>
+    <textarea class="input input-xxlarge" style="width: 90%" rows="13" name="test_output"></textarea> </p>
     <p align="left">Hint:<br/>
-    <textarea rows="13" name="hint" cols="180"></textarea></p>
+    <textarea style="width: 90%" rows="13" name="hint"></textarea></p>
     <div align="center">
         <input class="btn" style="width: 60px;height: 40px;" type="submit" value="提交" name="submit">
-        <?php require_once ("../footer.php"); ?>
     </div>
 </form>
+<div class="center">
+    <?php require_once ("../footer.php"); ?>
+</div>
 </body>
 </html>

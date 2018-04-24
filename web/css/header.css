@@ -47,3 +47,38 @@
     font-size: 20px;
     font-family: 宋体;
 }
+
+.problem_set{
+    position: relative;
+    display: inline-block;
+}
+.admin-problemset{
+    display: none;
+    position: absolute;
+    background-color: #faebcc;
+    border-radius: 5px;
+}
+.problem_set:hover .admin-problemset {
+    display: block;
+}
+.admin-problemset a:hover{
+    background-color: #2aabd2;
+}
+
+.contest_set{
+    position: relative;
+    display: inline-block;
+}
+.admin-contestset{
+    display: none;
+    position: absolute;
+    background-color: #faebcc;
+    border-radius: 5px;
+
+}
+.contest_set:hover .admin-contestset {
+    display: block;
+}
+.admin-contestset a:hover{
+    background-color: #2aabd2;
+}

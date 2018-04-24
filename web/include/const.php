@@ -1,5 +1,5 @@
-<?php if(file_exists("include/db_info.inc.php")){
-    require_once("include/db_info.inc.php");
+<?php if(file_exists("include/db_info.php")){
+    require_once("include/db_info.php");
 }
 $judge_result=Array('等待判题','等待重判','编译中','判题中','Accepted','Presentation Error','Wrong Answer','Time Limit Exceed','Memory Limit Exceed','Output Limit Exceed','Runtime Error','Compile Error','Compile OK');
 //$jresult=Array($MSG_PD,$MSG_PR,$MSG_CI,$MSG_RJ,$MSG_AC,$MSG_PE,$MSG_WA,$MSG_TLE,$MSG_MLE,$MSG_OLE,$MSG_RE,$MSG_CE,$MSG_CO,$MSG_TR);

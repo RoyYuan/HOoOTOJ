@@ -12,7 +12,7 @@ if (isset($_SESSION['user_id'])){
     $user_id=$_SESSION['user_id'];
     $username=$_SESSION['username'];
     $profile.= "<i class=icon-user></i><a href=modifypage.php>用户信息</a>&nbsp;<a href='userinfo.php?user=$user_id'><span id=red>$username</span></a>";
-    $profile.="&nbsp;<a href='./status.php?user_id=$user_id'><span id=red>最近提交</span></a>";
+    $profile.="&nbsp;<a href='./status.php?username=$username'><span id=red>最近提交</span></a>";
     $profile.= "&nbsp;<a href='./logout.php' target='_top' >注销</a>&nbsp;";
 }
 else{

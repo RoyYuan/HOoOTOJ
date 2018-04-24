@@ -1,27 +1,14 @@
-.top {
-    position: absolute;
-    left: 0; right: 0;
-    height: 72px;
+@import url(../bootstrap/css/bootstrap.css);
+
+.problem_set{
+    position: relative;
+    display: inline-block;
 }
-.sidebar {
+.admin-problemset{
+    display: none;
     position: absolute;
-    left: 0; top: 72px; bottom: 0;
-    width: 178px;
-}
-.content {
-    position: absolute;
-    left:178px; top: 72px; right: 0; bottom: 0;
 }
 
-#sideToggle {
-    display: none;
+.problem_set:hover .admin-problemset {
+    display: block;
 }
-.sidebar {
-    display: none;
-}
-.content {
-    position: absolute;
-    left:0; top: 72px; right: 0; bottom: 0;
-}
-#sideToggle:checked + .sidebar{display: block}
-#sideToggle:checked ~ .content{left: 178px}
