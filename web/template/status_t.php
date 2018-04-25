@@ -70,7 +70,7 @@
                 <input type="submit" class="input" value="搜索" style="height: 25px;">
             </form>
             <br/>
-            <table id="result_table" align="center" width="90%">
+            <table id="result_table"  class="table table-striped" align="center" width="90%">
                 <thead>
                 <tr class="toprow">
                     <th width="10%" style="text-align:center;">Run ID</th>

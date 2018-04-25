@@ -52,7 +52,11 @@ if (isset($_GET['cid'])){
     $cid=intval($_GET['cid']);
     $contest_cid=$cid;
 
-    $sql="SELECT * FROM `contest` WHERE `contest_id`='$cid' ";
+    $sql="SELECT * FROM `contest` WHERE `contest_id`='$cid'";
+    if (isset($_SESSION['groups']) && $_SESSION['groups']<=-4)
+        ;
+    else
+        $sql.=" AND `hide`=0";
     $result=mysqli_query($mysqli,$sql);
     $rows_cnt=mysqli_num_rows($result);
     $contest_ok=true;

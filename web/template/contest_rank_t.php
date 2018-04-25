@@ -47,6 +47,12 @@
 <div id="C1">
     <div id="main" class="center">
         <?php require_once ("contest_header.php");?>
+        <div>
+            <h3>Contest<?php echo $cid ?></h3>
+            [<a href="contest.php?cid=<?php echo $cid?>">Problemset</a>]
+            [<a href="status.php?cid=<?php echo $cid?>">Status</a>]
+            [<a href="contest_rank.php?cid=<?php echo $cid?>">Standing</a>]
+        </div>
         <?php
         $rank=1;
         function sec2str($sec){

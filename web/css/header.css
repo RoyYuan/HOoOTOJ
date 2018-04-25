@@ -55,7 +55,7 @@
 .admin-problemset{
     display: none;
     position: absolute;
-    background-color: #faebcc;
+    background-color: #a6e1ec;
     border-radius: 5px;
 }
 .problem_set:hover .admin-problemset {
@@ -72,7 +72,7 @@
 .admin-contestset{
     display: none;
     position: absolute;
-    background-color: #faebcc;
+    background-color: #a6e1ec;
     border-radius: 5px;
 
 }

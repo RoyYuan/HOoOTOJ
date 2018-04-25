@@ -8,13 +8,13 @@ h3{
 }
 
 .oddrow {
-    background-color: #E5ECF9;
+    background-color: #a6e1ec;
     white-space: nowrap;
     font-family: 宋体;
 }
 
 .evenrow {
-    background-color: #FFFFFF;
+    background-color: #E4F0F8;
     white-space: nowrap;
     font-family: 宋体;
 }
@@ -25,7 +25,7 @@ input{
 }
 
 .toprow {
-    background-color: #1A5CC8;
+    background-color: #2aabd2;
     color: #FFFFFF;
     font-weight: bold;
     white-space: nowrap;

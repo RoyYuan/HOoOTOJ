@@ -15,9 +15,12 @@
     <?php require_once ("header.php"); ?>
     <div id="main">
         <center>
-            <table width="90%">
+            <table>
                 <h2>Contest List</h2>
-                ServerTime:<span id="nowdate"></span>
+                服务器时间:<span id="nowdate"></span>
+            </table>
+            <table class="table table-striped">
+                <thead>
                 <tr class="toprow" align="center">
                     <td width="10%">
                         ID
@@ -29,6 +32,8 @@
                         Status
                     </td>
                 </tr>
+                </thead>
+
                 <tbody>
                 <?php
                 $cnt=1;

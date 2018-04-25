@@ -19,7 +19,7 @@ span.no {
 
 .toprow {
     width: 80%;
-    background-color: #1A5CC8;
+    background-color: #2aabd2;
     color: #FFFFFF;
     font-weight: bold;
     white-space: nowrap;
@@ -42,12 +42,12 @@ span.no {
 }
 
 .oddrow {
-    background-color: #E5ECF9;
+    background-color: #a6e1ec;
     white-space: nowrap;
 }
 
 .evenrow {
-    background-color: #FFFFFF;
+    background-color: #E4F0F8;
     white-space: nowrap;
 }
 

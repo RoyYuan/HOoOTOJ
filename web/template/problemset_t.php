@@ -36,7 +36,7 @@
             </h3>
             <center>
                 <table>
-                    <tr align="center" class="evenrow">
+                    <tr align="center">
                         <td width="40%">
                             <form action="problem.php">
                                 Problem ID：
@@ -54,13 +54,13 @@
                     </tr>
                 </table>
 
-                <table id="problemset" width="90%">
+                <table class="table table-striped" id="problemset" width="90%">
 
                     <thead>
                         <tr class="toprow">
                             <th width="10"></th>
-                            <th width="120"><A>题目id</A></th>
-                            <th>Title</th>
+                            <th width="120" class="pointer"><A>题目id</A></th>
+                            <th class="pointer">Title</th>
                             <th class="pointer" width=60 >提交</th>
                             <th class="pointer" width=60 >通过</th>
                         </tr>

@@ -19,23 +19,24 @@
             <div>
                 <h3>Contest<?php echo $contest_cid ?></h3>
                 <p><?php echo $contest_description ?></p><br/>
-                Start Time:<font color="#993399"><?php echo $contest_start_time ?></font>
-                End Time:<font color="#993399"><?php echo $contest_end_time ?></font>
-                Current Time:<font color="#993399"><span id="nowdate"><?php echo date("Y-m-d H:i:s")?></span></font>
+                开始时间:<font color="#993399"><?php echo $contest_start_time ?></font>
+                结束时间:<font color="#993399"><?php echo $contest_end_time ?></font>
+                当前时间:<font color="#993399"><span id="nowdate"><?php echo date("Y-m-d H:i:s")?></span></font>
                 Status:<?php
                 $now=time();
                 if ($now>$end_time)
-                    echo "<span class='red'>Ended</span>";
+                    echo "<span class='red'>已结束</span>";
                 elseif ($now<$start_time)
-                    echo "<span class='red'>Not Started</span>";
+                    echo "<span class='red'>尚未开始</span>";
                 else
-                    echo "<span class='red'>Running</span>";
+                    echo "<span class='red'>正在进行</span>";
                 ?>
                 <br/>
+                [<a href="contest.php?cid=<?php echo $contest_cid?>">Problemset</a>]
                 [<a href="status.php?cid=<?php echo $contest_cid?>">Status</a>]
                 [<a href="contest_rank.php?cid=<?php echo $contest_cid?>">Standing</a>]
             </div>
-            <table id="problemset" width="90%">
+            <table id="problemset" class='table table-striped' width="90%">
                 <thead>
                 <tr align="center" class="toprow">
                     <td width="5%">
@@ -43,8 +44,8 @@
                     <td style="cursor:hand" onclick="sortTable('problemset',1,'int');" width="15%">
                         <a>Problem ID</a>
                     </td>
-                    <td width="60%">
-                        Title
+                    <td style="cursor:hand" width="60%">
+                        <a>Title</a>
                     </td>
                     <td style="cursor:hand" onclick="sortTable('problemset',3,'int');" width="5%">
                         <a>Accepted</a>

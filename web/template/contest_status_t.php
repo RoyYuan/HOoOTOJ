@@ -16,6 +16,12 @@
     <?php require_once ("contest_header.php"); ?>
     <div id="main">
         <div id="center">
+            <div>
+                <h3>Contest<?php echo $cid ?></h3>
+                [<a href="contest.php?cid=<?php echo $cid?>">Problemset</a>]
+                [<a href="status.php?cid=<?php echo $cid?>">Status</a>]
+                [<a href="contest_rank.php?cid=<?php echo $cid?>">Standing</a>]
+            </div>
             <form id="simform" action="status.php" method="get">
                 Problem ID:<input class="input-mini" style="height: 24px;" type="text" size="4" name="problem_id" value="<?php echo htmlentities($problem_id,ENT_QUOTES,'UTF-8')?>">
                 用户:<input class="input-mini" style="height: 24px;" type="text" size="10" name="username" value="<?php echo htmlentities($username,ENT_QUOTES,'UTF-8')?>">

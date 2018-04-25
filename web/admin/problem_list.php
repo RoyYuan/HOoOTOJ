@@ -69,7 +69,7 @@ WHERE deleted=0 AND title LIKE '%$keyword%'";
 $result=mysqli_query($mysqli,$sql) or die(mysqli_error());
 ?>
 <form action="problem_list.php">
-    关键字：<input name="keyword">
+    关键字：<input name="keyword" value="<?php if (isset($keyword)) echo $keyword;?>">
     <input style="height: 25px;" type="submit" value="搜索">
 </form>
 <br/>
@@ -93,7 +93,7 @@ for (;$row=mysqli_fetch_object($result);){
     }
     if ($_SESSION['groups']==-5){
         echo "<td>";?>
-        <a href=# onclick='javascript::if(confirm("删除?")) location.href="problem_delete.php?id=<?php echo $row->problem_id?>";'>删除</a>
+        <a href=# onclick='check_delete(<?php echo $row->problem_id?>)'>删除</a>
         <?php
     }
     echo "</tr>";
@@ -103,5 +103,12 @@ echo "<div class='center'>";
 require ("../footer.php");
 echo "</div>";
 ?>
+<script>
+    function check_delete(id) {
+        if (confirm("确认删除？此操作不可逆！"))
+            location.href="problem_delete.php?id="+id;
+    }
+</script>
 </body>
 </html>
+<!--<script>if(confirm("删除?")) location.href="problem_delete.php?id=--><?php //echo $row->problem_id?>//";</script>

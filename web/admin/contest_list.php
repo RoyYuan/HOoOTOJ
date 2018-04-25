@@ -65,7 +65,7 @@ WHERE contest_title LIKE '%$keyword%' ";
 $result=mysqli_query($mysqli,$sql) or die(mysqli_error());
 ?>
 <form action="contest_list.php" class="center">
-    关键字：<input name="keyword">
+    关键字：<input name="keyword" value="<?php if (isset($keyword)) echo $keyword;?>">
     <input type="submit" style="height: 25px;" value="搜索">
 </form>
 <br/>
@@ -84,7 +84,7 @@ for (;$row=mysqli_fetch_object($result);){
     if (isset($_SESSION['groups']) && $_SESSION['groups']<=-4 || ($row->owner_id==$user_id)){
         echo "<td><a href='contest_private_change.php?cid=$cid'>".($row->private==0?"<span class=green>公开</span>":"<span class=red>私人</span>")."</a></td>";
         echo "<td><a href='contest_status_change.php?cid=$cid'>".($row->hide==0?"<span class=green>可见</span>":"<span class='red'>不可见</span>")."</a></td>";
-        echo "<td><a href='contest_edit.php>cid=$cid'>编辑</a></td>";
+        echo "<td><a href='contest_edit.php?cid=$cid'>编辑</a></td>";
     }
     echo "</tr>";
 }

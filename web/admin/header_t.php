@@ -51,7 +51,7 @@ if (isset($_SESSION['groups']) && $_SESSION['groups']<=-2)
     </div>
 
     <div id="profile">
-        <script src="../include/profile.php?<?php echo rand(); ?>"></script>
+        <script src="profile.php?<?php echo rand(); ?>"></script>
     </div>
 </div>
 <!--<div id=broadcast class="container">-->

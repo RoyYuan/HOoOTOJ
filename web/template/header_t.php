@@ -31,9 +31,9 @@ if (isset($_SESSION['groups']) && $_SESSION['groups']<=-2)
             ?>
         </div>
 <!--        <a class="btn --><?php //if ($url=="problemset.php") echo $now; ?><!--" href="problemset.php"><i class="icon-question-sign"></i>题库</a>-->
-        <a style="width: 100px;" class="btn <?php if (strlen($url) && (substr_compare($url,"status.php",0,10,TRUE)==0)) echo $now; ?>" href="status.php"><i class="icon-check"></i>Status</a>
+        <a style="width: 100px;" class="btn <?php if (strlen($url) && substr_compare($url,"status.php?cid=",0,15)!=0 && (substr_compare($url,"status.php",0,10,TRUE)==0)) echo $now; ?>" href="status.php"><i class="icon-check"></i>Status</a>
         <div class="contest_set">
-            <a style="width: 100px;" class="btn <?php if (strlen($url) && (substr_compare($url,"contest.php",0,11,TRUE)==0 || substr_compare($url,"contest_add_page.php",0,20,TRUE)==0 || substr_compare($url,"contest_list.php",0,16,TRUE)==0)) echo $now; ?>"
+            <a style="width: 100px;" class="btn <?php if (strlen($url) && (substr_compare($url,"status.php?cid=",0,15)==0 || substr_compare($url,"contest",0,7)==0 || substr_compare($url,"contest.php",0,11,TRUE)==0 || substr_compare($url,"contest_add_page.php",0,20,TRUE)==0 || substr_compare($url,"contest_list.php",0,16,TRUE)==0)) echo $now; ?>"
             <?php
             if ($flag){
                 echo "><i class='icon-fire'></i>竞赛</a>";
