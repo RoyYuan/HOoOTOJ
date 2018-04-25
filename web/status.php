@@ -157,7 +157,7 @@ for ($i=0;$i<$rows_cnt;$i++){
         $view_status[$i][1]="<a href='contest_rank.php?cid=".$row['contest_id']."&user_id=".$row['user_id']."#".$row['user_id']."'>".$row['username']."</a>";
     }
     else{
-        $view_status[$i][1]="<a href='userinfo.php?user=".$row['user_id']."'>".$row['username']."</a>";
+        $view_status[$i][1]="<a href='user_info.php?user=".$row['user_id']."'>".$row['username']."</a>";
     }
 
     //2

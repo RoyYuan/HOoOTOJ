@@ -91,8 +91,8 @@
                         echo "<td bgcolor=#ffff77>";
                     else
                         echo "<td>";
-                    echo "<a name='$user_id' href=userinfo.php?user=$user_id>$user_id</a>";
-                    echo "<td><a href='userinfo.php?user=$user_id'>".htmlentities($U[$i]->username,ENT_QUOTES,"UTF-8")."</a>";
+                    echo "<a name='$user_id' href=user_info.php?user=$user_id>$user_id</a>";
+                    echo "<td><a href='user_info.php?user=$user_id'>".htmlentities($U[$i]->username,ENT_QUOTES,"UTF-8")."</a>";
                     echo "<td><a href='status.php?user_id=$user_id&cid=$cid'>$user_solved</a>";
                     echo "<td>".sec2str($U[$i]->time);
                     for ($j=0;$j<$pid_cnt;$j++){
