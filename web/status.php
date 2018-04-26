@@ -16,15 +16,15 @@ function is_running($cid){
     return $cnt>0;
 }
 
-$judge_color=Array("btn gray","btn btn-info","btn btn-warning","btn btn-warning","btn btn-success","btn btn-danger","btn btn-danger","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-info");
-
-
 $cache_time=2;
 $OJ_CACHE_SHARE=false;
+$view_title="STATUS";
 require_once ("include/db_info.php");
 require_once ("include/do_cache.php");
 require_once ("include/const.php");
-$view_title="STATUS";
+$judge_color=Array("btn grey","btn btn-info","btn btn-warning","btn btn-warning","btn btn-success","btn btn-danger","btn btn-danger","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-info");
+
+
 
 $str="";
 $lock=false;
@@ -101,6 +101,16 @@ if (isset($_GET['username']) && $_GET['username']!=""){
     if ($str!="")
         $str.="&";
     $str.="username=".$username;
+}
+
+$language="";
+if (isset($_GET['language']) && $_GET['language']!=""){
+    $language=trim($_GET['language']);
+    if ($language!=-1)
+        $sql.=" AND `language`='".$language."'";
+    if ($str!="")
+        $str.="&";
+    $str.="language=".$language;
 }
 
 //按result搜索
@@ -195,10 +205,7 @@ for ($i=0;$i<$rows_cnt;$i++){
             echo "<td>----";
         }
     }
-//    if (isset($_SESSION['http_judge'])){
-//        $view_status[$i][3].="<form class='http_judge_form form-inline'><input type='hidden' name='sid' value='".$row['submit_id']."'>";
-//        $view_status[$i][3].="</form>";
-//    }
+
 
     //4-7
     if ($flag){
