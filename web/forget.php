@@ -41,7 +41,6 @@ function forget($username, $question, $answer){
 }
 function forget2($password){
     require_once ("include/db_info.php");
-    require_once ("include/functions.php");
 
     if(get_magic_quotes_gpc()){
         $password=stripcslashes($password);
@@ -62,6 +61,30 @@ function forget2($password){
     echo "<script>\n";
     echo "alert('设置密码成功\\n');\n";
     echo "window.location.href='loginpage.php';\n";
+    echo "</script>";
+}
+function password_change($password){
+    require_once ("include/db_info.php");
+    $mysqli=$GLOBALS['mysqli'];
+    if (get_magic_quotes_gpc())
+        $password=stripcslashes($password);
+    echo $password;
+    $sql="UPDATE `users` SET `password`='"
+        .$password
+        ."' WHERE `user_id`='"
+        .mysqli_real_escape_string($mysqli,$_SESSION['user_id'])
+        ."'";
+    $result=mysqli_query($mysqli,$sql);
+    if(mysqli_affected_rows($mysqli)==0){
+        echo "<script>\n";
+        echo "alert('设置密码失败\\n');\n";
+        echo "window.location.href='index.php';\n";
+        echo "</script>";
+        exit(0);
+    }
+    echo "<script>\n";
+    echo "alert('设置密码成功\\n');\n";
+    echo "window.location.href='index.php';\n";
     echo "</script>";
 }
 ?>

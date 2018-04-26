@@ -17,10 +17,12 @@
 if(!isset($_SESSION)){
     session_start();
 }
-$password = $password2 = "";
-$password_error = $password2_error = "";
+require_once ("include/db_info.php");
+$last_password=$password = $password2 = "";
+$last_password_error=$password_error = $password2_error = "";
 //$vcode_error=$_SESSION["vcode"];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $last_password = trim($_POST['last_password']);
     $password = trim($_POST['password']);
     $password2 = trim($_POST['password2']);
     $flag = 1;
@@ -34,9 +36,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = $password2 = "";
         $flag = 0;
     }
+    $user_id=$_SESSION['user_id'];
+    $sql="SELECT `password` FROM `users` WHERE `user_id`=$user_id";
+    $result=mysqli_query($mysqli,$sql);
+    $row=mysqli_fetch_object($result);
+    $cl_password=$row->password;
+    if (strcmp($cl_password,$last_password)){
+        $last_password_error="原密码不正确！";
+        $last_password="";
+        $flag=0;
+    }
     if($flag==1){
         require_once ("forget.php");
-        forget2($password);
+        password_change($password);
     }
 }
 ?>
@@ -46,6 +58,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <center>
                 <table id="input_table">
+                    <tr>
+                        <td width="220"></td>
+                        <td width="220">旧密码:</td>
+                        <td width="220">
+                            <input name="last_password" type="password" size="20">
+                        </td>
+                        <td width="220"><span class="error">
+                                *<?php echo $last_password_error; ?>
+                            </span></td>
+                    </tr>
                     <tr>
                         <td width=220></td>
                         <td width=220> 新密码:</td>

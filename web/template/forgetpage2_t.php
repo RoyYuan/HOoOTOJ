@@ -17,6 +17,11 @@
 if(!isset($_SESSION)){
     session_start();
 }
+if (isset($_SESSION['user_id'])){
+    $view_errors="你已登陆！";
+    require ("show_error.php");
+    exit(0);
+}
 $password = $password2 = "";
 $password_error = $password2_error = "";
 //$vcode_error=$_SESSION["vcode"];

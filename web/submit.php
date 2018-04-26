@@ -13,6 +13,7 @@ if (!isset($_SESSION['user_id'])){
 }
 
 require_once ("include/db_info.php");
+require_once ("include/const.php");
 
 $now=strftime("%Y-%m-%d %H:%M",time());
 $user_id=$_SESSION['user_id'];
@@ -74,6 +75,10 @@ else{
     $id=0;
 }
 
+$language=intval($_POST['language']);
+if ($language>count($language_ext) || $language<0)
+    $language=0;
+
 $source_code=$_POST['source_code'];
 if (get_magic_quotes_gpc()){
     $source_code=stripcslashes($source_code);
@@ -98,11 +103,11 @@ if (isset($_SESSION['store_id']))
     $store_id=$_SESSION['store_id'];
 if (!isset($pid)){
     $sql="INSERT INTO submissions(problem_id,user_id,username,language,code_length,submit_time)
-    VALUES ('$id','$user_id','$username',0,'$len','$now')";
+    VALUES ('$id','$user_id','$username','$language','$len','$now')";
 }
 else{
     $sql="INSERT INTO submissions(problem_id,user_id,username,language,code_length,contest_id,contest_num,submit_time)
-    VALUES ('$id','$user_id','$username',0,'$len','$cid','$pid','$now')";
+    VALUES ('$id','$user_id','$username','$language','$len','$cid','$pid','$now')";
 }
 echo $sql;
 mysqli_query($mysqli,$sql);

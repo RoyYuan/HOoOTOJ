@@ -13,6 +13,7 @@
 <body>
 <div id="C1">
     <?php
+    require_once ("include/const.php");
     if (isset($_GET['id'])){
         require_once("header.php");
         $id=$_GET['id'];
@@ -31,7 +32,20 @@
                     <input id="cid" type="hidden" value="<?php echo $cid?>" name="cid">
                     <input id="pid" type="hidden" value="<?php echo $pid?>" name="pid">
                 <?php }?>
-                Language: C++<br>
+                Language:
+                <select id="language" name="language">
+                    <?php
+                    $language_count=count($language_ext);
+                    if (isset($_COOKIE['last_language']))
+                        $last_language=$_COOKIE['last_language'];
+                    else
+                        $last_language=0;
+                    for ($i=0;$i<$language_count;$i++){
+                        echo "<option value=$i ".($last_language==$i?"selected":"").">".$language_name[$i]."</option>";
+                    }
+                    ?>
+                </select>
+                <br/>
 
                 <textarea style="width: 80%;" cols="180" rows="20" id="source_code" name="source_code"></textarea><br>
 
