@@ -10,7 +10,7 @@ require_once ("admin_header.php");
 $id=intval($_GET['id']);
 $sql="SELECT `owner_id` FROM `problems` WHERE `problem_id`=$id";
 $result=mysqli_query($mysqli,$sql);
-$row=mysqli_fetch_row($result);
+$row=mysqli_fetch_object($result);
 $owner_id=$row->owner_id;
 if ($_SESSION['groups']>-3 && $_SESSION['user_id']!=$owner_id){
     mysqli_free_result($result);

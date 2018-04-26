@@ -28,7 +28,7 @@ if (isset($_GET['id'])) {
     $id=$_GET['id'];
     $sql="SELECT `owner_id` FROM `problems` WHERE `problem_id`=$id";
     $result=mysqli_query($mysqli,$sql);
-    $row=mysqli_fetch_row($result);
+    $row=mysqli_fetch_object($result);
     $owner_id=$row->owner_id;
     if ($_SESSION['groups']>-3 && $_SESSION['user_id']!=$owner_id){
         mysqli_free_result($result);
@@ -41,7 +41,7 @@ if (isset($_GET['id'])) {
     mysqli_free_result($result);
     ?>
     <h1 class="center">编辑题目</h1>
-    <form method="post" action="problem_edit.php?owner=$owner_id.">
+    <form style="margin-left:2cm;" method="post" action="problem_edit.php?owner=$owner_id.">
         <?php
         $sql = "SELECT * FROM `problems` WHERE `problem_id`=" . intval($_GET['id']);
         $result = mysqli_query($mysqli, $sql);

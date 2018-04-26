@@ -7,6 +7,6 @@ $judge_color=Array("gray","gray","orange","orange","green","red","red","red","re
 //$language_name=Array("C++","C","Pascal","Java","Ruby","Bash","Python","PHP","Perl","C#","Obj-C","FreeBasic","Schema","Clang","Clang++","Lua","JavaScript","Other Language");
 //$language_ext=Array( "cc", "c", "pas", "java", "rb", "sh", "py", "php","pl", "cs","m","bas","scm","c","cc","lua","js" );
 $PID="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-$language_name=Array("C++","C","Java");
-$language_ext=Array("cc","c","java");
+$language_name=Array("C","C++","Java");
+$language_ext=Array("c","cc","java");
 ?>
