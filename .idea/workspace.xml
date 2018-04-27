@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd1b51fa-809b-4776-9fd7-2fef53deecc3" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/web/show_compile_errors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/template/show_compile_errors_t.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/faqs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/template/faq_t.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/phpfm.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/phpfm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/problem_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/problem_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/problem_status_change.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/problem_status_change.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/include/const.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/include/const.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/problemset.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/problemset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/problem_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/problem_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/include/db_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/include/db_info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/problem.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/problem.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/status.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/contest_rank_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/contest_rank_t.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/status_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/status_t.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/user_info_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/user_info_t.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/user_info.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,32 +22,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.19911991">
+    <splitter split-orientation="horizontal" split-proportion="0.44719473">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="password_reset.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/admin/password_reset.php">
+          <file leaf-file-name="phpfm.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/admin/phpfm.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="show_compile_errors.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/show_compile_errors.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="608">
-                  <caret line="32" column="11" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="show_compile_errors_t.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/template/show_compile_errors_t.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="570">
-                  <caret line="30" lean-forward="true" selection-end-line="30" />
+                <state relative-caret-position="19">
+                  <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+                  <folding>
+                    <element signature="e#4#10#0" expanded="true" />
+                    <element signature="e#10#16#0" expanded="true" />
+                    <element signature="e#4#10#0" expanded="true" />
+                    <element signature="e#10#16#0" expanded="true" />
+                    <element signature="e#4#10#0" expanded="true" />
+                    <element signature="e#10#16#0" expanded="true" />
+                    <element signature="e#4#10#1" expanded="true" />
+                    <element signature="e#4#10#1" expanded="true" />
+                    <element signature="e#4#10#1" expanded="true" />
+                    <element signature="e#4#10#1" expanded="true" />
+                    <element signature="e#4#10#1" expanded="true" />
+                    <element signature="e#4#10#1" expanded="true" />
+                    <element signature="e#4#10#1" expanded="true" />
+                    <element signature="e#4#10#1" expanded="true" />
+                    <element signature="e#4#10#1" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -53,78 +54,17 @@
           <file leaf-file-name="status.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/status.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="609">
-                  <caret line="84" column="9" lean-forward="true" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
+                <state relative-caret-position="349">
+                  <caret line="176" column="59" selection-start-line="176" selection-start-column="59" selection-end-line="176" selection-end-column="59" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="show_error.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/css/show_error.css">
+          <file leaf-file-name="contest_rank.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/contest_rank.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="76">
-                  <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="db_info.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/include/db_info.php">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file leaf-file-name="const.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/include/const.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="228">
-                  <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="problemset.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/problemset.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="437">
-                  <caret line="56" column="53" lean-forward="true" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
-                  <folding>
-                    <element signature="e#18#24#1" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="groups_change.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/admin/groups_change.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="988">
-                  <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="phpfm.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/admin/phpfm.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2147">
-                  <caret line="113" column="21" selection-start-line="113" selection-start-column="15" selection-end-line="113" selection-end-column="21" />
-                  <folding>
-                    <element signature="e#4#10#0" expanded="true" />
-                    <element signature="e#10#16#0" expanded="true" />
-                    <element signature="e#4#10#0" expanded="true" />
-                    <element signature="e#10#16#0" expanded="true" />
-                    <element signature="e#4#10#0" expanded="true" />
-                    <element signature="e#10#16#0" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                  </folding>
+                <state relative-caret-position="438">
+                  <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
                 </state>
               </provider>
             </entry>
@@ -133,113 +73,6 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="problem_edit.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/admin/problem_edit.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-                  <folding>
-                    <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="problem_status_change.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/admin/problem_status_change.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="228">
-                  <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="problem_delete.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/admin/problem_delete.php">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file leaf-file-name="problem_add.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/admin/problem_add.php">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file leaf-file-name="problem_add_page.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/admin/problem_add_page.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="456">
-                  <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="30" />
-                  <folding>
-                    <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="contest_private_change.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/admin/contest_private_change.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="247">
-                  <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="phpfm.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/web/admin/phpfm.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="727">
-                  <caret line="3776" column="24" selection-start-line="3776" selection-start-column="24" selection-end-line="3776" selection-end-column="24" />
-                  <folding>
-                    <element signature="e#90#96#1" expanded="true" />
-                    <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#a#0;n#nobr#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#form#0;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#form#1;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#nobr#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#1;n#nobr#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#2;n#nobr#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#3;n#nobr#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#4;n#nobr#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#5;n#nobr#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#58#64#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#592#598#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#1;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#2;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#3;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#4;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#5;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-                    <element signature="e#629#635#1" expanded="true" />
-                    <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#table#0;n#form#0;n#body#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#td#1;n#tr#0;n#table#1;n#form#0;n#body#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#td#2;n#tr#0;n#table#1;n#form#0;n#body#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#td#3;n#tr#0;n#table#1;n#form#0;n#body#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#1;n#form#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#1;n#td#1;n#tr#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#1;n#td#1;n#tr#0;n#!!top" expanded="true" />
-                    <element signature="e#17#23#1" expanded="true" />
-                    <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-                    <element signature="e#13#19#1" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="faqs.cn.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/faqs.cn.php">
               <provider selected="true" editor-type-id="text-editor">
@@ -249,25 +82,92 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Downloads/phpFileManager-1.0/index.php">
+          <file leaf-file-name="status_t.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/template/status_t.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="19" column="70" lean-forward="true" selection-end-line="5966" selection-end-column="2" />
+                <state relative-caret-position="532">
+                  <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="contest_rank_t.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/template/contest_rank_t.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="247">
+                  <caret line="97" column="34" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
                   <folding>
-                    <element signature="e#90#96#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="e#4#10#1" expanded="true" />
-                    <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="user_info.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/user_info.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="262">
+                  <caret line="25" selection-start-line="25" selection-end-line="33" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="user_info_t.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/template/user_info_t.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="76">
+                  <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="faqs.cn.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/faqs.cn.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="133">
+                  <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="faq_t.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/web/template/faq_t.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="513">
+                  <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="problem.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/problem.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="560">
+                  <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="faqs.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/faqs.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="152">
+                  <caret line="8" column="2" lean-forward="true" selection-end-line="8" selection-end-column="2" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="db_info.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/include/db_info.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="190">
+                  <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -285,13 +185,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tm</find>
-      <find>mark</find>
-      <find>$now</find>
-      <find>boot</find>
-      <find>admi</find>
-      <find>contest_OK</find>
-      <find>contest</find>
       <find>$flag</find>
       <find>keyword</find>
       <find>session_start</find>
@@ -302,8 +195,8 @@
       <find>pid</find>
       <find>2cm</find>
       <find>url</find>
-      <find />
-      <find />
+      <find>not started</find>
+      <find>table td</find>
       <find>table</find>
       <find>btn-</find>
       <find>btn-w</find>
@@ -315,6 +208,13 @@
       <find>CONFIG</find>
       <find>config</find>
       <find>config(</find>
+      <find>createarq</find>
+      <find>test_prompt(2)</find>
+      <find>test_prompt(</find>
+      <find>prompt</find>
+      <find>str</find>
+      <find>top</find>
+      <find>没有</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\RoyYuan\Documents\HOoOTOJ</dir>
@@ -326,16 +226,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/template/loginpage_t_2.php" />
-        <option value="$PROJECT_DIR$/web/template/problem_t.php" />
-        <option value="$PROJECT_DIR$/web/template/registerpage_t.php" />
-        <option value="$PROJECT_DIR$/web/template/show_error_t.php" />
-        <option value="$PROJECT_DIR$/web/template/show_sourcecode_t.php" />
         <option value="$PROJECT_DIR$/web/admin/contest_private_change.php" />
         <option value="$PROJECT_DIR$/web/admin/contest_status_change.php" />
         <option value="$PROJECT_DIR$/web/contest.php" />
         <option value="$PROJECT_DIR$/web/admin/contest_edit.php" />
-        <option value="$PROJECT_DIR$/web/template/status_t.php" />
         <option value="$PROJECT_DIR$/web/template/problemset_t.php" />
         <option value="$PROJECT_DIR$/web/css/problemset.css" />
         <option value="$PROJECT_DIR$/web/css/contest.css" />
@@ -352,14 +246,10 @@
         <option value="$PROJECT_DIR$/web/admin/contest_list.php" />
         <option value="$PROJECT_DIR$/web/admin/header_t.php" />
         <option value="$PROJECT_DIR$/web/admin/profile.php" />
-        <option value="$PROJECT_DIR$/web/admin/problem_list.php" />
         <option value="$PROJECT_DIR$/web/admin/problem_delete.php" />
         <option value="$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/userinfo.php" />
         <option value="$PROJECT_DIR$/web/include/profile.php" />
-        <option value="$PROJECT_DIR$/web/user_info.php" />
         <option value="$PROJECT_DIR$/web/css/user_info.css" />
-        <option value="$PROJECT_DIR$/web/template/contest_rank_t.php" />
-        <option value="$PROJECT_DIR$/web/template/user_info_t.php" />
         <option value="$PROJECT_DIR$/web/password_change.php" />
         <option value="$PROJECT_DIR$/web/css/password_change.css" />
         <option value="$PROJECT_DIR$/web/template/forgetpage2_t.php" />
@@ -373,10 +263,20 @@
         <option value="$PROJECT_DIR$/web/problemset.php" />
         <option value="$PROJECT_DIR$/web/show_compile_errors.php" />
         <option value="$PROJECT_DIR$/web/template/show_compile_errors_t.php" />
-        <option value="$PROJECT_DIR$/web/status.php" />
         <option value="$PROJECT_DIR$/web/admin/problem_status_change.php" />
         <option value="$PROJECT_DIR$/web/admin/problem_edit.php" />
         <option value="$PROJECT_DIR$/web/admin/phpfm.php" />
+        <option value="$PROJECT_DIR$/web/admin/problem_list.php" />
+        <option value="$PROJECT_DIR$/web/template/status_t.php" />
+        <option value="$PROJECT_DIR$/web/status.php" />
+        <option value="$PROJECT_DIR$/web/template/contest_rank_t.php" />
+        <option value="$PROJECT_DIR$/web/user_info.php" />
+        <option value="$PROJECT_DIR$/web/template/user_info_t.php" />
+        <option value="$PROJECT_DIR$/web/faqs.php" />
+        <option value="$PROJECT_DIR$/web/include/db_info.php" />
+        <option value="$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/faqs.cn.php" />
+        <option value="$PROJECT_DIR$/web/template/faq_t.php" />
+        <option value="$PROJECT_DIR$/web/problem.php" />
       </list>
     </option>
   </component>
@@ -386,7 +286,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="5" />
     <option name="y" value="30" />
     <option name="width" value="1080" />
@@ -397,6 +297,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -449,7 +350,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -505,12 +405,13 @@
       <workItem from="1524624777465" duration="7354000" />
       <workItem from="1524663495106" duration="2851000" />
       <workItem from="1524729043218" duration="6696000" />
-      <workItem from="1524747897361" duration="3347000" />
+      <workItem from="1524747897361" duration="4045000" />
+      <workItem from="1524791810634" duration="4653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108834000" />
+    <option name="totallyTimeSpent" value="114185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
@@ -547,34 +448,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/user_info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/problemset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="24" selection-end-line="63" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/user_info.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/contest_rank_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1558">
-          <caret line="82" column="35" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/forgetpage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -615,13 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/user_info_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -667,13 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/status_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="133" column="57" lean-forward="true" selection-start-line="133" selection-start-column="57" selection-end-line="133" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/include/const.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -702,9 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/problem_t.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/template/loginpage_t.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -723,40 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="31" column="18" lean-forward="true" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/groups_change.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/include/db_info.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/include/const.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/problemset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="56" column="53" lean-forward="true" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
-          <folding>
-            <element signature="e#18#24#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/password_reset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -788,39 +610,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/show_compile_errors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="11" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/status.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="84" column="9" lean-forward="true" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/ceinfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2298" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/problem_list.php">
+    <entry file="file://$PROJECT_DIR$/web/admin/profile.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/profile.php">
+    <entry file="file://$PROJECT_DIR$/web/show_compile_errors.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="608">
+          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/password_reset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/include/const.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/problemset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="56" column="53" lean-forward="true" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
           <folding>
-            <element signature="e#0#6#0" expanded="true" />
-            <element signature="e#0#6#0" expanded="true" />
-            <element signature="e#51#57#1" expanded="true" />
-            <element signature="e#31#37#1" expanded="true" />
-            <element signature="e#34#40#1" expanded="true" />
-            <element signature="e#25#31#1" expanded="true" />
+            <element signature="e#18#24#1" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/groups_change.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="927">
+          <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/admin/phpfm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding>
+            <element signature="e#4#10#0" expanded="true" />
+            <element signature="e#10#16#0" expanded="true" />
+            <element signature="e#4#10#0" expanded="true" />
+            <element signature="e#10#16#0" expanded="true" />
+            <element signature="e#4#10#0" expanded="true" />
+            <element signature="e#10#16#0" expanded="true" />
+            <element signature="e#4#10#1" expanded="true" />
+            <element signature="e#4#10#1" expanded="true" />
+            <element signature="e#4#10#1" expanded="true" />
+            <element signature="e#4#10#1" expanded="true" />
+            <element signature="e#4#10#1" expanded="true" />
+            <element signature="e#4#10#1" expanded="true" />
+            <element signature="e#4#10#1" expanded="true" />
+            <element signature="e#4#10#1" expanded="true" />
+            <element signature="e#4#10#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/problem_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -831,11 +694,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/problem_delete.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/problem_add.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/web/admin/problem_add_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="30" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/contest_private_change.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -844,23 +708,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/problem_add_page.php">
+    <entry file="file://$PROJECT_DIR$/web/admin/phpfm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="19">
+          <caret line="1557" column="29" selection-start-line="1557" selection-start-column="23" selection-end-line="1557" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/problem_edit.php">
+    <entry file="file://$PROJECT_DIR$/web/admin/problem_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="475">
+          <caret line="91" column="39" lean-forward="true" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/phpFileManager-1.0/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="19" column="70" selection-end-line="5966" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -871,100 +736,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/phpFileManager-1.0/index.php">
+    <entry file="file://$PROJECT_DIR$/web/template/status_t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="70" lean-forward="true" selection-end-line="5966" selection-end-column="2" />
+        <state relative-caret-position="532">
+          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/status.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="176" column="59" selection-start-line="176" selection-start-column="59" selection-end-line="176" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/contest_rank.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/contest_rank_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="97" column="34" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
           <folding>
-            <element signature="e#90#96#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/admin/phpfm.php">
+    <entry file="file://$PROJECT_DIR$/web/user_info.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2147">
-          <caret line="113" column="21" selection-start-line="113" selection-start-column="15" selection-end-line="113" selection-end-column="21" />
+        <state relative-caret-position="262">
+          <caret line="25" selection-start-line="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/include/db_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/faqs.cn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
           <folding>
-            <element signature="e#4#10#0" expanded="true" />
-            <element signature="e#10#16#0" expanded="true" />
-            <element signature="e#4#10#0" expanded="true" />
-            <element signature="e#10#16#0" expanded="true" />
-            <element signature="e#4#10#0" expanded="true" />
-            <element signature="e#10#16#0" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/phpfm.php">
+    <entry file="file://$PROJECT_DIR$/web/faqs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="3776" column="24" selection-start-line="3776" selection-start-column="24" selection-end-line="3776" selection-end-column="24" />
+        <state relative-caret-position="152">
+          <caret line="8" column="2" lean-forward="true" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/user_info_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/problem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/faq_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
           <folding>
-            <element signature="e#90#96#1" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#nobr#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#nobr#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#nobr#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#nobr#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#nobr#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#4;n#nobr#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#5;n#nobr#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#58#64#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="e#592#598#1" expanded="true" />
-            <element signature="e#4#10#1" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#4;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#5;n#nobr#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="e#629#635#1" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#form#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#1;n#form#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#table#1;n#form#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#0;n#table#1;n#form#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#1;n#form#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#td#1;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#td#1;n#tr#0;n#!!top" expanded="true" />
-            <element signature="e#17#23#1" expanded="true" />
-            <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="e#13#19#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

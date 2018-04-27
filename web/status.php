@@ -70,7 +70,7 @@ if (isset($_GET['top'])){
     //按页获取
     $top=strval(intval($_GET['top']));
     if ($top!=-1)
-        $sql=$sql."AND `submit_id`<='".$top."' ";
+        $sql=$sql." AND `submit_id`<='".$top."' ";
 }
 
 //按problem_id搜索
@@ -174,7 +174,7 @@ for ($i=0;$i<$rows_cnt;$i++){
     if ($row['contest_id']>0){
         $view_status[$i][2]="<div class='center'><a href='problem.php?cid=".$row['contest_id']."&pid=".$row['contest_num']."'>";
         if (isset($cid)){
-            $view_status[$i][2].=$PID[$row['contest_num']];
+            $view_status[$i][2].=$PID[$row['contest_num']-1];
         }
         else{
             $view_status[$i][2].=$row['problem_id'];

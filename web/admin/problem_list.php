@@ -89,7 +89,7 @@ for (;$row=mysqli_fetch_object($result);){
     if ((isset($_SESSION['groups']) && $_SESSION['groups']<=-3) || $_SESSION['user_id']==$row->owner_id){
         echo "<td><a href='problem_status_change.php?id=$row->problem_id'>".($row->hide==0?"<span titlc='点击以设为不可见' class=green>可见</span>":"<span class=red title='点击以设为可见的'>不可见</span>")."</a></td>";
         echo "<td><a href='problem_edit.php?id=$row->problem_id'>编辑</a>";
-        echo "<td><a href='phpfm.php?frame=3&pid=$row->problem_id'>测试数据</a>";
+        echo "<td><a target=\"view_window\" href='phpfm.php?frame=3&pid=$row->problem_id'>测试数据</a>";
     }
     if ($_SESSION['groups']==-5){
         echo "<td>";?>

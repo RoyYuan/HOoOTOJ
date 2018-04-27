@@ -27,13 +27,13 @@ if (isset($_GET['id']))
         $sql="SELECT * FROM `problems` ".
             "WHERE `problem_id`=$id AND `deleted`=0 AND `problem_id` NOT IN(
             SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN (
-            SELECT `contest_id` FROM `contest` WHERE `end_time`>'$now' OR `contest`.`hide`=1 OR `contest`.`private`=1 ))";
+            SELECT `contest_id` FROM `contest` WHERE `end_time`>'$now' AND `contest`.`hide`=0))";
     }
     else{
         $sql="SELECT * FROM `problems` ".
             "WHERE `problem_id`=$id AND `deleted`=0 AND `hide`=0 AND `problem_id` NOT IN(
             SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN (
-            SELECT `contest_id` FROM `contest` WHERE `end_time`>'$now' OR `contest`.`hide`=1 OR `contest`.`private`=1 ))";
+            SELECT `contest_id` FROM `contest` WHERE `end_time`>'$now' AND `contest`.`hide`=0))";
     }
 
 

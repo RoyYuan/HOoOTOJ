@@ -32,7 +32,7 @@
                         sorter:'punish'
                     }
                     <?php
-                    for($i=0;$i<$pid_cnt;$i++){
+                    for($i=1;$i<=$pid_cnt;$i++){
                         echo ",".($i+5).": { ";
                         echo "  sorter:'punish' ";
                         echo "}";
@@ -95,7 +95,7 @@
                     echo "<td><a href='user_info.php?user=$user_id'>".htmlentities($U[$i]->username,ENT_QUOTES,"UTF-8")."</a>";
                     echo "<td><a href='status.php?user_id=$user_id&cid=$cid'>$user_solved</a>";
                     echo "<td>".sec2str($U[$i]->time);
-                    for ($j=0;$j<$pid_cnt;$j++){
+                    for ($j=1;$j<=$pid_cnt;$j++){
                         $bg_bolor="eeeeee";
                         if (isset($U[$i]->problem_ac_sec[$j]) && $U[$i]->problem_ac_sec[$j]>0){
                             $aa=0x33+$U[$i]->problem_wa_times[$j]*32;

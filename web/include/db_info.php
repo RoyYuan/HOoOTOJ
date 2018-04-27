@@ -8,7 +8,7 @@ static $DB_PASSWORD="";
 
 //OJ设置
 static $OJ_DATA="C:/Users/RoyYuan/Documents/HOoOTOJ/data";
-static $OJ_NAME="hoootoj";
+static $OJ_NAME="HOoOTOJ";
 static $OJ_RANK_LOCK_PERCENT=0;
 
 //初始化db设置

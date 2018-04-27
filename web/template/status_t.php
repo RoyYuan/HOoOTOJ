@@ -109,8 +109,8 @@
             if (isset($_GET['prevtop']))
                 echo "[<a href='status.php?".$str."&top=".intval($_GET['prevtop'])."'>上一页</a>]&nbsp;&nbsp;";
             else
-                echo "[<a href='status.php?".$str."&top=".($top+20)."'>上一页</a>]&nbsp;&nbsp;";
-            echo "[<a href='status.php?".$str."&top=".$bottom."&prevtop=".$top."'>下一页</a>]";
+                echo "[<a href='status.php?".$str."&top=".intval($top+20)."'>上一页</a>]&nbsp;&nbsp;";
+            echo "[<a href='status.php?".$str."&top=".intval($bottom-1)."&prevtop=".$top."'>下一页</a>]";
             ?>
         </div>
 

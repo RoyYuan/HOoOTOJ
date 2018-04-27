@@ -23,15 +23,15 @@ if (!check_username($user)){
 }
 $view_title=$user."@".$OJ_NAME;
 $user_mysql=mysqli_real_escape_string($mysqli,$user);
-$sql="SELECT `user_id` FROM `users` WHERE `user_id`='$user_mysql'";
+$sql="SELECT `username` FROM `users` WHERE `user_id`='$user_mysql'";
 $result=mysqli_query($mysqli,$sql);
 $row_cnt=mysqli_num_rows($result);
 if ($row_cnt==0){
     echo "没有该用户！";
     exit(0);
 }
-
-$username=$_SESSION['username'];
+$row=mysqli_fetch_object($result);
+$username=$row->username;
 
 $sql="SELECT COUNT(DISTINCT problem_id) AS `ac` FROM `submissions` WHERE `user_id`='".$user_mysql."' AND `result`=4";
 $result=mysqli_query($mysqli,$sql) or die(mysqli_error($mysqli));
