@@ -53,12 +53,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div id="main">
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <center>
-                        <table id="input_table" style="font-size:20px">
+                        <table id="input_table" style="font-size:20px;border-collapse:separate;   border-spacing:10px;">
                             <tr>
                                 <td width=220></td>
-                                <td width=220> 用户名:</td>
+<!--                                <td width=220> 用户名:</td>-->
                                 <td width=220>
-                                    <input name="username" type="text" size=20 value="<?php echo $username ?>"></td>
+                                    <input name="username" class="form-control" placeholder="帐号" type="text" size=20 value="<?php echo $username ?>"></td>
                                 <td width=220>
                                     <span class="error">
                                        <?php echo $username_error; ?>
@@ -67,9 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </tr>
                             <tr>
                                 <td></td>
-                                <td> 密码:</td>
+<!--                                <td> 密码:</td>-->
                                 <td>
-                                    <input name="password" type="password" size=20></td>
+                                    <input name="password" class="form-control" placeholder="密码" type="password" size=20></td>
                                 <td>
                                     <span class="error">
                                        <?php echo $password_error; ?>
@@ -78,11 +78,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </tr>
                             <tr>
                                 <td></td>
-                                <td> 验证码:</td>
-                                <td>
-                                    <input name="vcode" size="5" type="text">&nbsp;<img alt="点击刷新" src="vcode.php" onclick="this.src='vcode.php?'+Math.random()">
+<!--                                <td> 验证码:</td>-->
+                                <td width=220>
+                                    <input name="vcode" class="form-control" placeholder="验证码" size="5" type="text">
                                 </td>
                                 <td>
+                                    <img alt="点击刷新" src="vcode.php" onclick="this.src='vcode.php?'+Math.random()">
                                     <span class="error">
                                        <?php echo $vcode_error; ?>
                                    </span>
@@ -90,9 +91,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </tr>
                             <tr>
                                 <td></td>
-                                <td width=220>
-                                    <input name="submit" class="S" type="submit" value="登陆"></td>
-                                <td><a href="forgetpage.php">忘记密码</a> <a href="registerpage.php">注册新用户</a></td>
+                                <td width=330>
+                                    <input name="submit" class="btn btn-primary" type="submit" value="登陆">&nbsp;&nbsp;
+                                    [<a href="forgetpage.php">忘记密码</a>]
                                 <td></td>
                             </tr>
                         </table>

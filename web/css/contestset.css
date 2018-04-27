@@ -6,7 +6,13 @@ h3{
 .red{
     color: red;
 }
+.green{
+    color: green;
+}
 
+.blue{
+    color: blue;
+}
 .oddrow {
     background-color: #a6e1ec;
     white-space: nowrap;

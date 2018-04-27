@@ -14,14 +14,14 @@ function check_ac($cid,$pid){
     $ac=intval($row[0]);
     mysqli_free_result($result);
     if ($ac>0)
-        return "<font color=green>Y</font>";
+        return "<div class='btn btn-success'>Y</div>";
     $sql="SELECT count(*) FROM `submissions` WHERE `contest_id`='$cid' AND `contest_num`='$pid' AND `user_id`='".$_SESSION['user_id']."'";
     $result=mysqli_query($mysqli,$sql);
     $row=mysqli_fetch_array($result);
     $sub=intval($row[0]);
     mysqli_free_result($result);
     if ($sub>0)
-        return "<font color=red>N</font>";
+        return "<div class='btn btn-danger'>N</div>";
     else
         return "";
 }
@@ -115,13 +115,13 @@ ORDER BY pnum";
     $contest_problemset=Array();
     $cnt=0;
     while($row=mysqli_fetch_object($result)){
-        $contest_problemset[$cnt][0]="";
+        $contest_problemset[$cnt][0]="<td></td>";
         if (isset($_SESSION['user_id']))
-            $contest_problemset[$cnt][0]=check_ac($cid,$cnt+1);
-        $contest_problemset[$cnt][1]="$row->pid Problem &nbsp;".$PID[$cnt];
-        $contest_problemset[$cnt][2]="<a href='problem.php?cid=$cid&pid=".($cnt+1)."'>$row->title</a>";
-        $contest_problemset[$cnt][3]=$row->accepted;
-        $contest_problemset[$cnt][4]=$row->submit;
+            $contest_problemset[$cnt][0]="<td>".check_ac($cid,$cnt+1)."</td>";
+        $contest_problemset[$cnt][1]="<td>$row->pid Problem &nbsp;".$PID[$cnt]."</td>";
+        $contest_problemset[$cnt][2]="<td><a href='problem.php?cid=$cid&pid=".($cnt+1)."'>$row->title</a></td>";
+        $contest_problemset[$cnt][3]="<td class='center'>".$row->accepted."</td>";
+        $contest_problemset[$cnt][4]="<td class='center'>".$row->submit."</td>";
         $cnt++;
     }
 
@@ -165,15 +165,15 @@ else{
             $length=$end_time-$start_time;
             $left=$end_time-$now;
             if ($now>$end_time){
-                $contest_list[$i][2]="<td><span class=green>已结束于$row->end_time</span></td>";
+                $contest_list[$i][2]="<td align='center'><span class='green'>已结束于$row->end_time</span></td>";
             }
             elseif ($now<$start_time){
-                $contest_list[$i][2]="<td><span class=blue>开始于$row->start_time</span>&nbsp;";
-                $contest_list[$i][2].="<span class=green>总时长".formatTimeLength($length)."</span></td>";
+                $contest_list[$i][2]="<td align='center'><span class='blue'>开始于$row->start_time</span>&nbsp;";
+                $contest_list[$i][2].="<span class='green'>总时长".formatTimeLength($length)."</span></td>";
             }
             else{
-                $contest_list[$i][2]="<td><span class=red>正在进行</span>&nbsp;";
-                $contest_list[$i][2].="<span class=green>剩余时长".formatTimeLength($left)."</span></td>";
+                $contest_list[$i][2]="<td align='center'><span class='red'>正在进行</span>&nbsp;";
+                $contest_list[$i][2].="<span class='green'>剩余时长".formatTimeLength($left)."</span></td>";
             }
             $i++;
         }

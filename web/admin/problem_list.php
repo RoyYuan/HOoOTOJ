@@ -87,13 +87,13 @@ for (;$row=mysqli_fetch_object($result);){
     echo "<td><a href='../problem.php?id=$row->problem_id'>".$row->title."</a></td>";
     echo "<td>$row->owner_id</td>";
     if ((isset($_SESSION['groups']) && $_SESSION['groups']<=-3) || $_SESSION['user_id']==$row->owner_id){
-        echo "<td><a href='problem_status_change.php?id=$row->problem_id'>".($row->hide==0?"<span titlc='点击以设为不可见' class=green>可见</span>":"<span class=red title='点击以设为可见的'>不可见</span>")."</a></td>";
-        echo "<td><a href='problem_edit.php?id=$row->problem_id'>编辑</a>";
-        echo "<td><a target=\"view_window\" href='phpfm.php?frame=3&pid=$row->problem_id'>测试数据</a>";
+        echo "<td><a href='problem_status_change.php?id=$row->problem_id'>".($row->hide==0?"<span titlc='点击以设为不可见' class=green>可见<span class='glyphicon glyphicon-eye-open'></span></span>":"<span class=red title='点击以设为可见的'>不可见<span class='glyphicon glyphicon-eye-close'></span></span>")."</a></td>";
+        echo "<td><a href='problem_edit.php?id=$row->problem_id'>编辑<span class=\"glyphicon glyphicon-wrench\"></span></a>";
+        echo "<td><a target=\"view_window\" href='phpfm.php?frame=3&pid=$row->problem_id'>测试数据 <span class='glyphicon glyphicon-folder-open'></span></a>";
     }
     if ($_SESSION['groups']==-5){
         echo "<td>";?>
-        <a href=# onclick='check_delete(<?php echo $row->problem_id?>)'>删除</a>
+        <a href=# onclick='check_delete(<?php echo $row->problem_id?>)'>删除<span class="glyphicon glyphicon-trash"></span></a>
         <?php
     }
     echo "</tr>";

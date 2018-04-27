@@ -13,6 +13,14 @@ h3{
     font-family: 宋体;
 }
 
+.green{
+    color: green;
+}
+
+.blue{
+    color: blue;
+}
+
 .evenrow {
     background-color: #E4F0F8;
     white-space: nowrap;

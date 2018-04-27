@@ -83,8 +83,8 @@ for (;$row=mysqli_fetch_object($result);){
     $user_id=$_SESSION['user_id'];
     if (isset($_SESSION['groups']) && $_SESSION['groups']<=-4 || ($row->owner_id==$user_id)){
         echo "<td><a href='contest_private_change.php?cid=$cid'>".($row->private==0?"<span class=green>公开</span>":"<span class=red>私人</span>")."</a></td>";
-        echo "<td><a href='contest_status_change.php?cid=$cid'>".($row->hide==0?"<span class=green>可见</span>":"<span class='red'>不可见</span>")."</a></td>";
-        echo "<td><a href='contest_edit.php?cid=$cid'>编辑</a></td>";
+        echo "<td><a href='contest_status_change.php?cid=$cid'>".($row->hide==0?"<span class=green>可见<span class='glyphicon glyphicon-eye-open'></span>":"<span class='red'>不可见<span class='glyphicon glyphicon-eye-close'></span></span>")."</a></td>";
+        echo "<td><a href='contest_edit.php?cid=$cid'>编辑<span class=\"glyphicon glyphicon-wrench\"></span></a></td>";
     }
     echo "</tr>";
 }

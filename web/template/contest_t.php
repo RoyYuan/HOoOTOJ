@@ -14,7 +14,7 @@
 <div id="C1">
     <?php require_once ("contest_header.php"); ?>
     <div id="main">
-        <script src="include/sortTable.js"></script>
+<!--        <script src="include/sortTable.js"></script>-->
         <center>
             <div>
                 <h3>Contest<?php echo $contest_cid ?></h3>
@@ -41,17 +41,17 @@
                 <tr align="center" class="toprow">
                     <td width="5%">
                     </td>
-                    <td style="cursor:hand" onclick="sortTable('problemset',1,'int');" width="15%">
+                    <td style="cursor:hand;text-align: left" width="15%">
                         <a>Problem ID</a>
                     </td>
-                    <td style="cursor:hand" width="60%">
+                    <td style="cursor:hand;text-align: left" width="60%">
                         <a>Title</a>
                     </td>
-                    <td style="cursor:hand" onclick="sortTable('problemset',3,'int');" width="5%">
-                        <a>Accepted</a>
+                    <td style="cursor:hand" width="5%">
+                        <a>Accepted<span class='glyphicon glyphicon-ok-circle'></span></a>
                     </td>
-                    <td style="cursor:hand" onclick="sortTable('problemset',4,'int');" width="5%">
-                        <a>Submited</a>
+                    <td style="cursor:hand" width="5%">
+                        <a>Submited<span class='glyphicon glyphicon-upload'></span></a>
                     </td>
                 </tr>
                 </thead>
@@ -64,9 +64,10 @@
                     else
                         echo "<tr class='evenrow'>";
                     foreach ($row as $table_cell) {
-                        echo "<td>";
-                        echo "\t".$table_cell;
-                        echo "</td>";
+                        echo $table_cell;
+//                        echo "<td>";
+//                        echo "\t".$table_cell;
+//                        echo "</td>";
                     }
                     echo "</tr>";
                     $cnt=1-$cnt;

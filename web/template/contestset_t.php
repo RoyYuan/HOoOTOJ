@@ -25,7 +25,7 @@
                     <td width="10%">
                         ID
                     </td>
-                    <td width="50%">
+                    <td width="50%" align="left">
                         Name
                     </td>
                     <td width="40%">

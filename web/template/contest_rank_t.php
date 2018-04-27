@@ -60,16 +60,16 @@
         }
         ?>
         <center>
+            <?php echo $first_blood[1].$U[0]->problem_ac_sec[1] ?>
             <h3>Contest RankList -- <?php echo $title ?></h3>
-        </center>
         <table id="rank" width="90%">
             <thead>
             <tr class="toprow" align="center">
                 <td class="{sorter:'false'}" width="5%">Rank</td>
-                <th width="10%">User</th>
-                <th width="10%">Username</th>
-                <th width="5%">Solved</th>
-                <th width="5%">Penalty</th>
+                <th width="5%" class="center">User</th>
+                <th width="10%" class="center">Username</th>
+                <th width="5%" class="center">Solved</th>
+                <th width="5%" class="center">Penalty</th>
                 <?php
                 for ($i=0;$i<$pid_cnt;$i++)
                     echo "<td><a href='problem.php?cid=$cid&pid=".($i+1)."'>$PID[$i]</a></td>";
@@ -86,42 +86,44 @@
                         echo $rank++;
                     else
                         echo "*";
+                    echo "</td>";
                     $user_solved=$U[$i]->solved;
                     if (isset($_GET['user_id']) && $user_id==$_GET['user_id'])
                         echo "<td bgcolor=#ffff77>";
                     else
                         echo "<td>";
-                    echo "<a name='$user_id' href=user_info.php?user=$user_id>$user_id</a>";
-                    echo "<td><a href='user_info.php?user=$user_id'>".htmlentities($U[$i]->username,ENT_QUOTES,"UTF-8")."</a>";
-                    echo "<td><a href='status.php?user_id=$user_id&cid=$cid'>$user_solved</a>";
-                    echo "<td>".sec2str($U[$i]->time);
+                    echo "<a name='$user_id' href=user_info.php?user=$user_id>$user_id</a></td>";
+                    echo "<td><a href='user_info.php?user=$user_id'>".htmlentities($U[$i]->username,ENT_QUOTES,"UTF-8")."</a></td>";
+                    echo "<td><a href='status.php?user_id=$user_id&cid=$cid'>$user_solved</a></td>";
+                    echo "<td>".sec2str($U[$i]->time)."</td>";
                     for ($j=1;$j<=$pid_cnt;$j++){
-                        $bg_bolor="eeeeee";
+                        $bg_color="#eeeeee";
                         if (isset($U[$i]->problem_ac_sec[$j]) && $U[$i]->problem_ac_sec[$j]>0){
-                            $aa=0x33+$U[$i]->problem_wa_times[$j]*32;
-                            $aa=$aa>0xaa?0xaa:$aa;
-                            $aa=dechex($aa);
-                            $bg_bolor="$aa"."ff"."$aa";
+//                            $aa=0x33+$U[$i]->problem_wa_times[$j]*32;
+//                            $aa=$aa>0xaa?0xaa:$aa;
+//                            $aa=dechex($aa);
+                            $bg_color="greenyellow";
                             if ($user_id==$first_blood[$j])
-                                $bg_bolor="aaaaff";
+                                $bg_color="limegreen";
                         }
                         elseif (isset($U[$i]->problem_wa_times[$j]) && $U[$i]->problem_wa_times[$j]>0){
-                            $aa=0xaa-$U[$i]->problem_wa_times[$j]*10;
-                            $aa=$aa>16?$aa:16;
-                            $aa=dechex($aa);
-                            $bg_bolor="ff$aa$aa";
+//                            $aa=0xaa-$U[$i]->problem_wa_times[$j]*10;
+//                            $aa=$aa>16?$aa:16;
+//                            $aa=dechex($aa);
+                            $bg_color="pink";
                         }
-                        echo "<td class=well style='padding:1px;background-color:$bg_bolor'>";
+                        echo "<td class=well style='padding:1px;background-color:$bg_color'>";
                         if (isset($U[$i])){
                             if (isset($U[$i]->problem_ac_sec[$j]) && $U[$i]->problem_ac_sec[$j]>0)
                                 echo sec2str($U[$i]->problem_ac_sec[$j]);
                             if (isset($U[$i]->problem_wa_times[$j]) && $U[$i]->problem_wa_times[$j]>0)
                                 echo "(-".$U[$i]->problem_wa_times[$j].")";
                         }
+                        echo "</td>";
                     }
                     echo "</tr>\n";
                 }
-                echo "</tbody></table>";
+                echo "</tbody></table></center>";
                 ?>
             <script>
                 function getTotal(rows){
@@ -143,25 +145,25 @@
                     try{
                         var total=getTotal(rows);
                         for (var i=1;i<rows.length;i++){
-                            var cell=rows[i].cells[0];
-                            var acc=rows[i].cells[3];
-                            var ac=parseInt(acc.innerText);
+                            var rank=rows[i].cells[0];
+                            var solved=rows[i].cells[3];
+                            var ac=parseInt(solved.innerText);
                             if (isNaN(ac))
-                                ac=parseInt(acc.textContent);
-                            if (cell.innerHTML!="*" && ac>0){
-                                var r=parseInt(cell.innerHTML);
+                                ac=parseInt(solved.textContent);
+                            if (rank.innerHTML!="*" && ac>0){
+                                var r=parseInt(rank.innerHTML);
                                 if (r==1){
-                                    cell.innerHTML="Winner";
-                                    cell.className="badge badge-warning";
+                                    rank.innerHTML="Winner";
+                                    rank.className="badge badge-warning";
                                 }
                                 if (r>1 && r<=total*.05+1)
-                                    cell.className="badge badge-warning";
+                                    rank.className="badge badge-warning";
                                 if (r>total*.05+1 && r<=total*.15+1)
-                                    cell.className="badge";
+                                    rank.className="badge";
                                 if (r>total*0.15+1 && r<=total*0.30+1)
-                                    cell.className="badge badge-error";
+                                    rank.className="badge badge-error";
                                 if (r>total*0.30+1 && ac>0)
-                                    cell.className="badge badge-info";
+                                    rank.className="badge badge-info";
                             }
                         }
                     }catch(e){

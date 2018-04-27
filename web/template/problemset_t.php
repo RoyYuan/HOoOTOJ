@@ -15,13 +15,13 @@
         <?php require_once("header.php"); ?>
         <div id="main">
             <script src="js/jquery.js"></script>
-            <script src="js/jquery.tablesorter.js"></script>
-            <script>
-                $(document).ready(function(){
-                    $("#problemset").tablesorter();
-                    }
-                );
-            </script>
+<!--            <script src="js/jquery.tablesorter.js"></script>-->
+<!--            <script>-->
+<!--                $(document).ready(function(){-->
+<!--                    $("#problemset").tablesorter();-->
+<!--                    }-->
+<!--                );-->
+<!--            </script>-->
             <h3 align="center">
                 <?php
                 for($i=1;$i<=$view_total_page;$i++){
@@ -61,8 +61,8 @@
                             <th width="10"></th>
                             <th width="120" class="pointer"><A>题目id</A></th>
                             <th class="pointer">Title</th>
-                            <th class="pointer" width=60 >提交</th>
-                            <th class="pointer" width=60 >通过</th>
+                            <th class="pointer" width=60 >提交<span class='glyphicon glyphicon-upload'></span></th>
+                            <th class="pointer" width=60 >通过<span class='glyphicon glyphicon-ok-circle'></span></th>
                         </tr>
                     </thead>
 
@@ -87,6 +87,18 @@
                 </table>
 
             </center>
+            <h3 align="center">
+                <?php
+                for($i=1;$i<=$view_total_page;$i++){
+                    if($i>1)
+                        echo '&nbsp;';
+                    if($i==$page)
+                        echo "<span class='red'>$i</span>";
+                    else
+                        echo "<a href='problemset.php?page=".$i."'>".$i."</a>";
+                }
+                ?>
+            </h3>
         </div>
     </div>
     <div class="center">

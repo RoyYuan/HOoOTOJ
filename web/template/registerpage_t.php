@@ -72,34 +72,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div id="main">
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <center>
-                        <table id="input_table">
+                        <table id="input_table" style="border-collapse:separate;   border-spacing:10px;">
                             <tr>
                                 <td width=220></td>
-                                <td width=220> 用户名:</td>
+<!--                                <td width=220> 用户名:</td>-->
                                 <td width=220>
-                                    <input name="username" type="text" size=20 value="<?php echo $username ?>"></td>
+                                    <input name="username" class="form-control" placeholder="帐号" type="text" size=20 value="<?php echo $username ?>"></td>
                                 <td width=220> <span class="error">
                                         * <?php echo $username_error; ?></span></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td> 密码:</td>
+<!--                                <td> 密码:</td>-->
                                 <td>
-                                    <input name="password" type="password" size=20 value="<?php echo $password ?>"></td>
+                                    <input name="password" class="form-control" placeholder="密码" type="password" size=20 value="<?php echo $password ?>"></td>
                                 <td><span class="error">* <?php echo $password_error; ?></span></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td> 确认密码:</td>
+<!--                                <td> 确认密码:</td>-->
                                 <td>
-                                    <input name="password2" type="password" size=20 value="<?php echo $password2 ?>"></td>
+                                    <input name="password2" class="form-control" placeholder="确认密码" type="password" size=20 value="<?php echo $password2 ?>"></td>
                                 <td><span class="error">* <?php echo $password2_error; ?></span></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td> 密保问题:</td>
+<!--                                <td> 密保问题:</td>-->
                                 <td>
-                                    <select name="question">
+                                    <select name="question" class="form-control">
                                 <option value="Mother"
                                         <?php if (!strcmp($question, "Mother")){ ?>selected="selected"<?php } ?> >
                                     您母亲的姓名是？
@@ -116,24 +116,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </tr>
                             <tr>
                                 <td></td>
-                                <td> 密保答案:</td>
+<!--                                <td> 密保答案:</td>-->
                                 <td>
-                                    <input name="answer" type="text" size=20 value="<?php echo $answer ?>"></td>
+                                    <input name="answer" class="form-control" placeholder="密保答案" type="text" size=20 value="<?php echo $answer ?>"></td>
                                 <td><span class="error">* <?php echo $answer_error; ?></span></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td> 验证码:</td>
+<!--                                <td> 验证码:</td>-->
                                 <td>
-                                    <input name="vcode" size="5" type="text">&nbsp;<img alt="点击刷新" src="vcode.php" onclick="this.src='vcode.php?'+Math.random()">
+                                    <input name="vcode" class="form-control" placeholder="验证码" size="5" type="text">
                                 </td>
-                                <td><span class="error">* <?php echo $vcode_error; ?></span></td>
+                                <td><img alt="点击刷新" src="vcode.php" onclick="this.src='vcode.php?'+Math.random()"><span class="error">* <?php echo $vcode_error; ?></span></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>
-                                    <input id="submit" class="S" name="submit" type="submit" value="注册"></td>
-                                <td><a href="loginpage.php">返回登录</a></td>
+                                    <input id="submit" class="btn btn-primary" name="submit" type="submit" value="注册">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="loginpage.php">返回登录</a></td>
                             </tr>
                         </table>
                     </center>
