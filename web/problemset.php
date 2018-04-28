@@ -87,9 +87,9 @@ while($row=mysqli_fetch_object($result)){
     //给AC的打Y，提交而未过的打N
     if (isset($sub_arr[$row->problem_id])){
         if (isset($acc_arr[$row->problem_id]))
-            $view_problemset[$i][0]="<div class='btn btn-success'>Y</div>";
+            $view_problemset[$i][0]="<span class='glyphicon glyphicon-ok'></span>";
         else
-            $view_problemset[$i][0]="<div class='btn btn-danger'>N</div>";
+            $view_problemset[$i][0]="<span class='glyphicon glyphicon-remove'></span>";
     }
     else
         $view_problemset[$i][0]="<div class=none></div>";

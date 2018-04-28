@@ -58,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <td width=220></td>
 <!--                                <td width=220> 用户名:</td>-->
                                 <td width=220>
+                                    <i class="fa fa-user fa-lg"></i>
                                     <input name="username" class="form-control" placeholder="帐号" type="text" size=20 value="<?php echo $username ?>"></td>
                                 <td width=220>
                                     <span class="error">

@@ -17,7 +17,7 @@
 <!--        <script src="include/sortTable.js"></script>-->
         <center>
             <div>
-                <h3>Contest<?php echo $contest_cid ?></h3>
+                <h3 style="font-family: Arial">Contest<?php echo $contest_cid ?></h3>
                 <p><?php echo $contest_description ?></p><br/>
                 开始时间:<font color="#993399"><?php echo $contest_start_time ?></font>
                 结束时间:<font color="#993399"><?php echo $contest_end_time ?></font>

@@ -48,7 +48,7 @@
     <div id="main" class="center">
         <?php require_once ("contest_header.php");?>
         <div>
-            <h3>Contest<?php echo $cid ?></h3>
+            <h3 style="font-family: Arial">Contest<?php echo $cid ?></h3>
             [<a href="contest.php?cid=<?php echo $cid?>">Problemset</a>]
             [<a href="status.php?cid=<?php echo $cid?>">Status</a>]
             [<a href="contest_rank.php?cid=<?php echo $cid?>">Standing</a>]
@@ -60,7 +60,7 @@
         }
         ?>
         <center>
-            <?php echo $first_blood[1].$U[0]->problem_ac_sec[1] ?>
+<!--            --><?php //echo $first_blood[1].$U[0]->problem_ac_sec[1] ?>
             <h3>Contest RankList -- <?php echo $title ?></h3>
         <table id="rank" width="90%">
             <thead>

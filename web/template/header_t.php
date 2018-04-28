@@ -1,62 +1,117 @@
-<link rel="stylesheet" type="text/css" href="css/header.css">
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <script src="js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
 <?php
 $flag=0;
+$now="active";
+if (!isset($_SESSION))
+    session_start();
 if (isset($_SESSION['groups']) && $_SESSION['groups']<=-2)
     $flag=1;
 ?>
-<div id="head">
-    <center>
-        <h2><img id="logo" src="image/logo.png"><span style="color:red">HOoOT Online Judge</span></h2>
-    </center>
-</div>
-<div id="subhead">
-    <div id="menu" class="navbar">
-        <?php $now="btn-warning"; ?>
-        <br/>
-        <br/>
-        <a class="btn" style="width: 100px;" href="./"><i class="icon-home"></i>主页</a>
-        <div class="problem_set">
-            <a style="width: 100px;" class="btn <?php if (strlen($url) && (substr_compare($url,"problemset.php",0,14,TRUE)==0 || substr_compare($url,"problem_add_page.php",0,20,TRUE)==0 || substr_compare($url,"problem_list.php",0,16,TRUE)==0)) echo $now; ?>"
-            <?php
-            if ($flag){
-                echo "><i class=\"icon-question-sign\"></i>题库</a>";
-                echo "<div class='admin-problemset'><a style=\"width: 100px;\" class='btn' href='problemset.php'>进入题库</a>";
-                echo "<a style=\"width: 100px;\" class='btn' href='admin/problem_add_page.php'>添加新题目</a>";
-                echo "<a style=\"width: 100px;\" class='btn' href='admin/problem_list.php'>管理题库</a></div>";
-            }
-            else
-            {
-                echo "href=\"problemset.php\"><i class=\"icon-question-sign\"></i>题库</a>";
-            }
-            ?>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!--            <img class="navbar-brand" src="image/logo.png">-->
+            <a class="navbar-brand" href="#">HOoOT OJ</a>
         </div>
-<!--        <a class="btn --><?php //if ($url=="problemset.php") echo $now; ?><!--" href="problemset.php"><i class="icon-question-sign"></i>题库</a>-->
-        <a style="width: 100px;" class="btn <?php if (strlen($url) && substr_compare($url,"status.php?cid=",0,15)!=0 && (substr_compare($url,"status.php",0,10,TRUE)==0)) echo $now; ?>" href="status.php"><i class="icon-check"></i>Status</a>
-        <div class="contest_set">
-            <a style="width: 100px;" class="btn <?php if (strlen($url) && (substr_compare($url,"status.php?cid=",0,15)==0 || substr_compare($url,"contest",0,7)==0 || substr_compare($url,"contest.php",0,11,TRUE)==0 || substr_compare($url,"contest_add_page.php",0,20,TRUE)==0 || substr_compare($url,"contest_list.php",0,16,TRUE)==0)) echo $now; ?>"
+        <div style="font-family: 宋体;font-weight:bold">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="index.php">主页</a>
+                </li>
+                <li class="dropdown  <?php if (strlen($url) && (substr_compare($url,"problemset.php",0,14,TRUE)==0 || substr_compare($url,"problem_add_page.php",0,20,TRUE)==0 || substr_compare($url,"problem_list.php",0,16,TRUE)==0)) echo $now; ?>">
+                    <?php
+                    if ($flag){?>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">题库</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="problemset.php">进入题库</a></li>
+                            <li><a href="admin/problem_add_page.php">添加题目</a></li>
+                            <li><a href="admin/problem_list.php">管理题库</a></li>
+                        </ul>
+                        <?php
+                    }
+                    else{
+                        ?>
+                        <a href="problemset.php">题库</a>
+                        <?php
+                    }
+                    ?>
+                </li>
+                <li class="<?php if (strlen($url) && substr_compare($url,"status.php?cid=",0,15)!=0 && (substr_compare($url,"status.php",0,10,TRUE)==0)) echo $now; ?>">
+                    <a href="status.php">Status</a>
+                </li>
+                <li class="dropdown <?php if (strlen($url) && (substr_compare($url,"status.php?cid=",0,15)==0 || substr_compare($url,"contest",0,7)==0 || substr_compare($url,"contest.php",0,11,TRUE)==0 || substr_compare($url,"contest_add_page.php",0,20,TRUE)==0 || substr_compare($url,"contest_list.php",0,16,TRUE)==0)) echo $now; ?>">
+                    <?php
+                    if ($flag){?>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">竞赛</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="contest.php">进入竞赛列表</a></li>
+                            <li><a href="admin/contest_add_page.php">添加竞赛</a></li>
+                            <li><a href="admin/contest_list.php">竞赛管理</a></li>
+                        </ul>
+                        <?php
+                    }
+                    else{
+                        ?>
+                        <a href="contest.php">竞赛</a>
+                        <?php
+                    }
+                    ?>
+                </li>
+                <li class="<?php if (strlen($url) && (substr_compare($url,"faqs.php",0,8,TRUE)==0)) echo $now; ?>">
+                    <a href="faqs.php">FAQ</a>
+                </li>
+            </ul>
             <?php
-            if ($flag){
-                echo "><i class='icon-fire'></i>竞赛</a>";
-                echo "<div class='admin-contestset'><a style='width: 100px' class='btn' href='contest.php'>进入竞赛列表</a>";
-                echo "<a style='width: 100px;' class='btn' href='admin/contest_add_page.php'>添加新竞赛</a>";
-                echo "<a style='width: 100px' class='btn' href='admin/contest_list.php'>管理竞赛</a></div>";
+            if (!isset($_SESSION['user_id'])) {
+                ?>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="registerpage.php"><span class="glyphicon glyphicon-user"></span> 注册&nbsp;</a></li>
+                    <li><a href="loginpage.php"><span class="glyphicon glyphicon-log-in"></span> 登录&nbsp;</a></li>
+                </ul>
+                <?php
             }
             else{
-                echo "href=\"contest.php\"><i class=\"icon-fire\"></i>竞赛</a>";
+                echo "<ul class=\"nav navbar-nav navbar-right\">";
+                if ($flag){
+                    ?>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            权限操作
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="admin/password_reset.php">重置他人密码</a>
+                            </li>
+                            <li>
+                                <a href="admin/groups_change.php">更改他人权限</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <?php
+                }
+                ?>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>个人中心</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user_info.php?user=<?php echo$_SESSION['user_id']?>">个人信息</a></li>
+                            <li><a href="logout.php">注销</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <?php
             }
             ?>
         </div>
-<!--        <a style="width: 100px;" class="btn --><?php //if ($url=="contest.php") echo $now; ?><!--" href="contest.php"><i class="icon-fire"></i>竞赛</a>-->
-        <a style="width: 100px;" class="btn <?php if ($url=="faqs.php") echo $now; ?>" href="faqs.php"><i class="icon-info-sign"></i>FAQ</a>
     </div>
 
-    <div id="profile">
-        <script src="include/profile.php?<?php echo rand(); ?>"></script>
-    </div>
-</div>
-<!--<div id=broadcast class="container">-->
-<!--    <marquee id=broadcast scrollamount=1 direction=up scrolldelay=250 onMouseOver='this.stop()' onMouseOut='this.start()';>-->
-<!--        --><?php //echo $view_marquee_msg?>
-<!--    </marquee>-->
-<!--</div>-->
-<br>
+</nav>
+</body>
+</html>
+

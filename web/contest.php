@@ -14,14 +14,14 @@ function check_ac($cid,$pid){
     $ac=intval($row[0]);
     mysqli_free_result($result);
     if ($ac>0)
-        return "<div class='btn btn-success'>Y</div>";
+        return "<span class='glyphicon glyphicon-ok'></span>";
     $sql="SELECT count(*) FROM `submissions` WHERE `contest_id`='$cid' AND `contest_num`='$pid' AND `user_id`='".$_SESSION['user_id']."'";
     $result=mysqli_query($mysqli,$sql);
     $row=mysqli_fetch_array($result);
     $sub=intval($row[0]);
     mysqli_free_result($result);
     if ($sub>0)
-        return "<div class='btn btn-danger'>N</div>";
+        return "<span class='glyphicon glyphicon-remove'></span>";
     else
         return "";
 }
@@ -118,8 +118,8 @@ ORDER BY pnum";
         $contest_problemset[$cnt][0]="<td></td>";
         if (isset($_SESSION['user_id']))
             $contest_problemset[$cnt][0]="<td>".check_ac($cid,$cnt+1)."</td>";
-        $contest_problemset[$cnt][1]="<td>$row->pid Problem &nbsp;".$PID[$cnt]."</td>";
-        $contest_problemset[$cnt][2]="<td><a href='problem.php?cid=$cid&pid=".($cnt+1)."'>$row->title</a></td>";
+        $contest_problemset[$cnt][1]="<td align='left'>&nbsp;Problem &nbsp;".$PID[$cnt]."</td>";
+        $contest_problemset[$cnt][2]="<td>&nbsp;<a href='problem.php?cid=$cid&pid=".($cnt+1)."'>$row->title</a></td>";
         $contest_problemset[$cnt][3]="<td class='center'>".$row->accepted."</td>";
         $contest_problemset[$cnt][4]="<td class='center'>".$row->submit."</td>";
         $cnt++;

@@ -54,7 +54,7 @@
                     </tr>
                 </table>
 
-                <table class="table table-striped" id="problemset" width="90%">
+                <table class="table table-striped table-hover" id="problemset" width="90%">
 
                     <thead>
                         <tr class="toprow">
@@ -71,9 +71,9 @@
                     $cnt=0;
                     foreach($view_problemset as $row){
                         if ($cnt)
-                            echo "<tr class='oddrow'>";
+                            echo "<tr class='info'>";
                         else
-                            echo "<tr class='evenrow'>";
+                            echo "<tr>";
                         foreach($row as $table_cell){
                             echo "<td>";
                             echo "\t".$table_cell;

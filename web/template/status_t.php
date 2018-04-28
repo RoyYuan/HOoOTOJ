@@ -168,7 +168,7 @@
                 row.cells[4].innerHTML=ra[1];
                 row.cells[5].innerHTML=ra[2];
                 if(ra[0]<4)
-                    window.setTimeout("fresh_result("+solution_id+")",2000);
+                    window.setTimeout("fresh_result("+submit_id+")",2000);
                 else
                     window.location.reload();
             }
