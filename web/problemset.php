@@ -95,8 +95,39 @@ while($row=mysqli_fetch_object($result)){
         $view_problemset[$i][0]="<div class=none></div>";
     $view_problemset[$i][1]="<div class='center'>".$row->problem_id."</div>";;
     $view_problemset[$i][2]="<div class='left'>&nbsp;<a href='problem.php?id=".$row->problem_id."'>".$row->title."</a></div>";;
-    $view_problemset[$i][3]="<div class='center'>".$row->submit."</div>";;
-    $view_problemset[$i][4]="<div class='center'>".$row->accept."</div>";;
+    $temp=0;
+    if ($row->submit)
+     $temp=$row->accept*100/$row->submit;
+    $temp1=100-$temp;
+
+    $view_problemset[$i][3]="<div class='progress progress-striped' style='text-align: center'>
+<div class=\"progress-bar progress-bar-success\" role=\"progressbar\"
+         aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\"
+         style=\"width:".$temp."% ;\">
+        <span>$row->accept Yes</span>
+    </div>";
+    if ($row->submit>0)
+        $view_problemset[$i][3].="<div class=\"progress-bar progress-bar-danger\" role=\"progressbar\"
+         aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\"
+         style=\"width:".$temp1."% ;\">
+        <span>".intval($row->submit-$row->accept)." No</span>
+    </div>";
+$view_problemset[$i][3].="</div>";
+//    $view_problemset[$i][3]="<div class=\"progress progress-striped\" style='text-align: center'>
+//    <span style='color:black;'>".$row->accept."/".$row->submit."</span>
+//    <div class=\"progress-bar progress-bar-info\" role=\"progressbar\"
+//         aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\"
+//         style=\"width:".$temp."% ;\">
+//    </div>";
+//    if ($row->submit>0)
+//        $view_problemset[$i][3].="<div class=\"progress-bar progress-bar-warning\" role=\"progressbar\"
+//         aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\"
+//         style=\"width:".$temp1."% ;\">
+//    </div>";
+//    $view_problemset[$i][3].= "</div>";
+
+//    $view_problemset[$i][3]="<div class='center'>".$row->submit."</div>";;
+//    $view_problemset[$i][4]="<div class='center'>".$row->accept."</div>";;
     $i++;
 }
 mysqli_free_result($result);

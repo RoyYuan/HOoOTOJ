@@ -61,8 +61,8 @@
                             <th width="10"></th>
                             <th width="120" class="pointer"><A>题目id</A></th>
                             <th class="pointer">Title</th>
-                            <th class="pointer" width=60 >提交<span class='glyphicon glyphicon-upload'></span></th>
-                            <th class="pointer" width=60 >通过<span class='glyphicon glyphicon-ok-circle'></span></th>
+                            <th class="pointer" width=120 >AC率（通过<span class='glyphicon glyphicon-ok-circle'></span>&错误<span class='glyphicon glyphicon-remove-circle'></span>）</th>
+<!--                            <th class="pointer" width=60 >通过</th>-->
                         </tr>
                     </thead>
 

@@ -17,8 +17,10 @@
     <?php require_once("header.php"); ?>
     <div id="C2">
         <center>
+            <br/>
+            <br/>
             <div id="main" style="width: 40%;" align="center">
-                <div id="myCarousel" class="carousel slide" style="border-radius: 50px;">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000" style="border-radius: 50px;">
                     <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -66,6 +68,10 @@
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                </div>
+                <div id="main" style="width: 40%" align="center">
+                    <h3>XUPT_HOoOT一路走来</h3>
+                    <h3>感谢孟老师，烫烫烫永不散</h3>
                 </div>
             </div>
         </center>

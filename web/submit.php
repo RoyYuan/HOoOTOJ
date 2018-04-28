@@ -25,15 +25,15 @@ if (isset($_POST['cid'])){
 }
 else{
     $id=intval($_POST['id']);
-    $sql="SELECT `problem_id` FROM `problems` WHERE `problem_id`=$id AND `problem_id` NOT IN (SELECT DISTINCT problem_id FROM `contest_problem` WHERE `contest_id` IN (
-SELECT `contest_id` FROM `contest` WHERE (`end_time`>'$now' or `contest`.hide=1)))";
+    $sql="SELECT `problem_id` FROM `problems` WHERE `problem_id`=$id AND `problem_id` NOT IN (
+SELECT DISTINCT problem_id FROM `contest_problem` WHERE `contest_id` IN (
+SELECT `contest_id` FROM `contest` WHERE (`end_time`>'$now' AND `contest`.hide=0)))";
     if (!isset($_SESSION['groups']) || (isset($_SESSION['groups']) && $_SESSION['groups']>=0))
-    if (!isset($_SESSION['administrator']))
         $sql.="AND `problems`.`hide`=0";
 }
 
 $result=mysqli_query($mysqli,$sql);
-if ($result && mysqli_num_rows($result) <1 && !isset($_SESSION['groups']) || (isset($_SESSION['groups']) && $_SESSION['groups']>=0) && !((isset($cid) && $cid<=0) || (isset($id)&&$id<=0))){
+if ($result && mysqli_num_rows($result) <1 && (!isset($_SESSION['groups']) || (isset($_SESSION['groups']) && $_SESSION['groups']>=0)) && !((isset($cid) && $cid<=0) || (isset($id)&&$id<=0))){
     mysqli_free_result($result);
     $view_errors="没有该题目<br>";
     require ("template/show_error_t.php");
@@ -141,7 +141,7 @@ $file="cache/cache_$sid.html";
 if (file_exists($file))
     unlink($file);
 
-$statusURL="status.php?user_id=".$_SESSION['user_id'];
+$statusURL="status.php?username=".$_SESSION['username'];
 if (isset($cid))
     $statusURL.="&cid=$cid";
 

@@ -188,7 +188,7 @@ for ($i=0;$i<$rows_cnt;$i++){
     //3
     $view_status[$i][3]="";
     if (intval($row['result'])==11 && ((isset($_SESSION['user_id']) && $row['user_id']==$_SESSION['user_id']) || (isset($_SESSION['groups']) && $_SESSION['groups']<=-2) ) ){
-        $view_status[$i][3].="<a href='show_compile_errors.php?sid=".$row['submit_id']."' class='".$judge_color[$row['result']]."' title='点击查看详情'>CE</a>";
+        $view_status[$i][3].="<a href='show_compile_errors.php?sid=".$row['submit_id']."' class='".$judge_color[$row['result']]."' title='点击查看详情'>".$judge_result[$row['result']]."</a>";
     }
     elseif ( (((intval($row['result'])==5 || intval($row['result'])==6) && $OJ_SHOW_DIFF) || $row['result']==10 || $row['result']==13) && ((isset($_SESSION['user_id']) && $row['user_id']==$_SESSION['user_id']) || (isset($_SESSION['groups']) && $_SESSION['groups']<=-2))){
         $view_status[$i][3].= "<a href=# class='".$judge_color[$row['result']]."' title='点击查看详情'>".$judge_result[$row['result']]."</a>";

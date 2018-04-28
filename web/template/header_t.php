@@ -19,7 +19,7 @@ if (isset($_SESSION['groups']) && $_SESSION['groups']<=-2)
     <div class="container-fluid">
         <div class="navbar-header">
             <!--            <img class="navbar-brand" src="image/logo.png">-->
-            <a class="navbar-brand" href="#">HOoOT OJ</a>
+            <a class="navbar-brand" href="#">HOoOT Online Judge</a>
         </div>
         <div style="font-family: 宋体;font-weight:bold">
             <ul class="nav navbar-nav">

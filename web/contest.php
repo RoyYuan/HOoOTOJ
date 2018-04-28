@@ -120,8 +120,28 @@ ORDER BY pnum";
             $contest_problemset[$cnt][0]="<td>".check_ac($cid,$cnt+1)."</td>";
         $contest_problemset[$cnt][1]="<td align='left'>&nbsp;Problem &nbsp;".$PID[$cnt]."</td>";
         $contest_problemset[$cnt][2]="<td>&nbsp;<a href='problem.php?cid=$cid&pid=".($cnt+1)."'>$row->title</a></td>";
-        $contest_problemset[$cnt][3]="<td class='center'>".$row->accepted."</td>";
-        $contest_problemset[$cnt][4]="<td class='center'>".$row->submit."</td>";
+        $temp=0;
+        if ($row->submit)
+            $temp=$row->accepted*100/$row->submit;
+        $temp1=100-$temp;
+
+        $contest_problemset[$cnt][3]="<td><div class='progress progress-striped' style='text-align: center'>
+<div class=\"progress-bar progress-bar-success\" role=\"progressbar\"
+         aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\"
+         style=\"width:".$temp."% ;\">
+        <span>$row->accepted Yes</span>
+    </div>";
+        if ($row->submit>0)
+            $contest_problemset[$cnt][3].="<div class=\"progress-bar progress-bar-danger\" role=\"progressbar\"
+         aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\"
+         style=\"width:".$temp1."% ;\">
+        <span>".intval($row->submit-$row->accepted)." No</span>
+    </div>";
+        $contest_problemset[$cnt][3].="</div></td>";
+
+
+//        $contest_problemset[$cnt][3]="<td class='center'>".$row->accepted."</td>";
+//        $contest_problemset[$cnt][4]="<td class='center'>".$row->submit."</td>";
         $cnt++;
     }
 

@@ -18,7 +18,7 @@
 
         <hr>
         <center>
-            <font size="+3"><?php echo $OJ_NAME?> Online Judge FAQ</font>
+            <font size="+3"><?php echo $OJ_NAME?> FAQ</font>
         </center>
         <hr>
         <p><font color=green>Q</font>:这个在线裁判系统使用什么样的编译器和编译选项?<br>

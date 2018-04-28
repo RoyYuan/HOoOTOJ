@@ -47,12 +47,14 @@
                     <td style="cursor:hand;text-align: left" width="60%">
                         <a>Title</a>
                     </td>
-                    <td style="cursor:hand" width="5%">
-                        <a>Accepted<span class='glyphicon glyphicon-ok-circle'></span></a>
-                    </td>
-                    <td style="cursor:hand" width="5%">
-                        <a>Submited<span class='glyphicon glyphicon-upload'></span></a>
-                    </td>
+                    <td class="pointer" width=120 ><a>AC率（通过<span class='glyphicon glyphicon-ok-circle'></span>&错误<span class='glyphicon glyphicon-remove-circle'></span>）</a></td>
+                    <!--                            <th class="pointer" width=60 >通过</th>-->
+<!--                    <td style="cursor:hand" width="5%">-->
+<!--                        <a>Accepted<span class='glyphicon glyphicon-ok-circle'></span></a>-->
+<!--                    </td>-->
+<!--                    <td style="cursor:hand" width="5%">-->
+<!--                        <a>Submited<span class='glyphicon glyphicon-upload'></span></a>-->
+<!--                    </td>-->
                 </tr>
                 </thead>
                 <tbody>
