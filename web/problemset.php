@@ -100,7 +100,7 @@ while($row=mysqli_fetch_object($result)){
      $temp=$row->accept*100/$row->submit;
     $temp1=100-$temp;
 
-    $view_problemset[$i][3]="<div class='progress progress-striped' style='text-align: center'>
+    $view_problemset[$i][3]="<div class='progress progress-striped' style='text-align: center;height: 20px'>
 <div class=\"progress-bar progress-bar-success\" role=\"progressbar\"
          aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\"
          style=\"width:".$temp."% ;\">

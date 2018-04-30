@@ -1,6 +1,6 @@
 @import url(../bootstrap/css/bootstrap.css);
 .content{
-    background: none repeat scroll 0 0 #E4F0F8;
+    /*background: none repeat scroll 0 0 #E4F0F8;*/
     font-family:Calibri;
     font-size: 20px;
     line-height: 24px;
@@ -16,7 +16,7 @@
 }
 
 .sampledata {
-    background: none repeat scroll 0 0 #8DB8FF;
+    /*background: none repeat scroll 0 0 #8DB8FF;*/
     font-family:Calibri;
     font-size: 18px;
     white-space: pre;

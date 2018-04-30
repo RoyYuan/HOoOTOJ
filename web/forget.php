@@ -7,7 +7,7 @@
  */
 function forget($username, $question, $answer){
     require_once ("include/db_info.php");
-    require_once ("include/functions.php");
+//    require_once ("include/functions.php");
 
 //mysqli_real_escape_string();转义字符串中的特殊字符
     $username=mysqli_real_escape_string($mysqli,$username);
@@ -52,7 +52,12 @@ function forget2($password){
         .mysqli_real_escape_string($mysqli,$_SESSION['forget_username'])
         ."'";
     $result=mysqli_query($mysqli,$sql);
-    if(mysqli_affected_rows($mysqli)==0){
+    $sql1="SELECT `password` FROM `users` WHERE `username`='"
+        .mysqli_real_escape_string($mysqli,$_SESSION['forget_username'])
+        ."'";
+    $result1=mysqli_query($mysqli,$sql1);
+    $row=mysqli_fetch_object($result1);
+    if(mysqli_affected_rows($mysqli)==0 && strcmp($row->password,$password)){
         echo "<script>\n";
         echo "alert('设置密码失败\\n');\n";
         echo "window.location.href='loginpage.php';\n</script>";
@@ -75,7 +80,12 @@ function password_change($password){
         .mysqli_real_escape_string($mysqli,$_SESSION['user_id'])
         ."'";
     $result=mysqli_query($mysqli,$sql);
-    if(mysqli_affected_rows($mysqli)==0){
+    $sql1="SELECT `password` FROM `users` WHERE `username`='"
+        .mysqli_real_escape_string($mysqli,$_SESSION['forget_username'])
+        ."'";
+    $result1=mysqli_query($mysqli,$sql1);
+    $row=mysqli_fetch_object($result1);
+    if(mysqli_affected_rows($mysqli)==0 && strcmp($row->password,$password)){
         echo "<script>\n";
         echo "alert('设置密码失败\\n');\n";
         echo "window.location.href='index.php';\n";

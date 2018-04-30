@@ -83,8 +83,8 @@
                     <th  width="10%" style="text-align:center;">用户</th>
                     <th width="10%" style="text-align:center;">Problem</th>
                     <th width="10%" style="text-align:center;">结果</th>
-                    <th width="7.5%" style="text-align:center;">空间</th>
-                    <th width="7.5%" style="text-align:center;">时间</th>
+                    <th width="7.5%" style="text-align:center;">空间<span class="glyphicon glyphicon-book"></span>(kb)</th>
+                    <th width="7.5%" style="text-align:center;">时间<span class="glyphicon glyphicon-time"></span>(ms)</th>
                     <th width="5%" style="text-align:center;">语言</th>
                     <th width="5%" style="text-align:center;">代码长度</th>
                     <th width="15%" style="text-align:center;">提交时间</th>

@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <td></td>
                                 <td width=330>
                                     <input name="submit" class="btn btn-primary" type="submit" value="登陆">&nbsp;&nbsp;
-                                    [<a href="forgetpage.php">忘记密码</a>]
+                                    [<a href="forgetpage.php" style="font-size: 15px;">忘记密码</a>]
                                 <td></td>
                             </tr>
                         </table>

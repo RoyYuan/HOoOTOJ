@@ -132,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <tr>
                                 <td></td>
                                 <td>
-                                    <input id="submit" class="btn btn-primary" name="submit" type="submit" value="注册">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="loginpage.php">返回登录</a></td>
+                                    <input id="submit" class="btn btn-primary" name="submit" type="submit" value="注册">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<a href="loginpage.php">返回登录</a>]</td>
                             </tr>
                         </table>
                     </center>

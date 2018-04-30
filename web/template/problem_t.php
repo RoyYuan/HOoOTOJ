@@ -9,6 +9,8 @@
 
     </style>
     <link rel=stylesheet href='css/problem.css' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
+    <script src="js/jquery.js"></script>
     <link rel="next" href="submitpage.php?
     <?php
     if($pr_flag){
@@ -55,32 +57,146 @@
         }
 
         echo "</center><div style='width:80%;margin-right: auto; margin-left: auto; '>";
-
-        echo "<h2>Description</h2><div class='content'>".$row->description."</div>";
-        echo "<h2>Input</h2><div class='content'>".$row->input."</div>";
-        echo "<h2>Output</h2><div class='content'>".$row->output."</div> ";
-
         //处理sample中的<>
         $sample_input=str_replace("<","&lt;",$row->sample_input);
         $sample_output=str_replace("<","&lt;",$row->sample_output);
         $sample_input=str_replace(">","&gt;",$sample_input);
         $sample_output=str_replace(">","&gt;",$sample_output);
-
-        echo "<h2>Sample Input</h2>";
-        echo "<pre class=content><span class='sampledata'>".($sample_input)."</span></pre>";
-
-        echo "<h2>Sample Output</h2>";
-        echo "<pre class=content><span class='sampledata'>".($sample_output)."</span></pre>";
-
-        echo "<h2>Hint</h2>";
-        echo "<div class=content><p>".nl2br($row->hint)."</p></div>";//nl2br() 函数在字符串中的每个新行（\n）之前插入 HTML 换行符
-        echo "</div>";
+        ?>
+            <div class='panel panel-default'>
+                <div class="panel-heading font-bold" style="color: white">
+                <span>
+                    题目描述
+                    <small>
+                        Description
+                    </small>
+                </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <?php echo $row->description; ?>
+                    </p>
+                </div>
+            </div>
+            <div class='panel panel-default'>
+                <div class="panel-heading font-bold" style="color: white">
+                <span>
+                    输入描述
+                    <small>
+                        Input Description
+                    </small>
+                </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <?php echo $row->input; ?>
+                    </p>
+                </div>
+            </div>
+            <div class='panel panel-default'>
+                <div class="panel-heading font-bold" style="color: white">
+                <span>
+                    输出描述
+                    <small>
+                        Output Description
+                    </small>
+                </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <?php echo $row->output; ?>
+                    </p>
+                </div>
+            </div>
+            <div class='panel panel-default'>
+                <div class="panel-heading font-bold" style="color: white"s>
+                <span>
+                    样例输入
+                    <small>
+                        Sample Input
+                    </small>
+                </span>
+                </div>
+                <div class="panel-body">
+                    <pre><?php echo $sample_input; ?></pre>
+                </div>
+            </div>
+            <div class='panel panel-default'>
+                <div class="panel-heading font-bold" style="color: white">
+                <span>
+                    样例输出
+                    <small>
+                        Sample Output
+                    </small>
+                </span>
+                </div>
+                <div class="panel-body">
+                    <pre><?php echo $sample_output; ?></pre>
+                </div>
+            </div>
+            <div class='panel panel-default'>
+                <div class="panel-heading font-bold" style="color: white"s>
+                <span>
+                    提示
+                    <small>
+                         Hint
+                    </small>
+                </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <?php echo nl2br($row->hint); ?>
+                    </p>
+                </div>
+            </div>
+            <?php
         echo "<center>";
-        if ($pr_flag){
-            echo "[<a href='submitpage.php?id=$id'>Submit</a>]";
+//        easypiechart
+        if ($row->submit && isset($_GET['id'])) {
+            $ac_rate=$row->accept*100/$row->submit;
+            ?>
+            <div id="chart">
+                <span class="chart" data-size="150" data-line-cap="butt" data-scale-color="black" data-line-width="20" data-track-color="lightgrey" data-bar-color="deepskyblue" data-percent="<?php echo intval($row->accept * 100 / $row->submit) ?>">
+                    <span class="percent"></span>%
+                    <br/>
+                    <div class="easypie-text">通过率</div>
+                </span>
+            </div>
+            <script src="js/jquery.js"></script>
+            <script src="js/jquery.easypiechart.js"></script>
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+            <script>
+                $(function() {
+                    $('.chart').easyPieChart({
+                        easing: 'easeOutBounce',
+                        onStep: function(from, to, percent) {
+                            $(this.el).find('.percent').text(Math.round(percent));
+                        }
+                    });
+                    var chart = window.chart = $('.chart').data('easyPieChart');
+                });
+            </script>
+            <?php
+        }
+        if ($pr_flag){?>
+            <span class="block">
+                <a href="submitpage.php?id=<?php echo $id;?>">
+                    <button class="btn btn-primary">Submit</button>
+                </a>
+            </span>
+<!--            <input class="btn btn-primary" value="Submit" type="button" onclick="javascript::window.location.href='submitpage.php?id=-->
+            <?php
+//            echo "<input class='btn btn-primary' type='button' onclick=\"javascript::window.location.href='submitpage.php?id=$id'\"><a href='submitpage.php?id=$id'>Submit</a>";
         }
         else{
-            echo "[<a href='submitpage.php>cid=$cid&pid=$pid'>Submit</a>]";
+            ?>
+            <span class="block">
+                <a href="submitpage.php?cid=<?php echo $cid;?>&pid=<?php echo $pid;?>">
+                    <button class="btn btn-primary">Submit</button>
+                </a>
+            </span>
+            <?php
+//            echo "<input class='btn btn-primary'><a href='submitpage.php>cid=$cid&pid=$pid'>Submit</a>";
         }
 
         echo "</center>";

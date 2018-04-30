@@ -50,29 +50,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div id="main">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <center>
-                <table id="input_table">
+                <table id="input_table" style="font-size:20px;border-collapse:separate;   border-spacing:10px;">
                     <tr>
                         <td width=220></td>
-                        <td width=220> 新密码:</td>
+<!--                        <td width=220> 新密码:</td>-->
                         <td width=220>
-                            <input name="password" type="password" size=20></td>
+                            <input class=form-control placeholder="新密码" name="password" type="password" size=20></td>
                         <td width=220> <span class="error">
                                         * <?php echo $password_error; ?></span></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td> 确认新密码:</td>
+<!--                        <td> 确认新密码:</td>-->
                         <td>
-                            <input name="password2" type="password" size=20></td>
+                            <input class=form-control placeholder="确认新密码" name="password2" type="password" size=20></td>
                         <td> <span class="error">
                                         * <?php echo $password2_error; ?></span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>
-                            <input id="submit" class="S" name="Submit" type="submit" value="确认"></td>
-                        <td><a href="loginpage.php">返回登录</a></td>
+                            <input id="submit" class="btn btn-primary" name="Submit" type="submit" value="确认">
+                            [<a href="loginpage.php" style="font-size: 15px">返回登录</a>]
+                        </td>
                         <td></td>
+<!--                        <td></td>-->
                     </tr>
                 </table>
             </center>
