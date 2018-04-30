@@ -45,6 +45,7 @@ if (isset($_GET['cid'])){
         $start_time=strtotime($row[0]);
         $title=$row[1];
         $end_time=strtotime($row[2]);
+        $contest_title=$row[1];
     }
     $lock_time=$end_time-($end_time-$start_time)*$OJ_RANK_LOCK_PERCENT;
     $time_sql="";
@@ -179,10 +180,11 @@ for ($i=0;$i<$rows_cnt;$i++){
         else{
             $view_status[$i][2].=$row['problem_id'];
         }
-        $view_status[$i][2].="</div></a>";
+        $view_status[$i][2].="</a></div>";
     }
     else{
-        $view_status[$i][2]="<div class='center'><a href='problem.php?id=".$row['problem_id']."'>".$row['problem_id']."</a></div>";
+//        $view_status[$i][2]="<div class='center'><a href='problem.php?id=".$row['problem_id']."'>".$row['problem_id']."</a></div>";
+        $view_status[$i][2]="<a href='problem.php?id=".$row['problem_id']."'>".$row['problem_id']."</a>";
     }
 
     //3

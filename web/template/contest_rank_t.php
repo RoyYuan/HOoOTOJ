@@ -48,7 +48,7 @@
     <div id="main" class="center">
         <?php require_once ("contest_header.php");?>
         <div>
-            <h3 style="font-family: Arial">Contest<?php echo $cid ?></h3>
+            <h3 style="font-family: Arial">Contest<?php echo $cid ?>--<?php echo $title?></h3>
             [<a href="contest.php?cid=<?php echo $cid?>">Problemset</a>]
             [<a href="status.php?cid=<?php echo $cid?>">Status</a>]
             [<a href="contest_rank.php?cid=<?php echo $cid?>">Standing</a>]
@@ -61,12 +61,12 @@
         ?>
         <center>
 <!--            --><?php //echo $first_blood[1].$U[0]->problem_ac_sec[1] ?>
-            <h3>Contest RankList -- <?php echo $title ?></h3>
-        <table id="rank" width="90%">
+            <h3>Contest RankList</h3>
+        <table id="rank" class="table table-striped" width="90%">
             <thead>
             <tr class="toprow" align="center">
-                <td class="{sorter:'false'}" width="5%">Rank</td>
-                <th width="5%" class="center">User</th>
+                <th class="{sorter:'false'} center" width="5%">Rank</th>
+<!--                <th width="5%" class="center">User</th>-->
                 <th width="10%" class="center">Username</th>
                 <th width="5%" class="center">Solved</th>
                 <th width="5%" class="center">Penalty</th>
@@ -76,9 +76,9 @@
                 echo "</tr></thead>\n<tbody>";
                 for ($i=0;$i<$user_cnt;$i++){
                     if ($i&1)
-                        echo "<tr class='oddrow' align='center'>\n";
+                        echo "<tr class='info' align='center'>\n";
                     else
-                        echo "<tr class='evenrow' align='center'>\n";
+                        echo "<tr class='' align='center'>\n";
                     echo "<td>";
                     $user_id=$U[$i]->user_id;
                     $username=$U[$i]->username;
@@ -92,8 +92,8 @@
                         echo "<td bgcolor=#ffff77>";
                     else
                         echo "<td>";
-                    echo "<a name='$user_id' href=user_info.php?user=$user_id>$user_id</a></td>";
-                    echo "<td><a href='user_info.php?user=$user_id'>".htmlentities($U[$i]->username,ENT_QUOTES,"UTF-8")."</a></td>";
+//                    echo "<a name='$user_id' href=user_info.php?user=$user_id>$user_id</a></td>";
+                    echo "<a href='user_info.php?user=$user_id'>".htmlentities($U[$i]->username,ENT_QUOTES,"UTF-8")."</a></td>";
                     echo "<td><a href='status.php?user_id=$user_id&cid=$cid'>$user_solved</a></td>";
                     echo "<td>".sec2str($U[$i]->time)."</td>";
                     for ($j=1;$j<=$pid_cnt;$j++){
@@ -112,7 +112,7 @@
 //                            $aa=dechex($aa);
                             $bg_color="pink";
                         }
-                        echo "<td class=well style='padding:1px;background-color:$bg_color'>";
+                        echo "<td class=well style='background-color:$bg_color'>";
                         if (isset($U[$i])){
                             if (isset($U[$i]->problem_ac_sec[$j]) && $U[$i]->problem_ac_sec[$j]>0)
                                 echo sec2str($U[$i]->problem_ac_sec[$j]);

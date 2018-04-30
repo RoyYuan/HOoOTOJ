@@ -22,6 +22,7 @@
 <!--                    }-->
 <!--                );-->
 <!--            </script>-->
+            <center><h2>Problem List</h2></center>
             <h3 align="center">
                 <?php
                 for($i=1;$i<=$view_total_page;$i++){

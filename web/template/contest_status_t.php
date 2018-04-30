@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv='refresh' content='60'>
-    <title><?php echo $view_title?></title>
+    <title>Contest Status</title>
     <link rel=stylesheet href='css/contest_status.css' type='text/css'>
     <style>
 
@@ -13,11 +13,12 @@
 </head>
 <body>
 <div id="C1">
-    <?php require_once ("contest_header.php"); ?>
+    <?php require_once ("contest_header.php");
+    ?>
     <div id="main">
         <div id="center">
             <div>
-                <h3 style="font-family: Arial">Contest<?php echo $cid ?></h3>
+                <h3 style="font-family: Arial">Contest<?php echo $cid ?>--<?php echo $contest_title;?></h3>
                 [<a href="contest.php?cid=<?php echo $cid?>">Problemset</a>]
                 [<a href="status.php?cid=<?php echo $cid?>">Status</a>]
                 [<a href="contest_rank.php?cid=<?php echo $cid?>">Standing</a>]
@@ -76,7 +77,7 @@
                 <input type="submit" class="input" value="搜索" style="height: 25px;">
             </form>
             <br/>
-            <table id="result_table" align="center" width="90%">
+            <table id="result_table" class="table table-striped" align="center" width="90%">
                 <thead>
                 <tr class="toprow">
                     <th width="10%" style="text-align:center;">Run ID</th>
@@ -95,10 +96,14 @@
                 <?php
                 $cnt=0;
                 foreach ($view_status as $row){
+//                    if ($cnt)
+//                        echo "<tr class='oddrow'>";
+//                    else
+//                        echo "<tr class='evenrow'>";
                     if ($cnt)
-                        echo "<tr class='oddrow'>";
+                        echo "<tr class='info'>";
                     else
-                        echo "<tr class='evenrow'>";
+                        echo "<tr>";
                     foreach ($row as $table_cell){
                         echo "<td>";
                         echo "\t".$table_cell;
@@ -115,8 +120,8 @@
             if (isset($_GET['prevtop']))
                 echo "[<a href='status.php?".$str."&top=".intval($_GET['prevtop'])."'>上一页</a>]&nbsp;&nbsp;";
             else
-                echo "[<a href='status.php?".$str."&top=".($top+20)."'>上一页</a>]&nbsp;&nbsp;";
-            echo "[<a href='status.php?".$str."&top=".$bottom."&prevtop=".$top."'>下一页</a>]";
+                echo "[<a href='status.php?".$str."&top=".intval($top+20)."'>上一页</a>]&nbsp;&nbsp;";
+            echo "[<a href='status.php?".$str."&top=".intval($bottom-1)."&prevtop=".$top."'>下一页</a>]";
             ?>
         </div>
     </div>
@@ -172,7 +177,7 @@
                 row.cells[4].innerHTML=ra[1];
                 row.cells[5].innerHTML=ra[2];
                 if(ra[0]<4)
-                    window.setTimeout("fresh_result("+solution_id+")",2000);
+                    window.setTimeout("fresh_result("+submit_id+")",2000);
                 else
                     window.location.reload();
             }
@@ -181,7 +186,7 @@
         xmlhttp.send();
     }
     <?php
-        if ($last>0 && $_SESSION['user_id']==$_GET['user_id'])
+        if ($last>0 && isset($_SESSION['user_id']) && $_SESSION['user_id']==$_GET['user_id'])
             echo "fresh_result($last);";
     ?>
     </script>

@@ -72,6 +72,7 @@
                 <div id="main" style="width: 40%" align="center">
                     <h3>XUPT_HOoOT一路走来</h3>
                     <h3>感谢孟老师，烫烫烫永不散</h3>
+                    <h3>愿XUPT ACM越来越好</h3>
                 </div>
             </div>
         </center>

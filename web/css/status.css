@@ -52,7 +52,25 @@ span.no {
 }
 
 #result_table{
-    text-align: center;
+    position: relative;
+    text-align:center;
+    vertical-align:middle;
+}
+
+#result_table td{
+    position: relative;
+    text-align:center;
+    vertical-align:middle;
+}
+
+#result_table td a{
+    text-align:center;
+    vertical-align:middle;
+    position:  relative;
+}
+
+td a{
+
 }
 
 #center{

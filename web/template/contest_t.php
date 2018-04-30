@@ -17,7 +17,7 @@
 <!--        <script src="include/sortTable.js"></script>-->
         <center>
             <div>
-                <h3 style="font-family: Arial">Contest<?php echo $contest_cid ?></h3>
+                <h3 style="font-family: Arial">Contest<?php echo $contest_cid ?>--<?php echo $contest_title ?></h3>
                 <p><?php echo $contest_description ?></p><br/>
                 开始时间:<font color="#993399"><?php echo $contest_start_time ?></font>
                 结束时间:<font color="#993399"><?php echo $contest_end_time ?></font>
@@ -61,10 +61,14 @@
                 <?php
                 $cnt=0;
                 foreach ($contest_problemset as $row){
+//                    if ($cnt)
+//                        echo "<tr class='oddrow'>";
+//                    else
+//                        echo "<tr class='evenrow'>";
                     if ($cnt)
-                        echo "<tr class='oddrow'>";
+                        echo "<tr class='info'>";
                     else
-                        echo "<tr class='evenrow'>";
+                        echo "<tr>";
                     foreach ($row as $table_cell) {
                         echo $table_cell;
 //                        echo "<td>";

@@ -17,6 +17,8 @@ function check_contest($MSG_CONTEST){
 $OJ_FAQ_LINK="faqs.php";
 $url=basename($_SERVER['REQUEST_URI']);
 //$view_marquee_msg=file_get_contents("./admin/msg.txt");
-
+if (!isset($_SESSION))
+    session_start();
 require("template/header_t.php");
+//require ("test.php");
 ?>

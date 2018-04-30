@@ -14,6 +14,7 @@
 <body>
 <div id="C1">
     <?php require_once ("header.php"); ?>
+    <center><h2>Status</h2></center>
     <div id="main">
         <br/>
         <div id="center" class="input-append">
@@ -88,12 +89,16 @@
                 <?php
                 $cnt=0;
                 foreach ($view_status as $row){
+//                    if ($cnt)
+//                        echo "<tr class='oddrow'>";
+//                    else
+//                        echo "<tr class='evenrow'>";
                     if ($cnt)
-                        echo "<tr class='oddrow'>";
+                        echo "<tr class='info'>";
                     else
-                        echo "<tr class='evenrow'>";
+                        echo "<tr>";
                     foreach ($row as $table_cell){
-                        echo "<td>";
+                        echo "<td align=\"center\" valign=\"middle\">";
                         echo "\t".$table_cell;
                         echo "</td>";
                     }
