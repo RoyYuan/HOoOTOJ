@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd1b51fa-809b-4776-9fd7-2fef53deecc3" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/contest_add_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/contest_add_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/contest_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/contest_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/problem_add_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/problem_add_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/problem_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/problem_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/template/loginpage_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/loginpage_t.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vcode.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/vcode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/registerpage_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/registerpage_t.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5096045">
+    <splitter split-orientation="horizontal" split-proportion="0.44463277">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
@@ -54,11 +47,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index_t.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index_t.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/template/index_t.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="304">
-                  <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+                <state relative-caret-position="589">
+                  <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -93,8 +86,23 @@
           <file leaf-file-name="contest_rank_t.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/template/contest_rank_t.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="304">
-                  <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+                <state relative-caret-position="228">
+                  <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+                  <folding>
+                    <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="registerpage_t.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/web/template/registerpage_t.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="4161">
+                  <caret line="219" column="77" selection-start-line="219" selection-start-column="77" selection-end-line="219" selection-end-column="77" />
+                  <folding>
+                    <element signature="n#style#0;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -106,8 +114,8 @@
           <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/bootstrap/css/bootstrap.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="96254">
-                  <caret line="5066" column="12" selection-start-line="5066" selection-start-column="12" selection-end-line="5066" selection-end-column="12" />
+                <state relative-caret-position="399">
+                  <caret line="5086" column="28" lean-forward="true" selection-start-line="5086" selection-start-column="28" selection-end-line="5086" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -142,11 +150,13 @@
           <file leaf-file-name="loginpage_t.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web/template/loginpage_t.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="927">
-                  <caret line="163" column="7" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="7" />
+                <state relative-caret-position="456">
+                  <caret line="141" column="35" lean-forward="true" selection-start-line="139" selection-start-column="28" selection-end-line="141" selection-end-column="35" />
                   <folding>
-                    <element signature="e#5829#5835#0#HTML" expanded="true" />
-                    <element signature="e#5835#5841#0#HTML" expanded="true" />
+                    <element signature="n#style#0;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="e#5871#5877#0#HTML" expanded="true" />
+                    <element signature="e#5877#5883#0#HTML" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#td#1;n#tr#3;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -225,7 +235,6 @@
         <option value="$PROJECT_DIR$/web/template/header_t.php" />
         <option value="$PROJECT_DIR$/web/admin/header_t.php" />
         <option value="$PROJECT_DIR$/web/template/faq_t.php" />
-        <option value="$PROJECT_DIR$/web/template/registerpage_t.php" />
         <option value="$PROJECT_DIR$/web/template/forgetpage_t.php" />
         <option value="$PROJECT_DIR$/web/template/forgetpage2_t.php" />
         <option value="$PROJECT_DIR$/web/forget.php" />
@@ -257,6 +266,7 @@
         <option value="$PROJECT_DIR$/web/vcode.php" />
         <option value="$PROJECT_DIR$/web/test.php" />
         <option value="$PROJECT_DIR$/web/template/loginpage_t.php" />
+        <option value="$PROJECT_DIR$/web/template/registerpage_t.php" />
       </list>
     </option>
   </component>
@@ -359,6 +369,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="is&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -424,12 +435,12 @@
       <workItem from="1525073208292" duration="11005000" />
       <workItem from="1525096770491" duration="4857000" />
       <workItem from="1525142361269" duration="18030000" />
-      <workItem from="1525181849376" duration="762000" />
+      <workItem from="1525181849376" duration="4261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180910000" />
+    <option name="totallyTimeSpent" value="184409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
@@ -495,8 +506,10 @@
         <state relative-caret-position="874">
           <caret line="46" column="2" lean-forward="true" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
           <folding>
-            <element signature="e#5829#5835#0#HTML" expanded="true" />
-            <element signature="e#5835#5841#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5871#5877#0#HTML" expanded="true" />
+            <element signature="e#5877#5883#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#1;n#tr#3;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -554,13 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" column="63" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/registerpage_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="134" column="224" selection-start-line="134" selection-start-column="224" selection-end-line="134" selection-end-column="224" />
         </state>
       </provider>
     </entry>
@@ -743,6 +749,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1805">
           <caret line="1" column="2486" selection-start-line="1" selection-start-column="2486" selection-end-line="1" selection-end-column="2486" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -802,20 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/contest_rank_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96254">
-          <caret line="5066" column="12" selection-start-line="5066" selection-start-column="12" selection-end-line="5066" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/problem_edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2128">
@@ -841,21 +836,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/loginpage_t.php">
+    <entry file="file://$PROJECT_DIR$/web/bootstrap/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="927">
-          <caret line="163" column="7" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="7" />
-          <folding>
-            <element signature="e#5829#5835#0#HTML" expanded="true" />
-            <element signature="e#5835#5841#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="399">
+          <caret line="5086" column="28" lean-forward="true" selection-start-line="5086" selection-start-column="28" selection-end-line="5086" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/template/index_t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="589">
+          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/contest_rank_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/loginpage_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="141" column="35" lean-forward="true" selection-start-line="139" selection-start-column="28" selection-end-line="141" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5871#5877#0#HTML" expanded="true" />
+            <element signature="e#5877#5883#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#1;n#tr#3;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/registerpage_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4161">
+          <caret line="219" column="77" selection-start-line="219" selection-start-column="77" selection-end-line="219" selection-end-column="77" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

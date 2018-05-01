@@ -12,11 +12,20 @@
     </style>
     <?php if(!isset($_SESSION)){
         session_start();
-    }?>
+    }
+    if (isset($_SESSION['user_id'])){
+        ?>
+        <script>
+            alert("您已经登陆，请注销后重试！");
+            history.go(-1);
+        </script>
+    <?php
+    }
+    ?>
     <script>
         flag1 = false;
         flag2 = false;
-        document.getElementById("vcode_error").innerHTML="Error:验证码错误";
+        // document.getElementById("vcode_error").innerHTML="Error:验证码错误";
         function usernameCheck(o){
             flag1=false;
             if (!/^[a-zA-Z]{1,1}[a-zA-Z0-9]{5,14}$/.test(o.value)){
@@ -58,14 +67,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = trim($_POST['password']);
     $vcode = trim($_POST['vcode']);
     $flag = 1;
-    if (empty($username)) {
-//        $username_error = "用户名不能为空";
-        $flag = 0;
-    }
-    if (empty($password)) {
-//        $password_error = "密码不能为空";
-        $flag = 0;
-    }
+//    if (empty($username)) {
+////        $username_error = "用户名不能为空";
+//        $flag = 0;
+//    }
+//    if (empty($password)) {
+////        $password_error = "密码不能为空";
+//        $flag = 0;
+//    }
     if (strcasecmp($_SESSION["vcode"], $vcode) || $vcode == "" || $vcode == null) {
 //    $vcode_error=$_SESSION["vcode"];
         $_SESSION["vcode"] = null;
@@ -90,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php require_once("header.php"); ?>
     <div id="main">
         <h1>登陆</h1>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  method="post" onsubmit="return checkSubmit();">
+        <form id="login_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  method="post">
             <center>
                 <table id="input_table" style="width:100%;font-size:20px;border-collapse:separate;border-spacing:10px;">
                     <tr>
@@ -140,7 +149,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <tr>
                         <td></td>
                         <td width=330>
-                            <input name="submit" class="btn btn-primary" type="submit" value="登陆">&nbsp;&nbsp;
+                            <input name="Submit" class="btn btn-primary" type="button" value="登陆" onclick="doSubmit()">&nbsp;&nbsp;
                             [<a href="forgetpage.php" style="font-size: 15px;">忘记密码</a>]
                         <td></td>
                     </tr>
@@ -153,10 +162,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php require_once ("footer.php"); ?>
 </div>
 <script>
-    function checkSubmit(){
+    function doSubmit(){
+        flag1=flag2=false;
         usernameCheck(document.getElementById("username"));
         passwordCheck(document.getElementById("password"));
-        return flag1&flag2;
+        // console.log(flag1);
+        // console.log(flag2);
+        if (flag1&&flag2)
+            $("#login_form").submit();
+        else
+            ;
     }
 </script>
 </body>
