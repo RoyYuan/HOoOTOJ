@@ -52,8 +52,14 @@ require_once ("header.php");?>
         <div style="width: 50%;">
             <input name="title" class="form-control" style="height:35px;font-size: 25px;" placeholder="题目标题" type="text">
             <br/>
-            <p>时间限制:&nbsp;<input type="text" name="time_limit" size="20" value="1">S</p>
-            <p>空间限制:&nbsp;<input type="text"  name="memory_limit" size="20" value="32">MByte</p>
+            <div style="float: left;width: 15%;height: 80px">
+                <p>时间限制(s):&nbsp;<input type="text" class="form-control" name="time_limit" size="20" value="1"></p>
+            </div>
+            <div style="float: left;width: 15%;height: 80px">
+                <p>空间限制(mb):&nbsp;<input type="text" class="form-control" name="memory_limit" size="20" value="32"></p>
+            </div>
+            <div style="width: 70%;height: 80px">
+            </div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading font-bold" style="color: white">
@@ -66,7 +72,7 @@ require_once ("header.php");?>
             </div>
             <div class="panel-body">
                 <p>
-                    <textarea style="width: 100%" rows="13" name="description"></textarea>
+                    <textarea class="form-control" style="width: 100%" rows="13" name="description"></textarea>
                 </p>
             </div>
         </div>
@@ -81,7 +87,7 @@ require_once ("header.php");?>
             </div>
             <div class="panel-body">
                 <p>
-                    <textarea style="width: 100%" rows="13" name="input"></textarea>
+                    <textarea class="form-control" style="width: 100%" rows="13" name="input"></textarea>
                 </p>
             </div>
         </div>
@@ -96,7 +102,7 @@ require_once ("header.php");?>
             </div>
             <div class="panel-body">
                 <p>
-                    <textarea style="width: 100%" rows="13" name="output"></textarea>
+                    <textarea class="form-control" style="width: 100%" rows="13" name="output"></textarea>
                 </p>
             </div>
         </div>
@@ -111,7 +117,7 @@ require_once ("header.php");?>
             </div>
             <div class="panel-body">
                 <p>
-                    <textarea class="input input-xxlarge" style="width: 100%" rows="13" name="sample_input"></textarea>
+                    <textarea class="form-control input input-xxlarge" style="width: 100%" rows="13" name="sample_input"></textarea>
                 </p>
             </div>
         </div>
@@ -126,7 +132,7 @@ require_once ("header.php");?>
             </div>
             <div class="panel-body">
                 <p>
-                    <textarea class="input input-xxlarge" style="width: 100%" rows="13" name="sample_output"></textarea>
+                    <textarea class="form-control input input-xxlarge" style="width: 100%" rows="13" name="sample_output"></textarea>
                 </p>
             </div>
         </div>
@@ -141,7 +147,7 @@ require_once ("header.php");?>
             </div>
             <div class="panel-body">
                 <p>
-                    <textarea class="input input-xxlarge" style="width: 100%" rows="13" name="test_input"></textarea>
+                    <textarea class="form-control input input-xxlarge" style="width: 100%" rows="13" name="test_input"></textarea>
                 </p>
             </div>
         </div>
@@ -156,7 +162,7 @@ require_once ("header.php");?>
             </div>
             <div class="panel-body">
                 <p>
-                    <textarea class="input input-xxlarge" style="width: 100%" rows="13" name="test_output"></textarea>
+                    <textarea class="form-control input input-xxlarge" style="width: 100%" rows="13" name="test_output"></textarea>
                 </p>
             </div>
         </div>
@@ -171,7 +177,7 @@ require_once ("header.php");?>
             </div>
             <div class="panel-body">
                 <p>
-                    <textarea style="width: 100%" rows="13" name="hint"></textarea>
+                    <textarea class="form-control" style="width: 100%" rows="13" name="hint"></textarea>
                 </p>
             </div>
         </div>

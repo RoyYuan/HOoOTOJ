@@ -40,44 +40,150 @@ if (isset($_GET['id'])) {
     }
     mysqli_free_result($result);
     ?>
+    <?php
+    $sql = "SELECT * FROM `problems` WHERE `problem_id`=" . intval($_GET['id']);
+    $result = mysqli_query($mysqli, $sql);
+    $row = mysqli_fetch_object($result);
+    ?>
     <h1 class="center">编辑题目</h1>
+    <h3>Problem ID:<?php echo $row->problem_id ?></h3>
     <form style="margin-left:2cm;" method="post" action="problem_edit.php?owner=$owner_id.">
-        <?php
-        $sql = "SELECT * FROM `problems` WHERE `problem_id`=" . intval($_GET['id']);
-        $result = mysqli_query($mysqli, $sql);
-        $row = mysqli_fetch_object($result);
-        ?>
-        <p align="left">Problem ID:<?php echo $row->problem_id ?></p>
         <input type=hidden name='problem_id' value='<?php echo $row->problem_id?>'>
-        <p align="left">题目标题:&nbsp;<input class="input input-xxlarge" type="text" name="title" size="60"
-                                          value='<?php echo htmlentities($row->title, ENT_QUOTES, "UTF-8"); ?>'></p>
-        <p align="left">时间限制:&nbsp;<input type="text" name="time_limit" size="20"
-                                          value='<?php echo htmlentities($row->time_limit, ENT_QUOTES, "UTF-8"); ?>'>S
-        </p>
-        <p align="left">空间限制:&nbsp;<input type="text" name="memory_limit" size="20"
-                                          value='<?php echo htmlentities($row->memory_limit, ENT_QUOTES, "UTF-8"); ?>'>MByte
-        </p>
-        <p align="left">Description:<br/>
-            <textarea style="width: 90%" rows="13" name="description"><?php echo htmlentities($row->description, ENT_QUOTES, "UTF-8"); ?></textarea>
-        </p>
-        <p align="left">Input:<br/>
-            <textarea style="width: 90%" rows="13" name="input"><?php echo htmlentities($row->input, ENT_QUOTES, "UTF-8") ?></textarea>
-        </p>
-        <p align="left">Output:<br/>
-            <textarea style="width: 90%" rows="13" name="output"><?php echo htmlentities($row->output, ENT_QUOTES, "UTF-8") ?></textarea>
-        </p>
-        <p align="left">Sample Input:<br/>
-            <textarea class="input input-xxlarge" style="width: 90%" rows="13" name="sample_input"><?php echo htmlentities($row->sample_input, ENT_QUOTES, "UTF-8") ?></textarea>
-        </p>
-        <p align="left">Sample Output:<br/>
-            <textarea class="input input-xxlarge" style="width: 90%" rows="13" name="sample_output"><?php echo htmlentities($row->sample_output, ENT_QUOTES, "UTF-8") ?></textarea>
-        </p>
-        <p align="left">Hint:<br/>
-            <textarea style="width: 90%" rows="13" name="hint"><?php echo htmlentities($row->hint, ENT_QUOTES, "UTF-8") ?></textarea>
-        </p>
-        <div align="center">
-            <input class="btn" style="width: 60px;height: 40px;" type="submit" value="提交" name="submit">
+        <div style="width: 90%">
+            <div style="width: 50%;">
+                <input name="title" class="form-control" style="height:35px;font-size: 25px;" placeholder="题目标题" type="text" value='<?php echo htmlentities($row->title, ENT_QUOTES, "UTF-8"); ?>'>
+                <br/>
+                <div style="float: left;width: 15%;height: 80px">
+                    <p>时间限制(s):&nbsp;<input type="text" class="form-control" name="time_limit" size="20" value='<?php echo htmlentities($row->time_limit, ENT_QUOTES, "UTF-8"); ?>'></p>
+                </div>
+                <div style="float: left;width: 15%;height: 80px">
+                    <p>空间限制(mb):&nbsp;<input type="text" class="form-control" name="memory_limit" size="20" value='<?php echo htmlentities($row->memory_limit, ENT_QUOTES, "UTF-8"); ?>'></p>
+                </div>
+                <div style="width: 70%;height: 80px">
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading font-bold" style="color: white">
+            <span>
+                题目描述
+                <small>
+                    Description
+                </small>
+            </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <textarea class="form-control" style="width: 100%" rows="13" name="description"><?php echo htmlentities($row->description, ENT_QUOTES, "UTF-8"); ?></textarea>
+                    </p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading font-bold" style="color: white">
+            <span>
+                输入描述
+                <small>
+                    Input Description
+                </small>
+            </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <textarea class="form-control" style="width: 100%" rows="13" name="input"><?php echo htmlentities($row->input, ENT_QUOTES, "UTF-8") ?></textarea>
+                    </p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading font-bold" style="color: white">
+            <span>
+                输出描述
+                <small>
+                    Output Description
+                </small>
+            </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <textarea class="form-control" style="width: 100%" rows="13" name="output"><?php echo htmlentities($row->output, ENT_QUOTES, "UTF-8") ?></textarea>
+                    </p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading font-bold" style="color: white">
+            <span>
+                样例输入
+                <small>
+                    Sample Input
+                </small>
+            </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <textarea class="form-control input input-xxlarge" style="width: 100%" rows="13" name="sample_input"><?php echo htmlentities($row->sample_input, ENT_QUOTES, "UTF-8") ?></textarea>
+                    </p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading font-bold" style="color: white">
+            <span>
+                样例输出
+                <small>
+                    Sample Output
+                </small>
+            </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <textarea class="form-control input input-xxlarge" style="width: 100%" rows="13" name="sample_output"><?php echo htmlentities($row->sample_output, ENT_QUOTES, "UTF-8") ?></textarea>
+                    </p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading font-bold" style="color: white">
+            <span>
+                提示
+                <small>
+                    Hint
+                </small>
+            </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <textarea class="form-control" style="width: 100%" rows="13" name="hint"><?php echo htmlentities($row->hint, ENT_QUOTES, "UTF-8") ?></textarea>
+                    </p>
+                </div>
+            </div>
+            <div align="center">
+                <input class="btn btn-primary" style="width: 60px;height: 40px;" type="submit" value="提交" name="submit">
+            </div>
         </div>
+
+
+<!--        <p align="left">题目标题:&nbsp;<input class="input input-xxlarge" type="text" name="title" size="60"-->
+<!--                                          value='--><?php //echo htmlentities($row->title, ENT_QUOTES, "UTF-8"); ?><!--'></p>-->
+<!--        <p align="left">时间限制:&nbsp;<input type="text" name="time_limit" size="20"-->
+<!--                                          value='--><?php //echo htmlentities($row->time_limit, ENT_QUOTES, "UTF-8"); ?><!--'>S-->
+<!--        </p>-->
+<!--        <p align="left">空间限制:&nbsp;<input type="text" name="memory_limit" size="20"-->
+<!--                                          value='--><?php //echo htmlentities($row->memory_limit, ENT_QUOTES, "UTF-8"); ?><!--'>MByte-->
+<!--        </p>-->
+<!--        <p align="left">Description:<br/>-->
+<!--            <textarea style="width: 90%" rows="13" name="description">--><?php //echo htmlentities($row->description, ENT_QUOTES, "UTF-8"); ?><!--</textarea>-->
+<!--        </p>-->
+<!--        <p align="left">Input:<br/>-->
+<!--            <textarea style="width: 90%" rows="13" name="input">--><?php //echo htmlentities($row->input, ENT_QUOTES, "UTF-8") ?><!--</textarea>-->
+<!--        </p>-->
+<!--        <p align="left">Output:<br/>-->
+<!--            <textarea style="width: 90%" rows="13" name="output">--><?php //echo htmlentities($row->output, ENT_QUOTES, "UTF-8") ?><!--</textarea>-->
+<!--        </p>-->
+<!--        <p align="left">Sample Input:<br/>-->
+<!--            <textarea class="input input-xxlarge" style="width: 90%" rows="13" name="sample_input">--><?php //echo htmlentities($row->sample_input, ENT_QUOTES, "UTF-8") ?><!--</textarea>-->
+<!--        </p>-->
+<!--        <p align="left">Sample Output:<br/>-->
+<!--            <textarea class="input input-xxlarge" style="width: 90%" rows="13" name="sample_output">--><?php //echo htmlentities($row->sample_output, ENT_QUOTES, "UTF-8") ?><!--</textarea>-->
+<!--        </p>-->
+<!--        <p align="left">Hint:<br/>-->
+<!--            <textarea style="width: 90%" rows="13" name="hint">--><?php //echo htmlentities($row->hint, ENT_QUOTES, "UTF-8") ?><!--</textarea>-->
+<!--        </p>-->
     </form>
 
     <?php

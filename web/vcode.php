@@ -8,7 +8,8 @@ for ($i = 0; $i < 4; $i++) {
     $str[$i] = $string[rand(0, 35)];
     $vcode .= $str[$i];
 }
-session_start(); //启用超全局变量session
+if (!isset($_SESSION))
+    session_start(); //启用超全局变量session
 $_SESSION["vcode"] = $vcode;
 $im = imagecreatetruecolor($w, $h);
 $white = imagecolorallocate($im, 255, 255, 255); //第一次调用设置背景色

@@ -119,17 +119,104 @@ else {
 
     <form style="margin-left:2cm;" method="post" action="contest_edit.php?cid=."$cid>
         <input type="hidden" name="cid" value="<?php echo $cid ?>">
-        <p align="left">竞赛标题:&nbsp;<input name="title" class="input input-xxlarge" type="text" name="title" size="60" value="<?php echo $title ?>"></p>
-        <p align="left">开始时间:&nbsp;<input name="start_time" type="datetime-local" min='<?php echo $now; ?>' value="<?php echo $start_time?>"></p>
-        <p align="left">结束时间:&nbsp;<input name="end_time" type="datetime-local" min='<?php echo $now; ?>' value="<?php echo $end_time?>"></p>
-        <p align="left">是否公开:&nbsp;<select name="private">
-                <option value="0" <?php if ($private==0) echo "selected=selected"?>>Public</option>
-                <option value="1" <?php if ($private==1) echo "selected=selected"?>>Private</option>
-            </select></p>
-        <p align="left">若是private请设置密码:&nbsp;<input type="text" name="password" value="<?php echo $password?>"></p>
-        <p align="left">Description:<br/>
-            <textarea rows="13" name="description" style="width: 90%"><?php echo $description?></textarea></p>
-        <p align="left">Problems:&nbsp;<input class="input-xxlarge" type="text" size="60" name="contest_problems" value="<?php echo $problem_list?>"></p>
+        <div style="width: 90%;">
+            <div style="width: 50%;">
+                <input name="title" class="form-control" style="height:35px;font-size: 25px;" placeholder="竞赛标题" type="text" value="<?php echo $title ?>">
+                <br/>
+            </div>
+            <div style="width: 15%;float: left;height: 100px">
+                <div class="panel panel-default" style="width: 230px">
+                    <div class="panel-heading font-bold" style="color: white">
+                <span>
+                    开始时间
+                    <small>
+                        Start Time
+                    </small>
+                </span>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            <input  class="form-control" name="start_time" type="datetime-local" min='<?php echo $now;?>' value="<?php echo $start_time?>"></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 15%;float: left;height: 100px">
+                <div class="panel panel-default" style="width: 230px">
+                    <div class="panel-heading font-bold" style="color: white">
+                <span>
+                    结束时间
+                    <small>
+                        End Time
+                    </small>
+                </span>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            <input  class="form-control" name="end_time" type="datetime-local" min='<?php echo $now;?>' value="<?php echo $end_time?>"></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 70%;height: 100px">
+            </div>
+            <br/>
+            <br/>
+            <div class="btn-group" data-toggle="buttons">
+                <label id=btn1 class="btn btn-primary <?php if($private==0) echo 'active'?>">
+                    <input id=select1 type="radio" name="private" value="0">公开
+                </label>
+                <label id=btn2 class="btn btn-primary <?php if($private==1) echo 'active'?>">
+                    <input id=select2 type="radio" name="private" value="1">私人
+                </label>
+            </div>
+            <br/>
+            <br/>
+            <p align="left" style="width: 20%"><input  placeholder="若是私人请设置密码" class="form-control" type="text" name="password" value="<?php echo $password?>"></p>
+            <br/>
+            <div class="panel panel-default">
+                <div class="panel-heading font-bold" style="color:white">
+                <span>
+                    竞赛描述
+                    <small>
+                        Contest Description
+                    </small>
+                </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <textarea  class="form-control" rows="13" name="description" style="width: 100%" ><?php echo $description?></textarea>
+                    </p>
+                </div>
+            </div>
+            <div class="panel panel-default" style="width: 30%">
+                <div class="panel-heading font-bold" style="color:white">
+                <span>
+                    竞赛题目
+                    <small>
+                        Contest Problems
+                    </small>
+                </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <input class="form-control input-xxlarge" value="<?php echo $problem_list?>" placeholder="请输入ProblemID,用英文逗号隔开" type="text" size="60" name="contest_problems">
+                    </p>
+                </div>
+            </div>
+        </div>
+
+<!--        <p align="left">竞赛标题:&nbsp;<input name="title" class="input input-xxlarge" type="text" name="title" size="60" value="--><?php //echo $title ?><!--"></p>-->
+<!--        <p align="left">开始时间:&nbsp;<input name="start_time" type="datetime-local" min='--><?php //echo $now; ?><!--' value="--><?php //echo $start_time?><!--"></p>-->
+<!--        <p align="left">结束时间:&nbsp;<input name="end_time" type="datetime-local" min='--><?php //echo $now; ?><!--' value="--><?php //echo $end_time?><!--"></p>-->
+<!--        <p align="left">是否公开:&nbsp;<select name="private">-->
+<!--                <option value="0" --><?php //if ($private==0) echo "selected=selected"?><!-- >Public</option>-->
+<!--                <option value="1" --><?php //if ($private==1) echo "selected=selected"?><!-- >Private</option>-->
+<!--            </select></p>-->
+<!--        <p align="left">若是private请设置密码:&nbsp;<input type="text" name="password" value="--><?php //echo $password?><!--"></p>-->
+<!--        <p align="left">Description:<br/>-->
+<!--            <textarea rows="13" name="description" style="width: 90%">--><?php //echo $description?><!--</textarea></p>-->
+<!--        <p align="left">Problems:&nbsp;<input class="input-xxlarge" type="text" size="60" name="contest_problems" value="--><?php //echo $problem_list?><!--"></p>-->
 
         <div align="center">
             <input class="btn" style="width: 60px;height: 40px;" type="reset" value="重置" name="reset">
