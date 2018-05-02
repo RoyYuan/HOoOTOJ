@@ -16,6 +16,7 @@
     <?php require_once ("header.php"); ?>
     <div id="main">
         <center>
+            <h1><?php echo $username;?>的个人信息</h1>
             <table class="table table-striped" id="statics" width="50%">
                 <tr class="oddrow">
                     <td width="50%" align="center">
@@ -50,9 +51,11 @@
                     </td>
                 </tr>
             </table>
+            <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id']==$user_mysql){?>
             <div>
                 [<a href="password_change.php">更改密码</a>]
             </div>
+            <?php } ?>
         </center>
     </div>
 </div>

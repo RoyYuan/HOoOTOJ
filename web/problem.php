@@ -27,13 +27,13 @@ if (isset($_GET['id']))
         $sql="SELECT * FROM `problems` ".
             "WHERE `problem_id`=$id AND `deleted`=0 AND `problem_id` NOT IN(
             SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN (
-            SELECT `contest_id` FROM `contest` WHERE `end_time`>'$now' AND `contest`.`hide`=0))";
+            SELECT `contest_id` FROM `contest` WHERE (`end_time`>'$now' AND `contest`.`private`=1 AND `contest`.`hide`=0)))";
     }
     else{
         $sql="SELECT * FROM `problems` ".
             "WHERE `problem_id`=$id AND `deleted`=0 AND `hide`=0 AND `problem_id` NOT IN(
             SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN (
-            SELECT `contest_id` FROM `contest` WHERE `end_time`>'$now' AND `contest`.`hide`=0))";
+            SELECT `contest_id` FROM `contest` WHERE (`end_time`>'$now' AND `contest`.`private`=1 AND `contest`.`hide`=0)))";
     }
 
 
@@ -118,7 +118,7 @@ if(mysqli_num_rows($result)!=1){
     if (isset($_GET['id'])){
         $id=intval($_GET['id']);
         mysqli_free_result($result);
-        $sql="SELECT contest.`contest_id` FROM `contest_problem`,`contest` WHERE contest.contest_id = contest_problem.contest_id AND `problem_id`=$id AND contest.`hide`=0 ORDER BY `num`";
+        $sql="SELECT contest.`contest_id` FROM `contest_problem`,`contest` WHERE contest.contest_id = contest_problem.contest_id AND `problem_id`=$id AND contest.`hide`=0 AND `end_time`>'$now' AND `contest`.`private`=1 ORDER BY `num`";
         $result=mysqli_query($mysqli,$sql);
         if($i=mysqli_num_rows($result)){
             $view_errors.="该题目正用于竞赛";

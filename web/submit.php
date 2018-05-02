@@ -21,7 +21,7 @@ $username=$_SESSION['username'];
 if (isset($_POST['cid'])){
     $pid=intval($_POST['pid']);
     $cid=intval($_POST['cid']);
-    $sql="SELECT `problem_id` FROM `contest_problem` WHERE `num`='pid' AND `contest_id`=$cid";
+    $sql="SELECT `problem_id` FROM `contest_problem` WHERE `num`='$pid' AND `contest_id`=$cid";
 }
 else{
     $id=intval($_POST['id']);
@@ -33,7 +33,7 @@ SELECT `contest_id` FROM `contest` WHERE (`end_time`>'$now' AND `contest`.hide=0
 }
 
 $result=mysqli_query($mysqli,$sql);
-if ($result && mysqli_num_rows($result) <1 && (!isset($_SESSION['groups']) || (isset($_SESSION['groups']) && $_SESSION['groups']>=0)) && !((isset($cid) && $cid<=0) || (isset($id)&&$id<=0))){
+if ($result && mysqli_num_rows($result) <1 && (!isset($_SESSION['groups']) || (isset($_SESSION['groups']) && $_SESSION['groups']>0)) && !((isset($cid) && $cid<=0) || (isset($id)&&$id<=0))){
     mysqli_free_result($result);
     $view_errors="没有该题目<br>";
     require ("template/show_error_t.php");

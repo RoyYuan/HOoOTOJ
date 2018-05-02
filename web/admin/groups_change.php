@@ -46,7 +46,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $row=mysqli_fetch_object($result);
     $my_group=$row->groups;
     mysqli_free_result($result);
-    $new_groups=$_POST['new_groups'];
+    $new_groups=-$_POST['new_groups'];
+    if ($my_group>=$new_groups){
+        echo "<script>\n";
+        echo "alert('目标权限组过高！\\n');\n";
+        echo "history.go(-1);\n";
+        echo "</script>";
+        exit(1);
+    }
     if ($my_group<$user_group){
         $sql="UPDATE `groups` SET `groups`='$new_groups' WHERE `user_id`='$user_id' AND `groups`<=0";
         $result=mysqli_query($mysqli,$sql);

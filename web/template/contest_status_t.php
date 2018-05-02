@@ -130,6 +130,66 @@
     <?php require_once ("footer.php"); ?>
 </div>
 
+<!--<script>-->
+<!--    var i=0;-->
+<!--    var judge_result=[-->
+<!--        --><?php
+//        foreach ($judge_result as $result) {
+//            echo "'$result',";
+//        }
+//        ?>
+<!--//        ''];-->
+<!--//    function auto_refresh() {-->
+<!--//        var tb=window.document.getElementById('result_table');-->
+<!--//        var rows=tb.rows;-->
+<!--//        for (var i=1;i<rows.length;i++){-->
+<!--//            var cell=rows[i].cells[3].innerHTML;-->
+<!--//            var sid=rows[i].cells[0].innerHTML;-->
+<!--//            if (cell.indexOf(judge_result[0])!=-1 || cell.indexOf(judge_result[2])!=-1 || cell.indexOf(judge_result[3])!=-1) {-->
+<!--//                fresh_result(sid);-->
+<!--//            }-->
+<!--//        }-->
+<!--//    }-->
+<!--//-->
+<!--//    function findRow(submit_id){-->
+<!--//        var tb=window.document.getElementById('result_table');-->
+<!--//        var rows=tb.rows;-->
+<!--//        for (var i=1;i<rows.length;i++){-->
+<!--//            var cell=rows[i].cells[0];-->
+<!--//            if (cell.innerHTML==submit_id)-->
+<!--//                return rows[i];-->
+<!--//        }-->
+<!--//    }-->
+<!--//-->
+<!--//    function fresh_result(submit_id) {-->
+<!--//        var xmlhttp;-->
+<!--//        if (window.XMLHttpRequest){-->
+<!--//            xmlhttp=new XMLHttpRequest();-->
+<!--//        }-->
+<!--//        xmlhttp.onreadystatechange=function () {-->
+<!--//            if (xmlhttp.readyState==4 && xmlhttp.status==200){-->
+<!--//                var tb=window.document.getElementById('result_table');-->
+<!--//                var row=findRow(submit_id);-->
+<!--//                var r=xmlhttp.responseText;-->
+<!--//                var ra=r.split(",");-->
+<!--//                var loader="<img width=18 src='image/loader.gif>";-->
+<!--//                row.cells[3].innerHTML="<span class='btn btn-warning'>"+judge_result[ra[0]]+"</span>"+loader;-->
+<!--//                row.cells[4].innerHTML=ra[1];-->
+<!--//                row.cells[5].innerHTML=ra[2];-->
+<!--//                if(ra[0]<4)-->
+<!--//                    window.setTimeout("fresh_result("+submit_id+")",2000);-->
+<!--//                else-->
+<!--//                    window.location.reload();-->
+<!--//            }-->
+<!--//        }-->
+<!--//        xmlhttp.open("GET","status-ajax.php?submit_id="+submit_id,true);-->
+<!--//        xmlhttp.send();-->
+<!--//    }-->
+//    <?php
+//        if ($last>0 && isset($_SESSION['user_id']) && $_SESSION['user_id']==$_GET['user_id'])
+//            echo "fresh_result($last);";
+//    ?>
+<!--    </script>-->
 <script>
     var i=0;
     var judge_result=[
@@ -185,10 +245,7 @@
         xmlhttp.open("GET","status-ajax.php?submit_id="+submit_id,true);
         xmlhttp.send();
     }
-    <?php
-        if ($last>0 && isset($_SESSION['user_id']) && $_SESSION['user_id']==$_GET['user_id'])
-            echo "fresh_result($last);";
-    ?>
-    </script>
+    auto_refresh();
+</script>
 </body>
 </html>

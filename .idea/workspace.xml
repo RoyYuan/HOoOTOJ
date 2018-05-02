@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="bd1b51fa-809b-4776-9fd7-2fef53deecc3" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/template/forgetpage2_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/forgetpage2_t.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/template/forgetpage_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/forgetpage_t.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/template/loginpage_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/loginpage_t.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/template/registerpage_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/registerpage_t.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/groups_change.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/groups_change.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/problem_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/problem_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/contest.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/contest.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/problem.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/problem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/problemset.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/problemset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/submit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/contest_rank_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/contest_rank_t.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/contest_status_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/contest_status_t.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/problem_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/problem_t.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/user_info_t.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/user_info_t.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/user_info.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,36 +23,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44463277">
+    <splitter split-orientation="horizontal" split-proportion="0.43615818">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/test.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="19">
-                  <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="vcode.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/vcode.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="228">
-                  <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="problem_edit.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/admin/problem_edit.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2128">
-                  <caret line="112" column="20" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="index_t.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/template/index_t.php">
               <provider selected="true" editor-type-id="text-editor">
@@ -55,38 +35,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="status_t.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/template/status_t.php">
+          <file leaf-file-name="contestrank.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/contestrank.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="304">
-                  <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="contest_t.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/template/contest_t.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="115" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="contest_status_t.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/template/contest_status_t.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="380">
-                  <caret line="20" column="102" selection-start-line="20" selection-start-column="102" selection-end-line="20" selection-end-column="102" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="contest_rank_t.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/template/contest_rank_t.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="551">
-                  <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+                <state relative-caret-position="171">
+                  <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+                  <folding>
+                    <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -94,24 +50,69 @@
           <file leaf-file-name="forgetpage_t.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/template/forgetpage_t.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="585">
-                  <caret line="87" column="34" lean-forward="true" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
+                <state relative-caret-position="1653">
+                  <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="forgetpage2_t.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/template/forgetpage2_t.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1216">
+                  <caret line="64" selection-start-line="64" selection-end-line="64" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="user_info_t.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/template/user_info_t.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="342">
+                  <caret line="18" column="40" selection-end-line="63" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="status_t.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/template/status_t.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="419">
+                  <caret line="136" column="8" lean-forward="true" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="problem_t.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/template/problem_t.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="533">
+                  <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
                   <folding>
-                    <element signature="n#style#0;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#a#0;n#td#1;n#tr#4;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="e#56#62#0" expanded="true" />
+                    <element signature="e#62#68#0" expanded="true" />
+                    <element signature="e#48#54#0" expanded="true" />
+                    <element signature="e#54#60#0" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="forgetpage2_t.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/web/template/forgetpage2_t.php">
+          <file leaf-file-name="submit.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/submit.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="532">
-                  <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-                  <folding>
-                    <element signature="n#style#0;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
+                <state relative-caret-position="399">
+                  <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="user_info.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/user_info.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="267">
+                  <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
@@ -123,60 +124,104 @@
           <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/bootstrap/css/bootstrap.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="96634">
-                  <caret line="5086" column="28" selection-start-line="5086" selection-start-column="28" selection-end-line="5086" selection-end-column="28" />
+                <state relative-caret-position="520">
+                  <caret line="4934" column="25" lean-forward="true" selection-start-line="4934" selection-start-column="25" selection-end-line="4934" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="registerpage_t.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/web/template/registerpage_t.php">
+          <file leaf-file-name="groups_change.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/admin/groups_change.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="324">
-                  <caret line="244" column="139" selection-start-line="244" selection-start-column="36" selection-end-line="244" selection-end-column="139" />
+                <state relative-caret-position="133">
+                  <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="contest_rank_t.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/template/contest_rank_t.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1026">
+                  <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
                   <folding>
-                    <element signature="n#style#0;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="e#10045#10051#0#HTML" expanded="true" />
+                    <element signature="e#1515#1569#0#PHP" expanded="true" />
+                    <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="contest_add_page.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/admin/contest_add_page.php">
+          <file leaf-file-name="contest.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/css/contest.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1463">
-                  <caret line="77" column="61" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
+                <state relative-caret-position="532">
+                  <caret line="37" column="33" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="submit.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/submit.php">
+          <file leaf-file-name="jquery.tablesorter.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/js/jquery.tablesorter.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="problem_add_page.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/admin/problem_add_page.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3572">
-                  <caret line="188" selection-start-line="188" selection-end-line="188" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="loginpage_t.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/template/loginpage_t.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="741">
-                  <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+                <state relative-caret-position="311">
+                  <caret line="883" column="16" selection-start-line="883" selection-start-column="7" selection-end-line="883" selection-end-column="16" />
                   <folding>
-                    <element signature="e#6049#6055#0#HTML" expanded="true" />
-                    <element signature="e#6055#6061#0#HTML" expanded="true" />
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="contest_rank.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/contest_rank.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="311">
+                  <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="contest_header.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/contest_header.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+                  <folding>
+                    <element signature="e#33#39#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header_t.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/web/template/header_t.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="76">
+                  <caret line="4" column="78" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/header.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="21" column="33" lean-forward="true" selection-end-line="24" />
+                  <folding>
+                    <element signature="e#33#39#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="contest_status_t.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/template/contest_status_t.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1559">
+                  <caret line="219" column="31" lean-forward="true" selection-start-line="219" selection-start-column="31" selection-end-line="219" selection-end-column="31" />
+                  <folding>
+                    <element signature="e#5964#6010#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -195,15 +240,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>test_prompt(</find>
-      <find>prompt</find>
-      <find>str</find>
-      <find>top</find>
-      <find>没有</find>
-      <find>badge</find>
-      <find>warning</find>
-      <find>form-control</find>
-      <find>carousel</find>
       <find>navbar-inner</find>
       <find>ajax</find>
       <find>tr</find>
@@ -225,6 +261,15 @@
       <find>alert</find>
       <find>close</find>
       <find>fa</find>
+      <find>now</find>
+      <find>没有</find>
+      <find>isNaN</find>
+      <find>pid_cnt</find>
+      <find>addpar</find>
+      <find>addp</find>
+      <find>addParser</find>
+      <find>badge</find>
+      <find>add</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\RoyYuan\Documents\HOoOTOJ</dir>
@@ -236,46 +281,32 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/problem.php" />
-        <option value="$PROJECT_DIR$/web/template/contestset_t.php" />
-        <option value="$PROJECT_DIR$/web/css/test.css" />
-        <option value="$PROJECT_DIR$/web/admin/problem_list.php" />
-        <option value="$PROJECT_DIR$/web/admin/contest_list.php" />
         <option value="$PROJECT_DIR$/web/css/loginpage.css" />
         <option value="$PROJECT_DIR$/web/css/registerpage.css" />
         <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/web/status-ajax.php" />
         <option value="$PROJECT_DIR$/web/template/submitpage_t.php" />
-        <option value="$PROJECT_DIR$/web/template/user_info_t.php" />
         <option value="$PROJECT_DIR$/web/header.php" />
         <option value="$USER_HOME$/Downloads/html5-css3-shadow-shine-text/html5-css3-shadow-shine-text/js/index.js" />
         <option value="$USER_HOME$/Downloads/html5-css3-shadow-shine-text/html5-css3-shadow-shine-text/css/style.css" />
         <option value="$USER_HOME$/Downloads/html5-css3-shadow-shine-text/html5-css3-shadow-shine-text/index.html" />
         <option value="$PROJECT_DIR$/web/admin/news_list.php" />
-        <option value="$PROJECT_DIR$/web/template/header_t.php" />
         <option value="$PROJECT_DIR$/web/admin/header_t.php" />
         <option value="$PROJECT_DIR$/web/template/faq_t.php" />
         <option value="$PROJECT_DIR$/web/forget.php" />
         <option value="$PROJECT_DIR$/web/css/problem.css" />
         <option value="$PROJECT_DIR$/web/css/problemset.css" />
         <option value="$PROJECT_DIR$/web/css/contest_rank.css" />
-        <option value="$PROJECT_DIR$/web/css/contest.css" />
         <option value="$PROJECT_DIR$/web/css/contestset.css" />
-        <option value="$PROJECT_DIR$/web/problemset.php" />
         <option value="$PROJECT_DIR$/web/css/chart.css" />
-        <option value="$PROJECT_DIR$/web/template/problem_t.php" />
         <option value="$PROJECT_DIR$/web/template/index_t.php" />
         <option value="$PROJECT_DIR$/web/css/status.css" />
         <option value="$PROJECT_DIR$/web/css/contest_status.css" />
-        <option value="$PROJECT_DIR$/web/contest_header.php" />
         <option value="$PROJECT_DIR$/web/contest.php" />
         <option value="$PROJECT_DIR$/web/template/contest_t.php" />
         <option value="$PROJECT_DIR$/web/status.php" />
-        <option value="$PROJECT_DIR$/web/template/contest_status_t.php" />
-        <option value="$PROJECT_DIR$/web/template/contest_rank_t.php" />
         <option value="$PROJECT_DIR$/web/template/problemset_t.php" />
         <option value="$PROJECT_DIR$/web/template/status_t.php" />
-        <option value="$PROJECT_DIR$/web/submit.php" />
         <option value="$PROJECT_DIR$/web/admin/problem_edit.php" />
         <option value="$PROJECT_DIR$/web/admin/problem_add_page.php" />
         <option value="$PROJECT_DIR$/web/admin/contest_add_page.php" />
@@ -287,6 +318,20 @@
         <option value="$PROJECT_DIR$/web/template/loginpage_t.php" />
         <option value="$PROJECT_DIR$/web/template/forgetpage_t.php" />
         <option value="$PROJECT_DIR$/web/template/forgetpage2_t.php" />
+        <option value="$PROJECT_DIR$/web/user_info.php" />
+        <option value="$PROJECT_DIR$/web/template/user_info_t.php" />
+        <option value="$PROJECT_DIR$/web/admin/groups_change.php" />
+        <option value="$PROJECT_DIR$/web/problemset.php" />
+        <option value="$PROJECT_DIR$/web/problem.php" />
+        <option value="$PROJECT_DIR$/web/admin/problem_add.php" />
+        <option value="$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/submit.php" />
+        <option value="$PROJECT_DIR$/web/submit.php" />
+        <option value="$PROJECT_DIR$/web/template/contest_status_t.php" />
+        <option value="$PROJECT_DIR$/web/template/problem_t.php" />
+        <option value="$PROJECT_DIR$/web/contest_header.php" />
+        <option value="$PROJECT_DIR$/web/css/contest.css" />
+        <option value="$PROJECT_DIR$/web/template/contest_rank_t.php" />
+        <option value="$PROJECT_DIR$/web/template/header_t.php" />
       </list>
     </option>
   </component>
@@ -323,12 +368,6 @@
               <item name="HOoOTOJ" type="b2602c69:ProjectViewProjectNode" />
               <item name="HOoOTOJ" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name=".idea" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="HOoOTOJ" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HOoOTOJ" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -348,20 +387,7 @@
               <item name="HOoOTOJ" type="b2602c69:ProjectViewProjectNode" />
               <item name="HOoOTOJ" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fonts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="HOoOTOJ" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HOoOTOJ" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="HOoOTOJ" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HOoOTOJ" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="image" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="HOoOTOJ" type="b2602c69:ProjectViewProjectNode" />
@@ -456,12 +482,13 @@
       <workItem from="1525096770491" duration="4857000" />
       <workItem from="1525142361269" duration="18030000" />
       <workItem from="1525181849376" duration="4261000" />
-      <workItem from="1525240057190" duration="2586000" />
+      <workItem from="1525240057190" duration="4294000" />
+      <workItem from="1525259847585" duration="8360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186995000" />
+    <option name="totallyTimeSpent" value="197063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
@@ -501,7 +528,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="12" />
@@ -510,7 +537,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="调试" order="14" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
@@ -522,98 +549,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/template/loginpage_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="2" lean-forward="true" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
-          <folding>
-            <element signature="e#6049#6055#0#HTML" expanded="true" />
-            <element signature="e#6055#6061#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/html5-css3-shadow-shine-text/html5-css3-shadow-shine-text/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2166">
-          <caret line="114" column="24" lean-forward="true" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/html5-css3-shadow-shine-text/html5-css3-shadow-shine-text/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="24" lean-forward="true" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="818" column="81" selection-start-line="818" selection-start-column="75" selection-end-line="818" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/css/bootstrap-theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="351" column="75" lean-forward="true" selection-start-line="351" selection-start-column="75" selection-end-line="351" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/faq_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/header_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/header_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="63" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/forget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/problemset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/problem.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/contest.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -659,27 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/contest_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/contest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/problem_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -691,13 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="642">
           <caret line="72" lean-forward="true" selection-end-line="83" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/problemset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -722,24 +633,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/user_info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/status-ajax.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/problem_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -754,20 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1805">
           <caret line="1" column="2486" selection-start-line="1" selection-start-column="2486" selection-end-line="1" selection-end-column="2486" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/submit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/problem_add_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3572">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
         </state>
       </provider>
     </entry>
@@ -792,24 +675,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/status_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/template/contest_t.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/contest_status_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="102" selection-start-line="20" selection-start-column="102" selection-end-line="20" selection-end-column="102" />
         </state>
       </provider>
     </entry>
@@ -829,15 +698,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
+        <state relative-caret-position="532">
           <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96634">
-          <caret line="5086" column="28" selection-start-line="5086" selection-start-column="28" selection-end-line="5086" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -848,52 +710,234 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/contest_rank_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/template/forgetpage_t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="87" column="34" lean-forward="true" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#1;n#tr#4;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1653">
+          <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/template/loginpage_t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
-          <folding>
-            <element signature="e#6049#6055#0#HTML" expanded="true" />
-            <element signature="e#6055#6061#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="969">
+          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/template/registerpage_t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="338">
           <caret line="244" column="139" selection-start-line="244" selection-start-column="36" selection-end-line="244" selection-end-column="139" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#10045#10051#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/template/forgetpage2_t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="1216">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/user_info_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="40" selection-end-line="63" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/problem_add_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="174" column="24" selection-start-line="174" selection-start-column="24" selection-end-line="174" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/problem_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/problemset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="761">
+          <caret line="74" column="11" lean-forward="true" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
           <folding>
-            <element signature="n#style#0;n#table#0;n#center#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#18#24#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/contest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+          <folding>
+            <element signature="e#17#23#0" expanded="true" />
+            <element signature="e#31#37#0" expanded="true" />
+            <element signature="e#4#10#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="e#65#71#1" expanded="true" />
+            <element signature="e#48#54#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/user_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/contest_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="29" column="95" lean-forward="true" selection-start-line="29" selection-start-column="95" selection-end-line="29" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/problem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="139" column="5" lean-forward="true" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/submit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/submit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/status_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="136" column="8" lean-forward="true" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/problem_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+          <folding>
+            <element signature="e#56#62#0" expanded="true" />
+            <element signature="e#62#68#0" expanded="true" />
+            <element signature="e#48#54#0" expanded="true" />
+            <element signature="e#54#60#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/include/my_func.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/contest_status_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1559">
+          <caret line="219" column="31" lean-forward="true" selection-start-line="219" selection-start-column="31" selection-end-line="219" selection-end-column="31" />
+          <folding>
+            <element signature="e#5964#6010#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="33" lean-forward="true" selection-end-line="24" />
+          <folding>
+            <element signature="e#33#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/contest_rank.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/jquery.tablesorter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="883" column="16" selection-start-line="883" selection-start-column="7" selection-end-line="883" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/contest.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="4934" column="25" lean-forward="true" selection-start-line="4934" selection-start-column="25" selection-end-line="4934" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/groups_change.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/contest_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#33#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/contest_rank_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+          <folding>
+            <element signature="e#1515#1569#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/header_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="78" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hustoj-php7-rc10/hustoj-php7-rc10/trunk/web/template/bs/contestrank.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

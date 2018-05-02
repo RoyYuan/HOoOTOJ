@@ -21,7 +21,6 @@ if (!check_username($user)){
     echo "没有该用户！";
     exit(0);
 }
-$view_title=$user."@".$OJ_NAME;
 $user_mysql=mysqli_real_escape_string($mysqli,$user);
 $sql="SELECT `username` FROM `users` WHERE `user_id`='$user_mysql'";
 $result=mysqli_query($mysqli,$sql);
@@ -33,6 +32,7 @@ if ($row_cnt==0){
 $row=mysqli_fetch_object($result);
 $username=$row->username;
 
+$view_title=$username."@".$OJ_NAME;
 $sql="SELECT COUNT(DISTINCT problem_id) AS `ac` FROM `submissions` WHERE `user_id`='".$user_mysql."' AND `result`=4";
 $result=mysqli_query($mysqli,$sql) or die(mysqli_error($mysqli));
 $row=mysqli_fetch_object($result);

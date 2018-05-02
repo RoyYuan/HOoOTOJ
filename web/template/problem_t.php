@@ -45,10 +45,11 @@
         echo "<span class='green'>TimeLimit:</span>$row->time_limit s&nbsp;&nbsp;";
         echo "<span class='green'>MemoryLimit:</span>$row->memory_limit MB";
         echo "<br/>";
-        echo "<span class='green'>提交:</span>$row->submit &nbsp;&nbsp;";
-        echo "<span class='green'>通过:</span>$row->accept";
-        echo "<br/>";
-
+        if ($pr_flag){
+            echo "<span class='green'>提交:</span>$row->submit &nbsp;&nbsp;";
+            echo "<span class='green'>通过:</span>$row->accept";
+            echo "<br/>";
+        }
         if($pr_flag){
             echo "[<a href='submitpage.php?id=$id'>Submit</a>]";
         }

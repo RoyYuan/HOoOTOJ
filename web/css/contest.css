@@ -12,7 +12,9 @@ h3{
     white-space: nowrap;
     font-family: 宋体;
 }
-
+.test{
+    color: #c0c0c0;
+}
 .green{
     color: green;
 }

@@ -5,45 +5,51 @@
     <meta http-equiv='refresh' content='60'>
     <title>Ranklist</title>
     <link rel=stylesheet href='css/contest_rank.css' type='text/css'>
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-latest.js"></script>
     <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
     <style>
 
         ::-webkit-scrollbar {display:none}
 
     </style>
-    <script>
-        $(document).ready(function(){
-            $.tablesorter.addParser({
-                id:'punish',
-                is:function (s) {
-                    return false;
-                },
-                format:function(s){
-                    var v=s.toLowerCase().replace(/\:/,'').replace(/\:/,'').replace(/\(-/,'.').replace(/\)/,'');
-                    v=parseFloat('0'+v);
-                    return v>1?v:v+Number.MAX_VALUE-1;
-                },
-                type:'numeric'
-            });
-            $("#rank").tablesorter({
-                headers:{
-                    4:{
-                        sorter:'punish'
-                    }
-                    <?php
-                    for($i=1;$i<=$pid_cnt;$i++){
-                        echo ",".($i+5).": { ";
-                        echo "  sorter:'punish' ";
-                        echo "}";
-                    }
-                    ?>
-                }
-            });
-        });
-    </script>
+<!--    <script>-->
+<!--        $(document).ready(function()-->
+<!--            {-->
+<!--                $.tablesorter.addParser({-->
+<!--                    id: 'punish',-->
+<!--                    is: function(s) {-->
+<!--                        return false;-->
+<!--                    },-->
+<!--                    format: function(s) {-->
+<!--                        var v=s.toLowerCase().replace(/\:/,'').replace(/\:/,'').replace(/\(-/,'.').replace(/\)/,'');-->
+<!--                        //alert(v);-->
+<!--                        v=parseFloat('0'+v);-->
+<!--                        return v>1?v:v+Number.MAX_VALUE-1;-->
+<!--                    },-->
+<!--                    // set type, either numeric or text-->
+<!--                    type: 'numeric'-->
+<!--                });-->
+<!---->
+<!--                $("#rank").tablesorter({-->
+<!--                    headers: {-->
+<!--                        3: {-->
+<!--                            sorter:'punish'-->
+<!--                        }-->
+<!--                        --><?php
+//                        for ($i=0;$i<$pid_cnt;$i++){
+//                            echo ",".($i+4).": { ";
+//                            echo "    sorter:'punish' ";
+//                            echo "}";
+//                        }
+//                        ?>
+<!--//                    }-->
+<!--//                });-->
+<!--//            }-->
+<!--//        );-->
+<!--//    </script>-->
 </head>
 <body>
+
 <div id="C1">
     <div id="main" class="center">
         <?php require_once ("contest_header.php");?>
@@ -76,7 +82,7 @@
                 echo "</tr></thead>\n<tbody>";
                 for ($i=0;$i<$user_cnt;$i++){
                     if ($i&1)
-                        echo "<tr class='info' align='center'>\n";
+                        echo "<tr class='' align='center'>\n";
                     else
                         echo "<tr class='' align='center'>\n";
                     echo "<td>";
@@ -154,16 +160,25 @@
                                 var r=parseInt(rank.innerHTML);
                                 if (r==1){
                                     rank.innerHTML="Winner";
-                                    rank.className="badge badge-warning";
-                                }
-                                if (r>1 && r<=total*.05+1)
-                                    rank.className="badge badge-warning";
-                                if (r>total*.05+1 && r<=total*.15+1)
                                     rank.className="badge";
-                                if (r>total*0.15+1 && r<=total*0.30+1)
-                                    rank.className="badge badge-error";
-                                if (r>total*0.30+1 && ac>0)
-                                    rank.className="badge badge-info";
+                                    rank.style="width:100%;background-color: gold;";
+                                }
+                                if (r>1 && r<=total*.05+1) {
+                                    rank.className = "badge";
+                                    rank.style="width:100%;background-color: gold;";
+                                }
+                                if (r>total*.05+1 && r<=total*.15+1){
+                                    rank.className="badge";
+                                    rank.style="width:100%;background-color: #c0c0c0;";
+                                }
+                                if (r>total*0.15+1 && r<=total*0.30+1) {
+                                    rank.className = "badge";
+                                    rank.style="width:100%;background-color: brown;";
+                                }
+                                if (r>total*0.30+1 && ac>0) {
+                                    rank.style="width:100%;background-color: deepskyblue;";
+                                    rank.className = "badge";
+                                }
                             }
                         }
                     }catch(e){

@@ -90,4 +90,6 @@ if (strlen($test_input))
     mk_data($pid,"test.in",$test_input,$OJ_DATA);
 if (strlen($test_output))
     mk_data($pid,"test.out",$test_output,$OJ_DATA);
+
+echo "<div><a href='../problem.php?id=$pid'>查看题目</a></div>";
 ?>

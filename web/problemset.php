@@ -62,7 +62,7 @@ else if(isset($_SESSION['groups']) && $_SESSION['groups']<0){
         "WHERE $filter_sql AND `deleted`=0 AND `problem_id` NOT IN(
         SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN(
         SELECT `contest_id` FROM `contest` WHERE
-        (`end_time`>'$now' or `contest`.`private`=1) AND contest.`hide`=0)
+        (`end_time`>'$now' AND `contest`.`private`=1) AND contest.`hide`=0)
         )";
 }
 else{
@@ -71,7 +71,7 @@ else{
         "WHERE `problems`.`hide`=0 AND $filter_sql AND `deleted`=0 AND `problem_id` NOT IN(
         SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN(
         SELECT `contest_id` FROM `contest` WHERE
-        (`end_time`>'$now' or `contest`.`private`=1) AND contest.`hide`=0)
+        (`end_time`>'$now' AND `contest`.`private`=1) AND contest.`hide`=0)
         )";
 }
 $sql.=" ORDER BY `problem_id`";//按照题目id排序
