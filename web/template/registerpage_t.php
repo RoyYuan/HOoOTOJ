@@ -10,6 +10,18 @@
         ::-webkit-scrollbar {display:none}
 
     </style>
+    <?php if(!isset($_SESSION)){
+        session_start();
+    }
+    if (isset($_SESSION['user_id'])){
+        ?>
+        <script>
+            alert("您已经登陆，请注销后重试！");
+            history.go(-1);
+        </script>
+        <?php
+    }
+    ?>
     <script>
         flag1=false;
         flag2=false;
@@ -78,7 +90,7 @@
 
 <body>
 <?php
-session_start();
+@session_start();
 $username = $password = $password2 = $question = $answer = $vcode = "";
 $vcode_error = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -96,25 +108,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $answer = trim($_POST['answer']);
     $vcode = trim($_POST['vcode']);
     $flag = 1;
-//    if (empty($username)) {
+    if (empty($username)) {
 //        $username_error = "用户名不能为空";
-//        $flag = 0;
-//    }
-//    if (empty($password)) {
+        $flag = 0;
+    }
+    if (empty($password)) {
 //        $password_error = "密码不能为空";
 //        $password2_error = "两次密码不一致";
-//        $password=$password2="";
-//        $flag = 0;
-//    }
-//    if (strcmp($password, $password2)) {
+        $password=$password2="";
+        $flag = 0;
+    }
+    if (strcmp($password, $password2)) {
 //        $password2_error = "两次密码不一致";
-//        $password=$password2="";
-//        $flag = 0;
-//    }
-//    if (empty($answer)) {
+        $password=$password2="";
+        $flag = 0;
+    }
+    if (empty($answer)) {
 //        $answer_error = "密保答案不能为空";
-//        $flag = 0;
-//    }
+        $flag = 0;
+    }
     if (strcasecmp($_SESSION["vcode"], $vcode) || $vcode == "" || $vcode == null) {
 //    $vcode_error=$_SESSION["vcode"];
         $_SESSION["vcode"] = null;
@@ -139,6 +151,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="C1">
             <?php require_once("header.php"); ?>
             <div id="main">
+                <h1>注册</h1>
                 <form id=reg_form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <center>
                         <table id="input_table" style="width:100%;border-collapse:separate;   border-spacing:10px;">

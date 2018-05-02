@@ -10,6 +10,47 @@
         ::-webkit-scrollbar {display:none}
 
     </style>
+
+    <?php if(!isset($_SESSION)){
+        session_start();
+    }
+    if (isset($_SESSION['user_id'])){
+        ?>
+        <script>
+            alert("您已经登陆，请注销后重试！");
+            history.go(-1);
+        </script>
+        <?php
+    }
+    ?>
+    <script>
+        flag1=false;
+        flag2=false;
+        function usernameCheck(o){
+            flag1=false;
+            if (!/^[a-zA-Z]{1,1}[a-zA-Z0-9]{5,14}$/.test(o.value)){
+                document.getElementById("username_error").innerHTML="Error:应由6-15位数字或大小写字母构成,开头须是字母";
+                $("#username_error").prop("class","alert alert-danger");
+                flag1=false;
+            }
+            else{
+                $("#username_error").prop("class","alert alert-danger hide");
+                flag1=true;
+            }
+        }
+        function answerCheck(o) {
+            flag2=false;
+            if (o.value.length>0){
+                $("#answer_error").prop("class","alert alert-danger hide");
+                flag2=true;
+            }
+            else{
+                document.getElementById("answer_error").innerHTML="Error:不能为空！";
+                $("#answer_error").prop("class","alert alert-danger");
+                flag2=false;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -22,6 +63,7 @@
     //$vcode_error=$_SESSION["vcode"];
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
+    $_SESSION['vcode_error']=false;
     $user_id = trim($_POST['user_id']);
     $question = trim($_POST['question']);
     switch($question){
@@ -34,17 +76,18 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $vcode = trim($_POST['vcode']);
     $flag = 1;
         if (empty($user_id)) {
-        $user_id_error = "用户名不能为空";
+//        $user_id_error = "用户名不能为空";
         $flag = 0;
     }
     if (empty($answer)) {
-        $answer_error = "密保答案不能为空";
+//        $answer_error = "密保答案不能为空";
         $flag = 0;
     }
     if (strcasecmp($_SESSION["vcode"], $vcode) || $vcode == "" || $vcode == null) {
 //    $vcode_error=$_SESSION["vcode"];
         $_SESSION["vcode"] = null;
-        $vcode_error = "验证码错误";
+        $_SESSION['vcode_error']=true;
+//        $vcode_error = "验证码错误";
         $flag = 0;
     }
     if($flag==1)
@@ -56,18 +99,24 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     ?>
         <div id="C1">
             <?php require_once("header.php"); ?>
+            <h1>忘记密码</h1>
             <div id="main">
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <form id="fg_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <center>
-                        <table id="input_table" style="font-size:20px;border-collapse:separate;   border-spacing:10px;">
+                        <table id="input_table" style="width:100%;font-size:20px;border-collapse:separate;   border-spacing:10px;">
                             <tr>
-                                <td width=220></td>
+                                <td width=40%></td>
 <!--                                <td width=220> 用户名:</td>-->
-                                <td width=220>
-                                    <i class="fa fa-user fa-lg"></i>
-                                    <input name="user_id" class="form-control" placeholder="帐号" type="text" size=20 value="<?php echo $user_id ?>"></td>
-                                <td width=220> <span class="error">
-                                        * <?php echo $user_id_error; ?></span></td>
+                                <td width=20%>
+<!--                                    <i class="fa fa-user fa-lg"></i>-->
+                                    <input id=username name="user_id" class="form-control" placeholder="帐号" type="text" onkeyup="usernameCheck(this)" size=20 value="<?php echo $user_id ?>"></td>
+                                <td width=40%>
+                                    <span class="error">
+                                        *
+<!--                                        --><?php //echo $user_id_error; ?>
+                                        <span id="username_error"></span>
+                                    </span>
+                                </td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -88,9 +137,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
                                 <td></td>
 <!--                                <td> 密保答案:</td>-->
                                 <td>
-                                    <input class="form-control" placeholder="密保答案" name="answer" type="text" size=20 value="<?php echo $answer ?>"></td>
-                                <td> <span class="error">
-                                        * <?php echo $answer_error; ?></span></td>
+                                    <input id=answer class="form-control" placeholder="密保答案" name="answer" type="text" onkeyup="answerCheck(this)" size=20 value="<?php echo $answer ?>"></td>
+                                <td>
+                                    <span class="error">
+                                        *
+<!--                                        --><?php //echo $answer_error; ?>
+                                        <span id="answer_error"></span>
+                                    </span>
+                                </td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -101,12 +155,17 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
                                 <td>
                                     <img alt="点击刷新" src="vcode.php" onclick="this.src='vcode.php?'+Math.random()">
                                     <span class="error">
-                                        * <?php echo $vcode_error; ?></span></td>
+                                        *
+                                        <span id="vcode_error" class="alert alert-danger <?php if (!isset($_SESSION['vcode_error']) || !$_SESSION['vcode_error']) echo hide;?>">
+                                        Error:验证码错误
+                                    </span>
+                                    </span>
+                                </td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>
-                                    <input id="submit" class="btn btn-primary" name="Submit" type="submit" value="确认">
+                                    <input id="Submit" class="btn btn-primary" name="Submit" type="button" value="确认" onclick="doSubmit()">
                                     [<a href="loginpage.php" style="font-size: 15px;">返回登录</a>]
                                 </td>
                                 <td></td>
@@ -121,4 +180,15 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 <div class="center">
     <?php require_once ("footer.php"); ?>
 </div>
+<script>
+    function doSubmit(){
+        flag1=flag2=false;
+        usernameCheck(document.getElementById("username"));
+        answerCheck(document.getElementById("answer"));
+        if (flag1 & flag2)
+            $("#fg_form").submit();
+        else
+            ;
+    }
+</script>
 </html>

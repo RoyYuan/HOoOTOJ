@@ -67,14 +67,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = trim($_POST['password']);
     $vcode = trim($_POST['vcode']);
     $flag = 1;
-//    if (empty($username)) {
-////        $username_error = "用户名不能为空";
-//        $flag = 0;
-//    }
-//    if (empty($password)) {
-////        $password_error = "密码不能为空";
-//        $flag = 0;
-//    }
+    if (empty($username)) {
+//        $username_error = "用户名不能为空";
+        $flag = 0;
+    }
+    if (empty($password)) {
+//        $password_error = "密码不能为空";
+        $flag = 0;
+    }
     if (strcasecmp($_SESSION["vcode"], $vcode) || $vcode == "" || $vcode == null) {
 //    $vcode_error=$_SESSION["vcode"];
         $_SESSION["vcode"] = null;
