@@ -152,10 +152,12 @@
                         var total=getTotal(rows);
                         for (var i=1;i<rows.length;i++){
                             var rank=rows[i].cells[0];
-                            var solved=rows[i].cells[3];
+                            var solved=rows[i].cells[2];
                             var ac=parseInt(solved.innerText);
+                            // alert(rank.innerHTML);
                             if (isNaN(ac))
                                 ac=parseInt(solved.textContent);
+                            // alert(ac);
                             if (rank.innerHTML!="*" && ac>0){
                                 var r=parseInt(rank.innerHTML);
                                 if (r==1){
@@ -163,19 +165,19 @@
                                     rank.className="badge";
                                     rank.style="width:100%;background-color: gold;";
                                 }
-                                if (r>1 && r<=total*.05+1) {
+                                else if (r>1 && r<=total*.05+1) {
                                     rank.className = "badge";
                                     rank.style="width:100%;background-color: gold;";
                                 }
-                                if (r>total*.05+1 && r<=total*.15+1){
+                                else if (r>total*.05+1 && r<=total*.15+1){
                                     rank.className="badge";
                                     rank.style="width:100%;background-color: #c0c0c0;";
                                 }
-                                if (r>total*0.15+1 && r<=total*0.30+1) {
+                                else if (r>total*0.15+1 && r<=total*0.30+1) {
                                     rank.className = "badge";
                                     rank.style="width:100%;background-color: brown;";
                                 }
-                                if (r>total*0.30+1 && ac>0) {
+                                else if (ac>0) {
                                     rank.style="width:100%;background-color: deepskyblue;";
                                     rank.className = "badge";
                                 }

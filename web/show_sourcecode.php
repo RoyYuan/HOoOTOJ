@@ -29,7 +29,7 @@ $code_result=$row->result;
 $code_time=$row->time;
 $code_memory=$row->memory;
 $code_problem_id=$row->problem_id;
-$view_user_id=$code_user_id=$row->user_id;
+$view_user_id=$code_username=$row->username;
 $contest_id=$row->contest_id;
 
 mysqli_free_result($result);

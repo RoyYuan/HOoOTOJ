@@ -19,7 +19,7 @@
             echo "<pre>";
             ob_start();
             echo "/**************************************************************\n";
-            echo "\tProblem:$code_problem_id\n\tUser:$code_user_id\n\tLanguage:".$language_name[$code_language]."\n";
+            echo "\tSubmit ID:$id\n\tProblem:$code_problem_id\n\tUser:$code_username\n\tLanguage:".$language_name[$code_language]."\n";
             echo "\tResult:".$judge_result[$code_result]."\n";
             if ($judge_result==4){
                 echo "\tTime:".$code_time."ms\n\tMemory:".$code_memory."kb\n";

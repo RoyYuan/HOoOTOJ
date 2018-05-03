@@ -210,7 +210,7 @@ for ($i=0;$i<$rows_cnt;$i++){
 
 
     //4-7
-    if ($flag){
+    if ($flag || $row['user_id']==$_SESSION['user_id']){
         //4&5
         if ($row['result']>=4){
             $view_status[$i][4]="<div id='center' class='red'>".$row['memory']."</div>";
